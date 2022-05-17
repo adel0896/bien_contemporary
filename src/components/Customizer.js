@@ -6,12 +6,12 @@ import Time from "./Time";
 import Location from "./Location";
 import Logo from "./Logo";
 
-export default function Customizer() {
+export default function Customizer(props) {
   return (
     <div className="Customizer">
       <Color></Color>
-      <Title></Title>
-      <Date></Date>
+      <Title getTitle={props.getTitle}></Title>
+      <Date getDate={props.getDate}></Date>
       <Time></Time>
       <Location></Location>
       <Logo></Logo>

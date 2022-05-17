@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Template() {
+export default function Template(props) {
   return (
     <div>
-      <h1>Title goes here</h1>
-      <h2>Time</h2>
+      <h1>{props.title}</h1>
+      <h2>{props.date}</h2>
       <h2>Date</h2>
     </div>
   );

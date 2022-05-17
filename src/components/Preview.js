@@ -1,12 +1,11 @@
 import React from "react";
 import Template from "./Template";
 
-export default function Preview() {
+export default function Preview(props) {
+  console.log(props.getTitle);
   return (
     <div className="Preview">
-      <Template>
-        <h1>PREVIEW GOES HERE</h1>
-      </Template>
+      <Template />
     </div>
   );
 }

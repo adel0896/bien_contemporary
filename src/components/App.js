@@ -1,18 +1,29 @@
 import React, { useState } from "react";
 import Customizer from "./Customizer";
 import Preview from "./Preview";
-export default function App(props) {
+export default function App() {
+  //   let TextContent = {
+  //     title: "default",
+  //     date: "default",
+  //   };
+  //   const textContent = Object.create(TextContent);
   const [data, setData] = useState(null);
-  function getData(event) {
+  function getTitle(event) {
     setData(event.target.value);
-    console.log(event.target.value);
+    return data; // return textContent.title;
   }
+  //   console.log(textContent.title);
+
+  function getDate(event) {
+    setData(event.target.value);
+    // textContent.date = data;
+    console.log(data);
+  }
+
   return (
     <section className="Screen">
-      <Customizer></Customizer>
-      <Preview></Preview>
-      <h1>{data}</h1>
-      <input type="text" onChange={getData} />
+      <Customizer getTitle={getTitle} getDate={getDate}></Customizer>
+      <Preview getTitle={getTitle}></Preview>
     </section>
   );
 }
