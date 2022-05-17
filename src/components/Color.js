@@ -5,11 +5,21 @@ export default function Color() {
     <label>
       Text color
       <select name="color">
-        <option value="lightgreen">lightgreen</option>
-        <option value="lightgrey">lightgrey</option>
-        <option value="pink">pink</option>
-        <option value="green">green</option>
-        <option value="grey">grey</option>
+        <option data-color="lightgreen" value="lightgreen">
+          lightgreen
+        </option>
+        <option data-color="lightgrey" value="lightgrey">
+          lightgrey
+        </option>
+        <option data-color="pink" value="pink">
+          pink
+        </option>
+        <option data-color="green" value="green">
+          green
+        </option>
+        <option data-color="grey" value="grey">
+          grey
+        </option>
       </select>
     </label>
   );
