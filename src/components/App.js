@@ -1,18 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
+import Title from "./Title";
+import Date from "./Date";
 import Customizer from "./Customizer";
 import Preview from "./Preview";
-export default function App(props) {
-  const [data, setData] = useState(null);
-  function getData(event) {
-    setData(event.target.value);
-    console.log(event.target.value);
+import { render } from "@testing-library/react";
+
+export default class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      title: "",
+      date: "",
+    };
   }
-  return (
-    <section className="Screen">
-      <Customizer></Customizer>
-      <Preview></Preview>
-      <h1>{data}</h1>
-      <input type="text" onChange={getData} />
-    </section>
-  );
+
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    const { title, date } = this.state;
+    this.setState(() => ({
+      [name]: value,
+      status: `${title}, ${date}`,
+    }));
+  };
+
+  render() {
+    // const { title, date, status } = this.state;
+    return (
+      <section className="Screen">
+        <Title onChange={this.handleChange}></Title>
+        <Date onChange={this.handleChange}></Date>
+
+        <Preview state={this.state}></Preview>
+      </section>
+    );
+  }
 }
+// render();

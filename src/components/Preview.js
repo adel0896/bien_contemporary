@@ -1,12 +1,16 @@
 import React from "react";
 import Template from "./Template";
 
-export default function Preview() {
+export default function Preview(props) {
+  // console.log(props.giveStatus);
+  console.log(props.state.title);
+  // const [data, setData] = useState(null);
+  // function getInputValue() {
+  //   setData();
+  // }
   return (
     <div className="Preview">
-      <Template>
-        <h1>PREVIEW GOES HERE</h1>
-      </Template>
+      <Template title={props.state.title} date={props.state.date}></Template>
     </div>
   );
 }
