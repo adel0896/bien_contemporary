@@ -8,8 +8,6 @@ import Location from "./Location";
 import Logo from "./Logo";
 
 export default function Customizer(props) {
-  console.log(props);
-
   return (
     <div className="Customizer">
       <Color
@@ -37,7 +35,11 @@ export default function Customizer(props) {
         name="location"
         value={props.value}
       ></Location>
-      <Logo></Logo>
+      <Logo
+        onLogoChange={props.onLogoChange}
+        name="logo"
+        value={props.value}
+      ></Logo>
     </div>
   );
 }

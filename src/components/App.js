@@ -9,11 +9,11 @@ export default class App extends Component {
     super();
     this.state = {
       color: "black",
-      title: "",
-      date: "",
-      time: "",
-      location: "",
-      logo: "",
+      title: "Abstract painting & cocktails",
+      date: "13/05",
+      time: "from 5pm to 8pm ",
+      location: "Vester Volgade 8",
+      logo: "none",
     };
   }
 
@@ -24,13 +24,19 @@ export default class App extends Component {
     }));
   };
   handleColorChange = (e) => {
-    console.log(e);
-    // const { name, color } = e;
     const color = e;
     const name = "color";
     this.setState(() => ({
       [name]: color,
     }));
+  };
+  handleLogoChange = (e) => {
+    const logo = e;
+    const name = "logo";
+    this.setState(() => ({
+      [name]: logo,
+    }));
+    console.log(e);
   };
 
   render() {
@@ -39,6 +45,7 @@ export default class App extends Component {
         <Customizer
           onInputChange={this.handleInputChange}
           onColorChange={this.handleColorChange}
+          onLogoChange={this.handleLogoChange}
         ></Customizer>
         <Preview state={this.state}></Preview>
       </section>
