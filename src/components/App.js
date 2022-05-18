@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Title from "./Title";
-import Date from "./Date";
-// import Customizer from "./Customizer";
+// import Title from "./Title";
+// import Date from "./Date";
+import Customizer from "./Customizer";
 import Preview from "./Preview";
 // import { render } from "@testing-library/react";
 
@@ -20,10 +20,10 @@ export default class App extends Component {
 
   handleChange = (e) => {
     const { name, value } = e.target;
-    const { color, title, date, time, location, logo } = this.state;
+    // const { color, title, date, time, location, logo } = this.state;
     this.setState(() => ({
       [name]: value,
-      status: `${title}, ${date}`,
+      //   status: `${title}, ${date}`,
     }));
   };
 
