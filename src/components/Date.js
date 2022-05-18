@@ -5,7 +5,6 @@ export default function Date(props) {
     <label>
       Date
       <input onChange={props.onChange} name="date" value={props.value} />
-      {/* <input onChange={props.onChange} name="title" value={props.value}></input> */}
     </label>
   );
 }
