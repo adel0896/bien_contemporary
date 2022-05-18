@@ -39,13 +39,36 @@ const ListItem = styledComponents("li")`
   width:30px;
   height:30px;  `;
 
-const options = ["lightGreen", "lightGrey", "pink", "green", "grey"];
-export default function Color() {
+const lightGreen = {
+  name: "lightGreen",
+  hex: "#e9efed",
+};
+const lightGrey = {
+  name: "lightGrey",
+  hex: "#c3c1c4",
+};
+const pink = {
+  name: "pink",
+  hex: "#cc9e87",
+};
+const green = {
+  name: "green",
+  hex: "#839388",
+};
+const grey = {
+  name: "grey",
+  hex: "#6c6c6e",
+};
+const options = [lightGreen, lightGrey, pink, green, grey];
+
+export default function Color(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const toggling = () => setIsOpen(!isOpen);
-  const onOptionClicked = (value) => () => {
-    setSelectedOption(value);
+
+  const onOptionClicked = (hex, name) => () => {
+    props.onColorChange(hex);
+    setSelectedOption(name);
     setIsOpen(false);
     console.log(selectedOption);
   };
@@ -63,9 +86,12 @@ export default function Color() {
             <DropDownList className="colorDropDownList">
               {options.map((option) => (
                 <ListItem
-                  onClick={onOptionClicked(option)}
+                  onClick={onOptionClicked(option.hex, option.name)}
                   key={Math.random()}
-                  className={option}
+                  className={option.name}
+                  data-color={option.name}
+                  value={props.value}
+                  name="color"
                 ></ListItem>
               ))}
             </DropDownList>

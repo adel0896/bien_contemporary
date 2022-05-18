@@ -4,7 +4,11 @@ export default function Title(props) {
   return (
     <div>
       Title
-      <input onChange={props.onChange} name="title" value={props.value}></input>
+      <input
+        onChange={props.onInputChange}
+        name="title"
+        value={props.value}
+      ></input>
     </div>
   );
 }

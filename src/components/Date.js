@@ -4,7 +4,7 @@ export default function Date(props) {
   return (
     <label>
       Date
-      <input onChange={props.onChange} name="date" value={props.value} />
+      <input onChange={props.onInputChange} name="date" value={props.value} />
     </label>
   );
 }

@@ -12,12 +12,28 @@ export default function Customizer(props) {
 
   return (
     <div className="Customizer">
-      <Color></Color>
-      <Title onChange={props.onChange} name="title" value={props.value}></Title>
-      <Date onChange={props.onChange} name="date" value={props.value}></Date>
-      <Time onChange={props.onChange} name="time" value={props.value}></Time>
+      <Color
+        onColorChange={props.onColorChange}
+        name="color"
+        value={props.value}
+      ></Color>
+      <Title
+        onInputChange={props.onInputChange}
+        name="title"
+        value={props.value}
+      ></Title>
+      <Date
+        onInputChange={props.onInputChange}
+        name="date"
+        value={props.value}
+      ></Date>
+      <Time
+        onInputChange={props.onInputChange}
+        name="time"
+        value={props.value}
+      ></Time>
       <Location
-        onChange={props.onChange}
+        onInputChange={props.onInputChange}
         name="location"
         value={props.value}
       ></Location>
