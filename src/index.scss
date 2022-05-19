@@ -2,6 +2,9 @@
   border: solid red 1px;
   background-color: #fdfbf8;
 }
+.Preview {
+  width: 50%;
+}
 .lightGreen {
   background-color: #e9efed;
 }
@@ -22,4 +25,13 @@
   height: 3rem;
   width: 5rem;
   background-repeat: no-repeat;
+}
+.imageSelect {
+  display: flex;
+
+  * {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 0.5rem;
+  }
 }

@@ -6,6 +6,7 @@ import Date from "./Date";
 import Time from "./Time";
 import Location from "./Location";
 import Logo from "./Logo";
+import Image from "./Image";
 
 export default function Customizer(props) {
   return (
@@ -35,6 +36,11 @@ export default function Customizer(props) {
         name="location"
         value={props.value}
       ></Location>
+      <Image
+        onImageChange={props.onImageChange}
+        name="image"
+        value={props.value}
+      ></Image>
       <Logo
         onLogoChange={props.onLogoChange}
         name="logo"

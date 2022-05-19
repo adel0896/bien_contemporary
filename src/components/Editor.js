@@ -4,7 +4,7 @@ import Customizer from "./Customizer";
 import Preview from "./Preview";
 // import { render } from "@testing-library/react";
 
-export default class App extends Component {
+export default class EditorS extends Component {
   constructor() {
     super();
     this.state = {
@@ -14,6 +14,7 @@ export default class App extends Component {
       time: "from 5pm to 8pm ",
       location: "Vester Volgade 8",
       logo: "none",
+      image: "none",
     };
   }
 
@@ -36,6 +37,14 @@ export default class App extends Component {
     this.setState(() => ({
       [name]: logo,
     }));
+    // console.log(e);
+  };
+  handleImageChange = (e) => {
+    const image = e;
+    const name = "image";
+    this.setState(() => ({
+      [name]: image,
+    }));
     console.log(e);
   };
 
@@ -46,6 +55,7 @@ export default class App extends Component {
           onInputChange={this.handleInputChange}
           onColorChange={this.handleColorChange}
           onLogoChange={this.handleLogoChange}
+          onImageChange={this.handleImageChange}
         ></Customizer>
         <Preview state={this.state}></Preview>
       </section>
