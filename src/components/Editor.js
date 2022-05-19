@@ -4,7 +4,7 @@ import Customizer from "./Customizer";
 import Preview from "./Preview";
 // import { render } from "@testing-library/react";
 
-export default class EditorS extends Component {
+export default class Editor extends Component {
   constructor() {
     super();
     this.state = {
@@ -50,7 +50,7 @@ export default class EditorS extends Component {
 
   render() {
     return (
-      <section className="Screen">
+      <section className="Editor">
         <Customizer
           onInputChange={this.handleInputChange}
           onColorChange={this.handleColorChange}
