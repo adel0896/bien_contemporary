@@ -10,7 +10,7 @@ export default function Template(props) {
   const logoToDisplay = logoColors.filter((x) => x.logoColor === props.logo)[0];
   const imageToDisplay = images.filter((x) => x.imageOption === props.image)[0];
 
-  console.log(logoToDisplay);
+  // console.log(logoToDisplay);
   if (props.logo !== "none") {
     document.querySelector(".logo img").src = logoToDisplay.path;
   }
