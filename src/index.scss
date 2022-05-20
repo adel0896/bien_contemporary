@@ -35,3 +35,10 @@
     margin: 0 0.5rem;
   }
 }
+.MockupsSection {
+  > * {
+    width: 5rem;
+    height: 6rem;
+    border: solid blue 1px;
+  }
+}
