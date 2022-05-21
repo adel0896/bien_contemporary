@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import image1 from "../assets/abstract.jpg";
-import image2 from "../assets/abstract2.jpg";
-import image3 from "../assets/abstract3.jpg";
+import image1 from "./assets/abstract.jpg";
+import image2 from "./assets/abstract2.jpg";
+import image3 from "./assets/abstract3.jpg";
 
 const Image1 = {
   path: image1,

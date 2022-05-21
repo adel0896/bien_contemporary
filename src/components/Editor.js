@@ -60,7 +60,14 @@ export default class Editor extends Component {
   render() {
     return (
       <section className="Screen">
-        <Customizer onInputChange={this.handleInputChange} onColorChange={this.handleColorChange} onLogoChange={this.handleLogoChange} onImageChange={this.handleImageChange} onImageUpload={this.handleImageUpload} state={this.state}></Customizer>
+        <Customizer
+          onInputChange={this.handleInputChange}
+          onColorChange={this.handleColorChange}
+          onLogoChange={this.handleLogoChange}
+          onImageChange={this.handleImageChange}
+          onImageUpload={this.handleImageUpload}
+          state={this.state}
+        ></Customizer>
         <Preview state={this.state}></Preview>
       </section>
     );

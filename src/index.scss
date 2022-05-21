@@ -1,4 +1,4 @@
-.Screen {
+.Editor {
   border: solid red 1px;
   background-color: #fdfbf8;
 }
@@ -39,5 +39,19 @@
     width: 5rem;
     height: 5rem;
     margin: 0 0.5rem;
+  }
+}
+.MockupsSection {
+  > * {
+    width: 5rem;
+    height: 6rem;
+    border: solid blue 1px;
+  }
+}
+.templateOptions {
+  display: flex;
+  div > * {
+    width: 7rem;
+    height: auto;
   }
 }
