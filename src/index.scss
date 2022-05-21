@@ -42,3 +42,10 @@
     border: solid blue 1px;
   }
 }
+.templateOptions {
+  display: flex;
+  div > * {
+    width: 7rem;
+    height: auto;
+  }
+}

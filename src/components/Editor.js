@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import Customizer from "./Customizer";
 import Preview from "./Preview";
-// import { render } from "@testing-library/react";
 
 export default class Editor extends Component {
   constructor() {
@@ -37,7 +36,6 @@ export default class Editor extends Component {
     this.setState(() => ({
       [name]: logo,
     }));
-    // console.log(e);
   };
   handleImageChange = (e) => {
     const image = e;
@@ -62,4 +60,3 @@ export default class Editor extends Component {
     );
   }
 }
-// render();

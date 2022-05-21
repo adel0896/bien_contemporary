@@ -17,7 +17,6 @@ export default class App extends Component {
     this.setState(() => ({
       [name]: format,
     }));
-    // console.log(format);
   };
   handleTemplateChange = (e) => {
     const template = e;
@@ -25,13 +24,15 @@ export default class App extends Component {
     this.setState(() => ({
       [name]: template,
     }));
-    // console.log(template);
   };
   render() {
     return (
       <>
         <section className="FormatTemplate">
-          <Format onFormatChange={this.handleFormatChange}></Format>
+          <Format
+            onFormatChange={this.handleFormatChange}
+            name="format"
+          ></Format>
         </section>
         <section className="EditorScreen">
           <Editor></Editor>

@@ -10,7 +10,6 @@ export default function Template(props) {
   const logoToDisplay = logoColors.filter((x) => x.logoColor === props.logo)[0];
   const imageToDisplay = images.filter((x) => x.imageOption === props.image)[0];
 
-  // console.log(logoToDisplay);
   if (props.logo !== "none") {
     document.querySelector(".logo img").src = logoToDisplay.path;
   }
@@ -19,10 +18,6 @@ export default function Template(props) {
     document.querySelector(".image img").src = imageToDisplay.path;
   }
 
-  // else if (props.logo === "none") {
-  //   document.querySelector(".logo img").src = logoColors[5].path;
-  //   console.log(logoColors);
-  // }
   return (
     <div className="templateContainer">
       <h1>TITLE IS{props.title}</h1>

@@ -39,14 +39,3 @@ export default function Image(props) {
     </div>
   );
 }
-{
-  /* <div>
-<img className="image1" src={image1} alt="painting" />
-</div>
-<div>
-<img src={image2} alt="painting" />
-</div>
-<div>
-<img src={image3} alt="painting" />
-</div> */
-}

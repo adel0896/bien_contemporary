@@ -4,7 +4,6 @@ import styledComponents from "styled-components";
 const FormatSelect = styledComponents("div")`
 background-color:#FDFBF8;
 `;
-const Arrow = styledComponents("p")``;
 const DropDownContainer = styledComponents("div")``;
 const DropDownHeader = styledComponents("div")``;
 const DropDownListContainer = styledComponents("div")``;
@@ -24,7 +23,6 @@ export default function Format(props) {
     props.onFormatChange(format);
     setSelectedFormat(format);
     setIsOpen(false);
-    // console.log(format);
   };
   return (
     <FormatSelect>

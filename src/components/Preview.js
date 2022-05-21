@@ -23,8 +23,6 @@ export default function Preview(props) {
     downloadjs(dataURL, `download.png`, "image/png");
   }
 
-  // console.log(props.state.title);
-
   return (
     <>
       <div className="Preview">
