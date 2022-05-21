@@ -2,15 +2,15 @@ import React from "react";
 import AbstractStoryPath from "./assets/Abstract-story.jpg";
 import AbstractPostPath from "./assets/Abstract-post.jpg";
 import AbstractBannerPath from "./assets/Abstract-banner.jpg";
-import CroquisStoryPath from "./assets/Croquis-story.png";
-import CroquisPostPath from "./assets/Croquis-post.png";
-import CroquisBannerPath from "./assets/Croquis-banner.png";
+import CroquisStoryPath from "./assets/Croquis-story.jpg";
+import CroquisPostPath from "./assets/Croquis-post.jpg";
+import CroquisBannerPath from "./assets/Croquis-banner.jpg";
 import OutsideStoryPath from "./assets/Outside-story.jpg";
 import OutsidePostPath from "./assets/Outside-post.jpg";
 import OutsideBannerPath from "./assets/Outside-banner.jpg";
-import ExhibitStoryPath from "./assets/Exhibit-story.png";
-import ExhibitPostPath from "./assets/Exhibit-post.png";
-import ExhibitBannerPath from "./assets/Exhibit-banner.png";
+import ExhibitStoryPath from "./assets/Exhibit-story.jpg";
+import ExhibitPostPath from "./assets/Exhibit-post.jpg";
+import ExhibitBannerPath from "./assets/Exhibit-banner.jpg";
 
 const AbstractStory = {
   path: AbstractStoryPath,

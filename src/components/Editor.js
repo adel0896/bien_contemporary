@@ -17,7 +17,6 @@ export default class Editor extends Component {
       file: "none",
     };
   }
-
   handleInputChange = (e) => {
     const { name, value } = e.target;
     this.setState(() => ({
@@ -58,6 +57,11 @@ export default class Editor extends Component {
   };
 
   render() {
+    const format = this.props.appState.format;
+    const template = this.props.appState.template;
+
+    console.log(format);
+
     return (
       <section className="Screen">
         <Customizer
@@ -68,7 +72,11 @@ export default class Editor extends Component {
           onImageUpload={this.handleImageUpload}
           state={this.state}
         ></Customizer>
-        <Preview state={this.state}></Preview>
+        <Preview
+          state={this.state}
+          format={format}
+          template={template}
+        ></Preview>
       </section>
     );
   }

@@ -1,3 +1,5 @@
+@use "./styles/variables.scss";
+@use "./styles/templateFormatScreen";
 .Editor {
   border: solid red 1px;
   background-color: #fdfbf8;
@@ -8,9 +10,7 @@
 .hidden {
   display: none;
 }
-// .templateContainer img {
-//   display: none;
-// }
+
 .lightGreen {
   background-color: #e9efed;
 }
@@ -27,7 +27,6 @@
   background-color: #6c6c6e;
 }
 .logo {
-  // background-image: url("/components/logos_svg/logo-black.svg");
   height: 3rem;
   width: 5rem;
   background-repeat: no-repeat;
@@ -48,10 +47,6 @@
     border: solid blue 1px;
   }
 }
-.templateOptions {
-  display: flex;
-  div > * {
-    width: 7rem;
-    height: auto;
-  }
+.hidden {
+  display: none;
 }

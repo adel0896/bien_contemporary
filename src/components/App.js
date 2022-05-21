@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Editor from "./Editor";
 import Format from "./Format";
 import Mockups from "./Mockups";
@@ -8,7 +8,8 @@ export default class App extends Component {
     super();
     this.state = {
       format: "post",
-      template: "",
+      template: "abstract",
+      show: true,
     };
   }
   handleFormatChange = (e) => {
@@ -25,23 +26,39 @@ export default class App extends Component {
       [name]: template,
     }));
   };
+  hideFirstScreen = (e) => {
+    console.log("wasap");
+    this.setState(() => ({
+      show: false,
+    }));
+  };
   render() {
-    return (
-      <>
-        <section className="FormatTemplate">
-          <Format
-            onFormatChange={this.handleFormatChange}
-            name="format"
-          ></Format>
-        </section>
+    const show = this.state.show;
+    if (show)
+      return (
+        <>
+          <section className="FormatTemplate">
+            <div className="FormatSection">
+              <Format
+                onFormatChange={this.handleFormatChange}
+                name="format"
+              ></Format>
+            </div>
+            <div className="TemplateSection">
+              <Mockups
+                format={this.state.format}
+                onTemplateChange={this.handleTemplateChange}
+              ></Mockups>
+            </div>
+            <button onClick={this.hideFirstScreen}>NEXT</button>
+          </section>
+        </>
+      );
+    else
+      return (
         <section className="EditorScreen">
-          <Editor></Editor>
-          <Mockups
-            format={this.state.format}
-            onTemplateChange={this.handleTemplateChange}
-          ></Mockups>
+          <Editor appState={this.state}></Editor>
         </section>
-      </>
-    );
+      );
   }
 }

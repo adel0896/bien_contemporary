@@ -15,12 +15,14 @@ export default function Mockups(props) {
   return (
     <section className="templateOptions">
       {arrayToMap.map((template) => (
-        <div
-          className={template}
-          key={Math.random()}
-          onClick={onTemplateClicked(template)}
-        >
-          <img src={template.path} alt="" />
+        <div className="templateContainer">
+          <div
+            className={template}
+            key={Math.random()}
+            onClick={onTemplateClicked(template)}
+          >
+            <img src={template.path} alt="" />
+          </div>
         </div>
       ))}
     </section>

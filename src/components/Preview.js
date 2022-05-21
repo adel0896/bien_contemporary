@@ -2,7 +2,7 @@ import React from "react";
 import Template from "./Template";
 import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
-import File from "./File";
+// import File from "./File";
 
 export default function Preview(props) {
   async function captureJPG() {
@@ -27,7 +27,18 @@ export default function Preview(props) {
   return (
     <>
       <div className="Preview">
-        <Template title={props.state.title} date={props.state.date} location={props.state.location} time={props.state.time} color={props.state.color} logo={props.state.logo} image={props.state.image} imagenew={props.state.file}></Template>
+        <Template
+          title={props.state.title}
+          date={props.state.date}
+          location={props.state.location}
+          time={props.state.time}
+          color={props.state.color}
+          logo={props.state.logo}
+          image={props.state.image}
+          imagenew={props.state.file}
+          format={props.format}
+          template={props.template}
+        ></Template>
 
         <div className="appendhere"></div>
       </div>

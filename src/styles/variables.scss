@@ -1,0 +1,40 @@
+// FONTS
+// @font-face {
+//     font-family: "barlow-light";
+//     src: url("/assets/BarlowCondensed-Light.woff") format("woff");
+//     font-weight: normal;
+//     font-style: normal;
+//   }
+@font-face {
+  font-family: "ChicaGogoNFW01-Regular";
+  src: url("../components/assets/fonts/ChicaGogoNFW01Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("../components/assets/fonts/Montserrat-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("../components/assets/fonts/Montserrat-Medium.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --heading-font: "ChicaGogoNFW01-Regular";
+  --regular-font: "Montserrat Regular";
+  --medium-font: "Montserrat Medium";
+  --background-color: #fdfbf8;
+  --light-green: #e9efed;
+  --light-grey: #c3c1c4;
+  --pink: #cc9e87;
+  --green: #839388;
+  --dark-red: #490f19;
+  --grey: #6c6c6e;
+  --black: black;
+  --white: white;
+}
