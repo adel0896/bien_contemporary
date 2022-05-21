@@ -6,8 +6,8 @@ import Date from "./Date";
 import Time from "./Time";
 import Location from "./Location";
 import Logo from "./Logo";
-import File from "./File";
 import Image from "./Image";
+import File from "./File";
 
 export default class Customizer extends Component {
   constructor(props) {
