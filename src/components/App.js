@@ -42,6 +42,7 @@ export default class App extends Component {
               <Format
                 onFormatChange={this.handleFormatChange}
                 name="format"
+                defaultFormat={this.state.format}
               ></Format>
             </div>
             <div className="TemplateSection">

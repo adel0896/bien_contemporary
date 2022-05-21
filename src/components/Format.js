@@ -40,7 +40,7 @@ export default function Format(props) {
   return (
     <FormatSelect>
       <DropDownHeader onClick={toggling}>
-        {selectedFormat || "Select a format"} v
+        {selectedFormat || props.defaultFormat} v
       </DropDownHeader>
       <DropDownContainer>
         <DropDownListContainer>

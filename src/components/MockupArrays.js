@@ -1,4 +1,3 @@
-import React from "react";
 import AbstractStoryPath from "./assets/Abstract-story.jpg";
 import AbstractPostPath from "./assets/Abstract-post.jpg";
 import AbstractBannerPath from "./assets/Abstract-banner.jpg";

@@ -21,13 +21,6 @@ export const images = [Image1, Image2, Image3];
 export default function Image(props) {
   const [file, setFile] = useState();
 
-  function onFileAdded(e) {
-    setFile(URL.createObjectURL(e.target.files[0]));
-    const selectedFile = e.target.files[0].name;
-    console.log(selectedFile);
-    props.onImageUpload(selectedFile);
-  }
-
   const [selectedImage, setSelectedImage] = useState(null);
   const onImageClicked = (path, imageOption) => () => {
     props.onImageChange(imageOption);
@@ -36,7 +29,12 @@ export default function Image(props) {
   return (
     <div className="imageSelect">
       {images.map((image) => (
-        <div onClick={onImageClicked(image.path, image.imageOption)} key={Math.random()} value={props.value} name="image">
+        <div
+          onClick={onImageClicked(image.path, image.imageOption)}
+          key={Math.random()}
+          value={props.value}
+          name="image"
+        >
           <img src={image.path} alt="" />
         </div>
       ))}
