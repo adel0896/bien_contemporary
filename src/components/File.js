@@ -1,17 +1,18 @@
 import React from "react";
-import { useState } from "react";
-export default function File() {
-  const [file, setFile] = useState();
-  function handleChange(e) {
-    console.log(e.target.files);
-    setFile(URL.createObjectURL(e.target.files[0]));
+import { Component } from "react";
+export default class File extends Component {
+  constructor(props) {
+    super(props);
   }
 
-  return (
-    <div className="App">
-      <h2>Add Image:</h2>
-      <input type="file" onChange={handleChange} />
-      <img src={file} />
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <h2>Add Image:</h2>
+        <input type="file" onChange={this.props.handleChange} name="file" />
+        {/* in case we want a little image to appear when we upload */}
+        {/* <img src={this.props.state.file} /> */}
+      </div>
+    );
+  }
 }

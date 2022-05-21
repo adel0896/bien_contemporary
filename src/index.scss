@@ -5,6 +5,12 @@
 .Preview {
   width: 50%;
 }
+.hidden {
+  display: none;
+}
+// .templateContainer img {
+//   display: none;
+// }
 .lightGreen {
   background-color: #e9efed;
 }
@@ -19,4 +25,19 @@
 }
 .grey {
   background-color: #6c6c6e;
+}
+.logo {
+  // background-image: url("/components/logos_svg/logo-black.svg");
+  height: 3rem;
+  width: 5rem;
+  background-repeat: no-repeat;
+}
+.imageSelect {
+  display: flex;
+
+  * {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 0.5rem;
+  }
 }
