@@ -1,12 +1,25 @@
-@use "./styles/variables.scss";
+@use "./styles/variables";
 @use "./styles/templateFormatScreen";
+@use "./styles/templates/abstract";
+@use "./styles/templates/croquis";
+@use "./styles/templates/exhibit";
+@use "./styles/templates/outdoor";
 .Editor {
   border: solid red 1px;
   background-color: #fdfbf8;
 }
 .Preview {
-  width: 50%;
+  width: 100%;
 }
+.templateContainer {
+  // width: 100%;
+  width: 1080px;
+  height: 1920px;
+}
+// .story-size {
+//   width: 1080px;
+//   height: 1920px;
+// }
 .hidden {
   display: none;
 }
@@ -50,3 +63,7 @@
 .hidden {
   display: none;
 }
+// .appendhere canvas {
+//   width: 90px !important;
+//   height: 90px !important;
+// }

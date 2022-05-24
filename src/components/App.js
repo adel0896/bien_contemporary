@@ -27,10 +27,15 @@ export default class App extends Component {
     }));
   };
   hideFirstScreen = (e) => {
-    console.log("wasap");
     this.setState(() => ({
       show: false,
     }));
+  };
+  goBack = (e) => {
+    this.setState(() => ({
+      show: true,
+    }));
+    // console.log(this.props.appState.show);
   };
   render() {
     const show = this.state.show;
@@ -58,7 +63,7 @@ export default class App extends Component {
     else
       return (
         <section className="EditorScreen">
-          <Editor appState={this.state}></Editor>
+          <Editor appState={this.state} goBack={this.goBack}></Editor>
         </section>
       );
   }

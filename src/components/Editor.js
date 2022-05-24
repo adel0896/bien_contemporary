@@ -64,6 +64,7 @@ export default class Editor extends Component {
 
     return (
       <section className="Screen">
+        <button onClick={this.props.goBack}>BACK</button>
         <Customizer
           onInputChange={this.handleInputChange}
           onColorChange={this.handleColorChange}

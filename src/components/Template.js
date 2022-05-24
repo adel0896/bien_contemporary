@@ -1,7 +1,9 @@
 import React from "react";
-
 import { logoColors } from "./Logo";
 import { images } from "./Image";
+import defaultImage from "./assets/abstract.jpg";
+import downloadjs from "downloadjs";
+import html2canvas from "html2canvas";
 
 export default function Template(props) {
   if (props.color !== "black") {
@@ -23,19 +25,48 @@ export default function Template(props) {
     document.querySelector(".image img").src = newImage;
   }
 
-  return (
-    <div className={`${props.template}-${props.format} templateContainer`}>
-      <h1>TITLE IS{props.title}</h1>
-      <h1>DATE IS{props.date}</h1>
-      <h1>Location is {props.location}</h1>
-      <h1>Time is {props.time}</h1>
+  // downloading the template
 
-      <div className="logo">
-        <img src={logoColors[5].path} alt="" />
+  async function captureJPG() {
+    const image = document.querySelector(".templateContainer");
+    html2canvas(image).then(function (canvas) {
+      document.querySelector(".appendhere").appendChild(canvas);
+    });
+    const canvas = await html2canvas(image);
+    const dataURL = canvas.toDataURL("image/jpeg");
+    downloadjs(dataURL, `download.png`, "image/jpeg");
+  }
+
+  async function capturePNG() {
+    const image = document.querySelector(".templateContainer");
+    html2canvas(image).then(function (canvas) {
+      // image.classList.add("story-size");
+      document.querySelector(".appendhere").appendChild(canvas);
+    });
+    const canvas = await html2canvas(image);
+    const dataURL = canvas.toDataURL("image/png");
+    downloadjs(dataURL, `download.png`, "image/png");
+  }
+
+  return (
+    <>
+      <div className={`${props.template}-${props.format} templateContainer`}>
+        <h1>TITLE IS{props.title}</h1>
+        <h1>DATE IS{props.date}</h1>
+        <h1>Location is {props.location}</h1>
+        <h1>Time is {props.time}</h1>
+
+        <div className="logo">
+          <img src={logoColors[5].path} alt="" />
+        </div>
+        <div className="image">
+          <img src={defaultImage} alt="" />
+        </div>
       </div>
-      <div className="image">
-        <img src="" alt="" />
-      </div>
-    </div>
+      <div className="appendhere"></div>
+
+      <button onClick={captureJPG}>CaptureJPG</button>
+      <button onClick={capturePNG}>CapturePNG</button>
+    </>
   );
 }
