@@ -16,7 +16,7 @@ export default function Mockups(props) {
     <section className="templateOptions">
       {arrayToMap.map((template) => (
         <div key={Math.random()}>
-          <div className="templateContainer">
+          <div className="templateMockupContainer">
             <div
               className={`${props.format}Mockup`}
               onClick={onTemplateClicked(template)}

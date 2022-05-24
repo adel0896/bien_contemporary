@@ -4,6 +4,7 @@
 @use "./styles/templates/croquis";
 @use "./styles/templates/exhibit";
 @use "./styles/templates/outdoor";
+@use "./styles/editor";
 .Editor {
   border: solid red 1px;
   background-color: #fdfbf8;
@@ -12,9 +13,9 @@
   width: 100%;
 }
 .templateContainer {
-  // width: 100%;
-  width: 1080px;
-  height: 1920px;
+  width: 100%;
+  // width: 1080px;
+  // height: 1920px;
 }
 // .story-size {
 //   width: 1080px;

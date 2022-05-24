@@ -1,0 +1,53 @@
+@use "../styles/variables";
+.EditorScreen {
+  background-color: var(--background-color);
+  .EditorMain {
+    display: flex;
+    justify-content: space-evenly;
+    .Customizer {
+      border: solid red 1px;
+      //   display: grid;
+      //   grid-template-columns: 1fr 1fr 1fr 1fr;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      .customizerInput {
+        label {
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+        }
+      }
+      .DateTimeRow {
+        display: flex;
+        column-gap: 1rem;
+      }
+    }
+    .Preview {
+      height: 100vh;
+      background-color: var(--white);
+      display: grid;
+      grid-template-columns: 1.6fr 0.4fr;
+      .templateContainer {
+        grid-column: 1/2;
+        display: grid;
+        .image {
+          grid-row: 1/9;
+          grid-column: 1/2;
+        }
+        .TemplateText {
+          grid-row: 1/9;
+          grid-column: 1/2;
+
+          z-index: 99;
+        }
+      }
+      .appendhere {
+        position: absolute;
+      }
+      .ExportButtons {
+        grid-column: 2/3;
+      }
+    }
+  }
+}

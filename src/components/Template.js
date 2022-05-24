@@ -51,22 +51,25 @@ export default function Template(props) {
   return (
     <>
       <div className={`${props.template}-${props.format} templateContainer`}>
-        <h1>TITLE IS{props.title}</h1>
-        <h1>DATE IS{props.date}</h1>
-        <h1>Location is {props.location}</h1>
-        <h1>Time is {props.time}</h1>
+        <div className="TemplateText">
+          <h1>TITLE IS{props.title}</h1>
+          <h1>DATE IS{props.date}</h1>
+          <h1>Location is {props.location}</h1>
+          <h1>Time is {props.time}</h1>
 
-        <div className="logo">
-          <img src={logoColors[5].path} alt="" />
+          <div className="logo">
+            <img src={logoColors[5].path} alt="" />
+          </div>
         </div>
         <div className="image">
           <img src={defaultImage} alt="" />
         </div>
       </div>
       <div className="appendhere"></div>
-
-      <button onClick={captureJPG}>CaptureJPG</button>
-      <button onClick={capturePNG}>CapturePNG</button>
+      <div className="ExportButtons">
+        <button onClick={captureJPG}>CaptureJPG</button>
+        <button onClick={capturePNG}>CapturePNG</button>
+      </div>
     </>
   );
 }

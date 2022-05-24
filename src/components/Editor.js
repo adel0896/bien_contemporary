@@ -64,20 +64,24 @@ export default class Editor extends Component {
 
     return (
       <section className="Screen">
-        <button onClick={this.props.goBack}>BACK</button>
-        <Customizer
-          onInputChange={this.handleInputChange}
-          onColorChange={this.handleColorChange}
-          onLogoChange={this.handleLogoChange}
-          onImageChange={this.handleImageChange}
-          onImageUpload={this.handleImageUpload}
-          state={this.state}
-        ></Customizer>
-        <Preview
-          state={this.state}
-          format={format}
-          template={template}
-        ></Preview>
+        <div className="EditorHeader">
+          <button onClick={this.props.goBack}>BACK</button>
+        </div>
+        <section className="EditorMain">
+          <Customizer
+            onInputChange={this.handleInputChange}
+            onColorChange={this.handleColorChange}
+            onLogoChange={this.handleLogoChange}
+            onImageChange={this.handleImageChange}
+            onImageUpload={this.handleImageUpload}
+            state={this.state}
+          ></Customizer>
+          <Preview
+            state={this.state}
+            format={format}
+            template={template}
+          ></Preview>
+        </section>
       </section>
     );
   }
