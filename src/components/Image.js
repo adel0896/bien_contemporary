@@ -28,7 +28,7 @@ export default function Image(props) {
   };
   return (
     <div className="imageSelectContainer">
-      <p>Picture</p>
+      <p className="inputLabel">Picture</p>
       <div className="imageSelect">
         {images.map((image) => (
           <div

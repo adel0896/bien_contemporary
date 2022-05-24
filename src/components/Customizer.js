@@ -29,23 +29,29 @@ export default class Customizer extends Component {
           name="color"
           value={this.props.value}
         ></Color>
+        <Logo
+          onLogoChange={this.props.onLogoChange}
+          name="logo"
+          value={this.props.value}
+        ></Logo>
         <Title
           onInputChange={this.props.onInputChange}
           name="title"
           value={this.props.value}
         ></Title>
-        <div className="DateTimeRow">
-          <Date
-            onInputChange={this.props.onInputChange}
-            name="date"
-            value={this.props.value}
-          ></Date>
-          <Time
-            onInputChange={this.props.onInputChange}
-            name="time"
-            value={this.props.value}
-          ></Time>
-        </div>
+        {/* <div className="DateTimeRow"> */}
+        <Date
+          onInputChange={this.props.onInputChange}
+          name="date"
+          value={this.props.value}
+        ></Date>
+        <Time
+          onInputChange={this.props.onInputChange}
+          name="time"
+          value={this.props.value}
+        ></Time>
+
+        {/* </div> */}
         <Location
           onInputChange={this.props.onInputChange}
           name="location"
@@ -57,11 +63,7 @@ export default class Customizer extends Component {
           name="image"
           value={this.props.value}
         ></Image>
-        <Logo
-          onLogoChange={this.props.onLogoChange}
-          name="logo"
-          value={this.props.value}
-        ></Logo>
+
         <File
           handleChange={this.props.onImageUpload}
           state={this.props.state}

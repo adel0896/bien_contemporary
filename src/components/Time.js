@@ -3,7 +3,7 @@ import React from "react";
 export default function Time(props) {
   return (
     <div className="Time customizerInput">
-      <label>
+      <label className="inputLabel">
         Time
         <input
           type="text"

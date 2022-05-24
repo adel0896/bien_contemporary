@@ -8,38 +8,44 @@ import grey from "./logos_svg/logo-grey.svg";
 import black from "./logos_svg/logo-black.svg";
 import white from "./logos_svg/logo-white.svg";
 import outline from "./logos_svg/logo-outline.svg";
+import ArrowDown from "./assets/arrow-down.png";
 
-const ColorSelect = styledComponents("div")`
-width:9rem;
-display:grid;
-grid-template-columns: 1.4fr 1fr 0.6fr;
-background-color:#FDFBF8;
-.selectColor{
-  grid-column: 1/2;
-  grid-row:1/2;
-}
+const LogoSelect = styledComponents("div")`
+// width:9rem;
+// display:grid;
+position:relative;
+// background-color:var(--background-color);
+// .selectColor{
+//   grid-column: 1/2;
+//   grid-row:1/2;
+// }
 
 `;
-const Arrow = styledComponents("p")`
-cursor:pointer;
+const Arrow = styledComponents("div")`
+// cursor:pointer;
 // grid-column: 3/4;
 // grid-row: 1/2;
 `;
 const DropDownContainer = styledComponents("div")`
-// grid-column: 2/3;
-// grid-row:1/2;`;
+position:absolute;
+// border: solid var(--light-grey) 1px;
+background-color:var(--background-color);
+`;
 const DropDownHeader = styledComponents("div")`
 margin: auto 0;
 width:50px;
 height:50px;
-grid-column: 2/3;
-grid-row:1/2;
+align-items:center;
+display:flex;
+// grid-column: 2/3;
+// grid-row:1/2;
 
 `;
 const DropDownListContainer = styledComponents("div")``;
 const DropDownList = styledComponents("ul")`
-background-color:#FDFBF8;
-padding:0;
+padding:0 1rem;
+
+
 `;
 const ListItem = styledComponents("li")`
   list-style:none;
@@ -106,12 +112,16 @@ export default function Logo(props) {
 
   return (
     <div className="Logo">
-      <ColorSelect>
-        <p className="setLogoColor">Logo appearance</p>
-        <DropDownHeader>
-          <img src={selectedLogo || black} alt="selected_logo" />
-          <Arrow onClick={toggling}>v</Arrow>
-        </DropDownHeader>
+      <LogoSelect>
+        <p className="setLogoColor inputLabel">Logo appearance</p>
+        <div class="headerArrow">
+          <DropDownHeader>
+            <img src={selectedLogo || black} alt="selected_logo" />
+          </DropDownHeader>
+          <Arrow onClick={toggling}>
+            <img src={ArrowDown} alt="arrow-down" />
+          </Arrow>
+        </div>
         <DropDownContainer>
           <DropDownListContainer>
             {isOpen && (
@@ -130,7 +140,7 @@ export default function Logo(props) {
             )}
           </DropDownListContainer>
         </DropDownContainer>
-      </ColorSelect>
+      </LogoSelect>
     </div>
   );
 }
