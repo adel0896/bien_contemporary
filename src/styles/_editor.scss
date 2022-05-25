@@ -4,6 +4,12 @@
   height: 100vh;
   .EditorHeader {
     height: 10vh;
+    button {
+      background-color: transparent;
+      border: none;
+      margin: 2vw;
+      cursor: pointer;
+    }
   }
   .EditorMain {
     display: grid;
@@ -12,8 +18,7 @@
     height: 90vh;
     .Customizer {
       font-family: var(--regular-font);
-      padding: 1rem;
-      border: solid red 1px;
+      padding: 0 0 5vh 5vh;
       grid-column: 1/2;
       display: grid;
       height: 80vh;
@@ -44,8 +49,7 @@
         align-items: center;
         justify-content: space-between;
       }
-      .imageSelectContainer {
-      }
+
       .File {
         align-self: flex-end;
         margin-bottom: 2vw;
@@ -73,6 +77,9 @@
       }
       .Logo {
         grid-column: 1/4;
+        .inputLabel {
+          margin: 0.5vw 0;
+        }
         .headerArrow {
           display: flex;
           column-gap: 2rem;
@@ -146,4 +153,35 @@
       }
     }
   }
+}
+
+//CORNER BORDERS FOR CUSTOMIZER AND PREVIEW
+
+.Customizer,
+.Preview {
+  position: relative;
+}
+.Customizer:after,
+.Customizer > :first-child:after,
+.Preview:after,
+.Preview > :first-child:after {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: solid var(--grey);
+  content: " ";
+}
+
+.Customizer:after,
+.Preview:after {
+  top: 0;
+  right: 0;
+  border-width: 2px 2px 0 0;
+}
+
+.Customizer > :first-child:after,
+.Preview > :first-child:after {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 2px 2px;
 }

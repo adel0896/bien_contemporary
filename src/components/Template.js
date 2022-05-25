@@ -60,9 +60,9 @@ export default function Template(props) {
             </h1>{" "}
             <h1 className={`${props.template}Date`}>{props.date}</h1>
             <h1 className={`${props.template}Time`}>{props.time}</h1>
-            <div className="logo">
-              <img src={logoColors[5].path} alt="" />
-            </div>
+          </div>
+          <div className="logo">
+            <img src={logoColors[5].path} alt="" />
           </div>
           <div className="image">
             <img src={defaultImage} alt="" />
