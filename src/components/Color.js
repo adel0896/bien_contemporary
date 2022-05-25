@@ -74,31 +74,33 @@ export default function Color(props) {
   };
 
   return (
-    <ColorSelect>
-      <p className="selectColor">Color</p>
-      <DropDownHeader
-        className={selectedOption || "lightGreen"}
-      ></DropDownHeader>
+    <div className="Color">
+      <ColorSelect>
+        <p className="selectColor">Color</p>
+        <DropDownHeader
+          className={selectedOption || "lightGreen"}
+        ></DropDownHeader>
 
-      <DropDownContainer>
-        <DropDownListContainer>
-          {isOpen && (
-            <DropDownList className="colorDropDownList">
-              {options.map((option) => (
-                <ListItem
-                  onClick={onOptionClicked(option.hex, option.name)}
-                  key={Math.random()}
-                  className={option.name}
-                  data-color={option.name}
-                  value={props.value}
-                  name="color"
-                ></ListItem>
-              ))}
-            </DropDownList>
-          )}
-        </DropDownListContainer>
-      </DropDownContainer>
-      <Arrow onClick={toggling}>v</Arrow>
-    </ColorSelect>
+        <DropDownContainer>
+          <DropDownListContainer>
+            {isOpen && (
+              <DropDownList className="colorDropDownList">
+                {options.map((option) => (
+                  <ListItem
+                    onClick={onOptionClicked(option.hex, option.name)}
+                    key={Math.random()}
+                    className={option.name}
+                    data-color={option.name}
+                    value={props.value}
+                    name="color"
+                  ></ListItem>
+                ))}
+              </DropDownList>
+            )}
+          </DropDownListContainer>
+        </DropDownContainer>
+        <Arrow onClick={toggling}>v</Arrow>
+      </ColorSelect>
+    </div>
   );
 }

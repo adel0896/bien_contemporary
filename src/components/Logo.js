@@ -22,12 +22,12 @@ background-color:#FDFBF8;
 `;
 const Arrow = styledComponents("p")`
 cursor:pointer;
-grid-column: 3/4;
-grid-row: 1/2;
+// grid-column: 3/4;
+// grid-row: 1/2;
 `;
 const DropDownContainer = styledComponents("div")`
-grid-column: 2/3;
-grid-row:1/2;`;
+// grid-column: 2/3;
+// grid-row:1/2;`;
 const DropDownHeader = styledComponents("div")`
 margin: auto 0;
 width:50px;
@@ -105,30 +105,32 @@ export default function Logo(props) {
   };
 
   return (
-    <ColorSelect>
-      <p className="setLogoColor">Logo appearance</p>
-      <DropDownHeader>
-        <img src={selectedLogo || black} alt="selected_logo" />
-      </DropDownHeader>
-      <DropDownContainer>
-        <DropDownListContainer>
-          {isOpen && (
-            <DropDownList className="colorDropDownList">
-              {logoColors.map((option) => (
-                <ListItem
-                  onClick={onLogoClicked(option.path, option.logoColor)}
-                  key={Math.random()}
-                  value={props.value}
-                  name="logo"
-                >
-                  <img src={option.path} alt="logo_option" />
-                </ListItem>
-              ))}
-            </DropDownList>
-          )}
-        </DropDownListContainer>
-      </DropDownContainer>
-      <Arrow onClick={toggling}>v</Arrow>
-    </ColorSelect>
+    <div className="Logo">
+      <ColorSelect>
+        <p className="setLogoColor">Logo appearance</p>
+        <DropDownHeader>
+          <img src={selectedLogo || black} alt="selected_logo" />
+          <Arrow onClick={toggling}>v</Arrow>
+        </DropDownHeader>
+        <DropDownContainer>
+          <DropDownListContainer>
+            {isOpen && (
+              <DropDownList className="colorDropDownList">
+                {logoColors.map((option) => (
+                  <ListItem
+                    onClick={onLogoClicked(option.path, option.logoColor)}
+                    key={Math.random()}
+                    value={props.value}
+                    name="logo"
+                  >
+                    <img src={option.path} alt="logo_option" />
+                  </ListItem>
+                ))}
+              </DropDownList>
+            )}
+          </DropDownListContainer>
+        </DropDownContainer>
+      </ColorSelect>
+    </div>
   );
 }

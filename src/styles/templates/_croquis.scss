@@ -1,5 +1,36 @@
 .croquis-story {
+  width: 45vw;
+  max-width: 80vh;
+  height: 80vw;
+  max-height: 142.24vh;
+  background-color: white;
+
+  .TemplateText {
+    width: 45vw;
+    max-width: 80vh;
+  }
+
+  .image {
+    position: inherit;
+    z-index: 2;
+    width: 45vw;
+    max-width: 80vh;
+    height: 80vw;
+    max-height: 142.24vh;
+    // position: relative;
+    // z-index: -10;
+
+    img {
+      width: 16.875vw;
+      max-width: 30vh;
+      height: 80vw;
+      max-height: 142.24vh;
+      position: relative;
+      z-index: -11;
+    }
+  }
 }
+
 .croquis-post {
 }
 .croquis-baner {

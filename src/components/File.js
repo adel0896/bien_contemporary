@@ -7,7 +7,7 @@ export default class File extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="File ">
         <h2>Add Image:</h2>
         <input type="file" onChange={this.props.handleChange} name="file" />
         {/* in case we want a little image to appear when we upload */}

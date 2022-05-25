@@ -48,8 +48,8 @@ export default function Mockups(props) {
   return (
     <section className="templateOptions">
       {arrayToMap.map((template) => (
-        <div className="mockupTemplate" key={Math.random()}>
-          <div className="templateContainer">
+        <div key={Math.random()}>
+          <div className="templateMockupContainer">
             <div className={`${props.format}Mockup`} onClick={onTemplateClicked(template)}>
               <img src={template.path} alt="" />
             </div>

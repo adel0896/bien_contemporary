@@ -34,16 +34,18 @@ export default class Customizer extends Component {
           name="title"
           value={this.props.value}
         ></Title>
-        <Date
-          onInputChange={this.props.onInputChange}
-          name="date"
-          value={this.props.value}
-        ></Date>
-        <Time
-          onInputChange={this.props.onInputChange}
-          name="time"
-          value={this.props.value}
-        ></Time>
+        <div className="DateTimeRow">
+          <Date
+            onInputChange={this.props.onInputChange}
+            name="date"
+            value={this.props.value}
+          ></Date>
+          <Time
+            onInputChange={this.props.onInputChange}
+            name="time"
+            value={this.props.value}
+          ></Time>
+        </div>
         <Location
           onInputChange={this.props.onInputChange}
           name="location"

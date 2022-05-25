@@ -27,17 +27,20 @@ export default function Image(props) {
     setSelectedImage(path);
   };
   return (
-    <div className="imageSelect">
-      {images.map((image) => (
-        <div
-          onClick={onImageClicked(image.path, image.imageOption)}
-          key={Math.random()}
-          value={props.value}
-          name="image"
-        >
-          <img src={image.path} alt="" />
-        </div>
-      ))}
+    <div className="imageSelectContainer">
+      <p>Picture</p>
+      <div className="imageSelect">
+        {images.map((image) => (
+          <div
+            onClick={onImageClicked(image.path, image.imageOption)}
+            key={Math.random()}
+            value={props.value}
+            name="image"
+          >
+            <img src={image.path} alt="" />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
