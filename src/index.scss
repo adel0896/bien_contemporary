@@ -44,9 +44,12 @@
 .white {
   background-color: white;
 }
+.darkred {
+  background-color: var(--dark-red);
+}
 .logo {
-  height: 3rem;
-  width: 5rem;
+  height: 3vw;
+  width: 5vw;
   background-repeat: no-repeat;
 }
 .imageSelect {

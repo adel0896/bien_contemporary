@@ -21,6 +21,7 @@ export default class App extends Component {
   };
   handleTemplateChange = (e) => {
     const template = e;
+
     const name = "template";
     this.setState(() => ({
       [name]: template,
@@ -34,8 +35,9 @@ export default class App extends Component {
   goBack = (e) => {
     this.setState(() => ({
       show: true,
+      format: "post",
+      template: "abstract",
     }));
-    // console.log(this.props.appState.show);
   };
   render() {
     const show = this.state.show;
@@ -44,17 +46,11 @@ export default class App extends Component {
         <>
           <section className="FormatTemplate">
             <div className="FormatSection">
-              <Format
-                onFormatChange={this.handleFormatChange}
-                name="format"
-                defaultFormat={this.state.format}
-              ></Format>
+              <Format onFormatChange={this.handleFormatChange} name="format" defaultFormat={this.state.format}></Format>
             </div>
             <div className="TemplateSection">
-              <Mockups
-                format={this.state.format}
-                onTemplateChange={this.handleTemplateChange}
-              ></Mockups>
+              <label className="labelTemp">Select the template:</label>
+              <Mockups format={this.state.format} onTemplateChange={this.handleTemplateChange} template={this.state.template}></Mockups>
             </div>
             <button onClick={this.hideFirstScreen}>NEXT</button>
           </section>

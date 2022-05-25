@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Customizer from "./Customizer";
 import Preview from "./Preview";
+import ArrowBack from "./assets/arrow-back.png";
 
 export default class Editor extends Component {
   constructor(props) {
@@ -65,7 +66,9 @@ export default class Editor extends Component {
     return (
       <section className="Screen">
         <div className="EditorHeader">
-          <button onClick={this.props.goBack}>BACK</button>
+          <button onClick={this.props.goBack}>
+            <img src={ArrowBack} alt="arrow-back" />
+          </button>
         </div>
         <section className="EditorMain">
           <Customizer

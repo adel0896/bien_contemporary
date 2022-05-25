@@ -71,7 +71,20 @@ const white = {
   name: "white",
   hex: "#FFFFFF",
 };
-const options = [lightGreen, lightGrey, pink, green, grey, black, white];
+const darkRed = {
+  name: "darkred",
+  hex: "#490f19",
+};
+const options = [
+  lightGreen,
+  lightGrey,
+  pink,
+  green,
+  grey,
+  black,
+  white,
+  darkRed,
+];
 
 export default function Color(props) {
   const [isOpen, setIsOpen] = useState(false);

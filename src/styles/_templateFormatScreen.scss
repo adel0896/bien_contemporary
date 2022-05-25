@@ -5,14 +5,28 @@
   margin: 0;
   position: absolute;
   z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .FormatSection {
     padding: 1rem 0;
     height: 17%;
     border-bottom: solid black 2px;
     font-family: var(--medium-font);
+    width: 70%;
   }
   .TemplateSection {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    label {
+      align-self: center;
+      font-size: 1rem;
+      font-family: var(--medium-font);
+      padding-bottom: 0.5rem;
+    }
     .templateOptions {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -25,7 +39,7 @@
       }
 
       div {
-        width: 30rem;
+        width: 30vw;
         margin: auto;
         transition: all 0.2s;
         cursor: pointer;
@@ -55,5 +69,33 @@
   }
 }
 .mockupselected {
-  border: solid red;
+  box-shadow: 2px 2px 5px var(--light-grey);
+
+  border: solid var(--grey) 1.5px;
+}
+
+.headerFormat {
+  display: grid;
+  justify-items: center;
+  label {
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+  }
+
+  section {
+    div {
+      width: 20vw;
+      background-color: #fdfbf8;
+      position: relative;
+    }
+    li {
+      padding: 1rem;
+    }
+  }
+
+  .logo {
+    justify-self: center;
+    width: 10rem;
+    height: auto;
+  }
 }
