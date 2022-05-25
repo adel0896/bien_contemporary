@@ -90,13 +90,17 @@
       }
     }
     .Preview {
-      height: 90vh;
+      height: 85vh;
       grid-column: 2/3;
       background-color: var(--white);
       display: grid;
       grid-template-columns: 1.6fr 0.4fr;
       .templatContainerGrid {
-        margin: 10vw;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        border: solid;
+        // margin: 2vw;
       }
       .templateContainer {
         grid-column: 1/3;
