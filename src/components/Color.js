@@ -1,34 +1,37 @@
 import React, { useState } from "react";
 import styledComponents from "styled-components";
+import ArrowDown from "./assets/arrow-down.png";
 
 const ColorSelect = styledComponents("div")`
 width:7rem;
-display:grid;
+// display:grid;
 z-index:99;
 position:relative;
-grid-template-columns: 1.4fr 1fr 0.6fr;
+// grid-template-columns: 1.4fr 1fr 0.6fr;
 background-color:#FDFBF8;
-.selectColor{
-  grid-column: 1/2;
-  grid-row:1/2;
-}
+// .selectColor{
+//   grid-column: 1/2;
+//   grid-row:1/2;
+// }
 
 `;
-const Arrow = styledComponents("p")`
-cursor:pointer;
-grid-column: 3/4;
-grid-row: 1/2;
+const Arrow = styledComponents("div")`
+// cursor:pointer;
+// grid-column: 3/4;
+// grid-row: 1/2;
 `;
 const DropDownContainer = styledComponents("div")`
-grid-column: 2/3;
-grid-row:1/2;
+// grid-column: 2/3;
+// grid-row:1/2;
 position:absolute`;
 const DropDownHeader = styledComponents("div")`
 margin: auto 0;
 width:30px;
 height:30px;
-grid-column: 2/3;
-grid-row:1/2;
+align-items:center;
+display:flex;
+// grid-column: 2/3;
+// grid-row:1/2;
 
 `;
 const DropDownListContainer = styledComponents("div")``;
@@ -78,10 +81,14 @@ export default function Color(props) {
     <div className="Color">
       <ColorSelect>
         <p className="selectColor inputLabel">Color</p>
-        <DropDownHeader
-          className={selectedOption || "lightGreen"}
-        ></DropDownHeader>
-
+        <div class="headerArrow">
+          <DropDownHeader
+            className={selectedOption || "lightGreen"}
+          ></DropDownHeader>
+          <Arrow onClick={toggling}>
+            <img src={ArrowDown} alt="arrow-down" />
+          </Arrow>
+        </div>
         <DropDownContainer>
           <DropDownListContainer>
             {isOpen && (
@@ -100,7 +107,6 @@ export default function Color(props) {
             )}
           </DropDownListContainer>
         </DropDownContainer>
-        <Arrow onClick={toggling}>v</Arrow>
       </ColorSelect>
     </div>
   );

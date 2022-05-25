@@ -20,6 +20,11 @@
       grid-template-columns: 8vw 8vw 8vw 8vw;
       .Color {
         grid-column: 1/2;
+        .headerArrow {
+          display: flex;
+          column-gap: 2rem;
+          align-items: center;
+        }
       }
       .Title {
         grid-column: 1/4;
@@ -76,7 +81,7 @@
 
       .customizerInput {
         input {
-          height: 1.5rem;
+          height: 3vw;
           background-color: transparent;
           border: solid var(--grey) 1px;
         }
