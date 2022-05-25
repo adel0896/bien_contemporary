@@ -1,6 +1,7 @@
 @use "../styles/variables";
 .EditorScreen {
   background-color: var(--background-color);
+  height: 100vh;
   .EditorHeader {
     height: 10vh;
   }
@@ -8,12 +9,14 @@
     display: grid;
     padding: 0 5rem;
     grid-template-columns: 32vw 1fr;
+    height: 90vh;
     .Customizer {
       font-family: var(--regular-font);
       padding: 1rem;
       border: solid red 1px;
       grid-column: 1/2;
       display: grid;
+      height: 80vh;
       grid-template-columns: 8vw 8vw 8vw 8vw;
       .Color {
         grid-column: 1/2;
