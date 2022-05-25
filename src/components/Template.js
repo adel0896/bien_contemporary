@@ -29,6 +29,12 @@ export default function Template(props) {
     const image = document.querySelector(".templateContainer");
     html2canvas(image).then(function (canvas) {
       document.querySelector(".appendhere").appendChild(canvas);
+      document.querySelector(".appendhere").classList.remove("hidden");
+      document.querySelector("body").style.overflow = "hidden";
+      setInterval(function () {
+        document.querySelector(".appendhere").removeChild(canvas);
+        document.querySelector(".appendhere").classList.add("hidden");
+      }, 3000);
     });
     const canvas = await html2canvas(image);
     const dataURL = canvas.toDataURL("image/jpeg");
@@ -38,9 +44,16 @@ export default function Template(props) {
   async function capturePNG() {
     const image = document.querySelector(".templateContainer");
     html2canvas(image).then(function (canvas) {
-      // image.classList.add("story-size");
       document.querySelector(".appendhere").appendChild(canvas);
+      document.querySelector(".appendhere").classList.remove("hidden");
+      document.querySelector("body").style.overflow = "hidden";
+
+      setInterval(function () {
+        document.querySelector(".appendhere").removeChild(canvas);
+        document.querySelector(".appendhere").classList.add("hidden");
+      }, 3000);
     });
+
     const canvas = await html2canvas(image);
     const dataURL = canvas.toDataURL("image/png");
     downloadjs(dataURL, `download.png`, "image/png");
@@ -49,16 +62,10 @@ export default function Template(props) {
   return (
     <>
       <div className="templatContainerGrid">
-        <div
-          className={`${props.template}-${props.format} templateContainer ${props.format}Size`}
-          id="templateContainer"
-        >
+        <div className={`${props.template}-${props.format} templateContainer ${props.format}Size`} id="templateContainer">
           <div className="TemplateText">
             <h1 className={`${props.template}Title `}>{props.title}</h1>
-            <h1 className={`${props.template}Location`}>
-              {props.location}
-            </h1>{" "}
-            <h1 className={`${props.template}Date`}>{props.date}</h1>
+            <h1 className={`${props.template}Location`}>{props.location}</h1> <h1 className={`${props.template}Date`}>{props.date}</h1>
             <h1 className={`${props.template}Time`}>{props.time}</h1>
             <div className="logo">
               <img src={logoColors[5].path} alt="" />
@@ -68,9 +75,9 @@ export default function Template(props) {
             <img src={defaultImage} alt="" />
           </div>
         </div>
+        <div className="appendhere hidden"></div>
       </div>
-      <div className="appendhere"></div>
-      <div className="ExportButtons">
+      <div className="ExportButtons" id="ExportButtons">
         <button onClick={captureJPG}>CaptureJPG</button>
         <button onClick={capturePNG}>CapturePNG</button>
       </div>
