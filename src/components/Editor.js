@@ -68,6 +68,7 @@ export default class Editor extends Component {
         <div className="EditorHeader">
           <button onClick={this.props.goBack}>
             <img src={ArrowBack} alt="arrow-back" />
+            Back
           </button>
         </div>
         <section className="EditorMain">

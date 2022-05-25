@@ -4,6 +4,7 @@ import { images } from "./Image";
 import defaultImage from "./assets/abstract.jpg";
 import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
+import svgGraphic from "./assets/graphicAbstract.svg";
 
 export default function Template(props) {
   if (props.color !== "black") {
@@ -55,11 +56,14 @@ export default function Template(props) {
         >
           <div className="TemplateText">
             <h1 className={`${props.template}Title `}>{props.title}</h1>
-            <h1 className={`${props.template}Location`}>
-              {props.location}
-            </h1>{" "}
-            <h1 className={`${props.template}Date`}>{props.date}</h1>
-            <h1 className={`${props.template}Time`}>{props.time}</h1>
+            {/* <div className="graphicElAbstract">
+              <svg src={svgGraphic}></svg>
+            </div> */}
+            <div className="eventDetails">
+              <h1 className={`${props.template}Location`}>{props.location}</h1>
+              <h1 className={`${props.template}Date`}>{props.date}</h1>
+              <h1 className={`${props.template}Time`}>{props.time}</h1>
+            </div>
           </div>
           <div className="logo">
             <img src={logoColors[5].path} alt="" />
@@ -67,6 +71,9 @@ export default function Template(props) {
           <div className="image">
             <img src={defaultImage} alt="" />
           </div>
+          {/* <div className="graphicElAbstract">
+            <svg viewBox="0 0 100 100" src={svgGraphic}></svg>
+          </div> */}
         </div>
       </div>
       <div className="appendhere"></div>
