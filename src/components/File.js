@@ -1,5 +1,6 @@
 import React from "react";
 import { Component } from "react";
+import Plus from "./assets/icon-plus.png";
 export default class File extends Component {
   constructor(props) {
     super(props);
@@ -8,10 +9,16 @@ export default class File extends Component {
   render() {
     return (
       <div className="File ">
-        <h2>Add Image:</h2>
-        <input type="file" onChange={this.props.handleChange} name="file" />
-        {/* in case we want a little image to appear when we upload */}
-        {/* <img src={this.props.state.file} /> */}
+        <label htmlFor="imageInput">
+          <img src={Plus} alt="plus-icon" />
+        </label>
+        <input
+          id="imageInput"
+          className="addImageBtn"
+          type="file"
+          onChange={this.props.handleChange}
+          name="file"
+        />
       </div>
     );
   }

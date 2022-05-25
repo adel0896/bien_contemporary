@@ -5,7 +5,7 @@ const ColorSelect = styledComponents("div")`
 width:7rem;
 display:grid;
 z-index:99;
-position:absolute;
+position:relative;
 grid-template-columns: 1.4fr 1fr 0.6fr;
 background-color:#FDFBF8;
 .selectColor{
@@ -21,7 +21,8 @@ grid-row: 1/2;
 `;
 const DropDownContainer = styledComponents("div")`
 grid-column: 2/3;
-grid-row:1/2;`;
+grid-row:1/2;
+position:absolute`;
 const DropDownHeader = styledComponents("div")`
 margin: auto 0;
 width:30px;
@@ -76,7 +77,7 @@ export default function Color(props) {
   return (
     <div className="Color">
       <ColorSelect>
-        <p className="selectColor">Color</p>
+        <p className="selectColor inputLabel">Color</p>
         <DropDownHeader
           className={selectedOption || "lightGreen"}
         ></DropDownHeader>

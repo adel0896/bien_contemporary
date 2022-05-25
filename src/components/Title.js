@@ -3,7 +3,7 @@ import React from "react";
 export default function Title(props) {
   return (
     <div className="Title customizerInput">
-      <label>
+      <label className="inputLabel">
         Title
         <input
           onChange={props.onInputChange}
