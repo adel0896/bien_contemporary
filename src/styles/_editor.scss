@@ -38,14 +38,18 @@
       .Location {
         grid-column: 1/4;
       }
-      .imageSelectContainer {
+      .imageSelectorFile {
         grid-column: 1/4;
+        display: flex;
+        align-items: center;
+      }
+      .imageSelectContainer {
       }
       .File {
-        grid-column: 4/5;
-        grid-row: 6/7;
-        align-self: center;
-        justify-self: center;
+        // grid-column: 4/5;
+        // grid-row: 6/7;
+        // align-self: center;
+        // justify-self: center;
         input {
           display: none;
         }
@@ -104,7 +108,7 @@
         display: grid;
         align-content: center;
         justify-content: center;
-        border: solid;
+        // border: solid;
         // margin: 2vw;
       }
       .templateContainer {

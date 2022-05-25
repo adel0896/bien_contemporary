@@ -57,17 +57,19 @@ export default class Customizer extends Component {
           name="location"
           value={this.props.value}
         ></Location>
-        <Image
-          onImageChange={this.props.onImageChange}
-          onImageUpload={this.props.onImageUpload}
-          name="image"
-          value={this.props.value}
-        ></Image>
+        <div className="imageSelectorFile">
+          <Image
+            onImageChange={this.props.onImageChange}
+            onImageUpload={this.props.onImageUpload}
+            name="image"
+            value={this.props.value}
+          ></Image>
 
-        <File
-          handleChange={this.props.onImageUpload}
-          state={this.props.state}
-        ></File>
+          <File
+            handleChange={this.props.onImageUpload}
+            state={this.props.state}
+          ></File>
+        </div>
       </div>
     );
   }

@@ -1,6 +1,27 @@
+@use "../variables";
 .abstract-story {
+  .abstractTitle {
+    font-size: 3.5vw;
+    text-align: center;
+    line-height: 3.5vw;
+    word-spacing: 9vw;
+    text-transform: uppercase;
+  }
+  .abstractTime,
+  .abstractDate,
+  .abstractLocation {
+    width: fit-content;
+    font-size: 1.7vw;
+    margin: 0.5rem 1rem 0.5rem auto;
+  }
+  .image {
+    opacity: 0.7;
+  }
 }
 .abstract-post {
 }
 .abstract-baner {
+}
+.TemplateText {
+  font-family: var(--heading-font);
 }

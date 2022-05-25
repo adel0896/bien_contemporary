@@ -114,7 +114,7 @@ export default function Logo(props) {
     <div className="Logo">
       <LogoSelect>
         <p className="setLogoColor inputLabel">Logo appearance</p>
-        <div class="headerArrow">
+        <div className="headerArrow">
           <DropDownHeader>
             <img src={selectedLogo || black} alt="selected_logo" />
           </DropDownHeader>

@@ -63,7 +63,15 @@ const grey = {
   name: "grey",
   hex: "#6c6c6e",
 };
-const options = [lightGreen, lightGrey, pink, green, grey];
+const black = {
+  name: "black",
+  hex: "#000000",
+};
+const white = {
+  name: "white",
+  hex: "#FFFFFF",
+};
+const options = [lightGreen, lightGrey, pink, green, grey, black, white];
 
 export default function Color(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,7 +89,7 @@ export default function Color(props) {
     <div className="Color">
       <ColorSelect>
         <p className="selectColor inputLabel">Color</p>
-        <div class="headerArrow">
+        <div className="headerArrow">
           <DropDownHeader
             className={selectedOption || "lightGreen"}
           ></DropDownHeader>
