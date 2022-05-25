@@ -42,20 +42,19 @@
         grid-column: 1/4;
         display: flex;
         align-items: center;
+        justify-content: space-between;
       }
       .imageSelectContainer {
       }
       .File {
-        // grid-column: 4/5;
-        // grid-row: 6/7;
-        // align-self: center;
-        // justify-self: center;
+        align-self: flex-end;
+        margin-bottom: 2vw;
         input {
           display: none;
         }
         label {
-          width: 1.7rem;
-          height: 1.7rem;
+          width: 2vw;
+          height: 2vw;
           padding: 0;
           align-items: center;
           display: flex;
@@ -103,11 +102,13 @@
       grid-column: 2/3;
       background-color: var(--white);
       display: grid;
-      grid-template-columns: 1.6fr 0.4fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 4vw;
       .templatContainerGrid {
         display: grid;
         align-content: center;
         justify-content: center;
+        grid-column: 1/2;
         // border: solid;
         // margin: 2vw;
       }
@@ -139,8 +140,9 @@
         }
       }
       .ExportButtons {
-        grid-column: 2/3;
-        align-self: self-end;
+        grid-column: 1/2;
+        margin-top: auto;
+        text-align: end;
       }
     }
   }
