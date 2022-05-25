@@ -10,8 +10,12 @@ body {
     button {
       background-color: transparent;
       border: none;
-      margin: 2vw;
+      padding: 2vw;
+      display: flex;
+      align-items: center;
       cursor: pointer;
+      font-family: var(--regular-font);
+      font-size: 1rem;
     }
   }
   .EditorMain {
@@ -97,6 +101,7 @@ body {
           height: 3vw;
           background-color: transparent;
           border: solid var(--grey) 1px;
+          //   font-size: 1.2rem;
         }
         label {
           display: flex;
@@ -155,6 +160,14 @@ body {
         grid-column: 1/2;
         margin-top: auto;
         text-align: end;
+        button {
+          background-color: transparent;
+          border: none;
+          border-top: solid var(--grey) 1px;
+          font-family: var(--medium-font);
+          margin: 0.5vw;
+          font-size: 1rem;
+        }
       }
     }
   }

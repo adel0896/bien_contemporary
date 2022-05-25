@@ -1,6 +1,108 @@
+@use "../variables";
+//COMMON STYLING
+.outside-story,
+.outside-post,
+.outside-banner {
+  .TemplateText {
+    font-family: var(--heading-font);
+    display: flex;
+    flex-direction: column;
+    max-height: 80%;
+    justify-content: space-between;
+  }
+  .outsideTitle {
+    font-size: 2.5vw;
+    letter-spacing: 0.3vw;
+    border-top: solid white 3px;
+    border-left: solid white 3px;
+    width: min-content;
+    line-height: 3.5vw;
+    padding: 1vw;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+  }
+  .eventDetails {
+    width: fit-content;
+
+    > * {
+      letter-spacing: 0.3vw;
+    }
+  }
+  .logo {
+    height: 3vw;
+    width: 5vw;
+    grid-row: 8/9;
+    grid-column: 1/2;
+    z-index: 80;
+    background-repeat: no-repeat;
+    img {
+      width: inherit;
+      height: inherit;
+    }
+  }
+}
 .outside-story {
+  .outsideTitle {
+    margin-left: 3vw;
+  }
+  .eventDetails {
+    margin: 0 2vw 0 auto;
+    border-bottom: solid white 3px;
+    border-right: solid white 3px;
+    > * {
+      text-align: right;
+      margin: 1vw 0;
+    }
+  }
+  .logo {
+    margin: 0 0 2vw 2vw;
+    justify-self: self-start;
+    img {
+      width: inherit;
+      height: inherit;
+    }
+  }
 }
 .outside-post {
+  .outsideTitle {
+    margin-left: 2vw;
+  }
+  .eventDetails {
+    border-bottom: solid white 3px;
+    border-left: solid white 3px;
+    margin: 0 auto 0 2vw;
+
+    > * {
+      text-align: left;
+      padding: 0.5vw;
+      margin: 0.1vw 0;
+    }
+  }
+  .logo {
+    justify-self: self-end;
+    margin: 0 2vw 2vw 0;
+  }
 }
-.outside-baner {
+.outside-banner {
+  .outsideTitle {
+    margin-left: 3vw;
+
+    max-width: 60%;
+  }
+  .eventDetails {
+    border-bottom: solid white 3px;
+    border-left: solid white 3px;
+    margin: 0 auto 0 3vw;
+    font-size: 1.3vw;
+    > * {
+      text-align: left;
+      padding: 0.5vw;
+      margin: 0.1vw 0 0 1vw;
+    }
+  }
+  .logo {
+    justify-self: self-end;
+    margin: 0 2vw 2vw 0;
+  }
 }

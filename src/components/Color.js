@@ -4,25 +4,16 @@ import ArrowDown from "./assets/arrow-down.png";
 
 const ColorSelect = styledComponents("div")`
 width:7rem;
-// display:grid;
 z-index:99;
 position:relative;
-// grid-template-columns: 1.4fr 1fr 0.6fr;
 background-color:#FDFBF8;
-// .selectColor{
-//   grid-column: 1/2;
-//   grid-row:1/2;
-// }
+
 
 `;
 const Arrow = styledComponents("div")`
-// cursor:pointer;
-// grid-column: 3/4;
-// grid-row: 1/2;
+
 `;
 const DropDownContainer = styledComponents("div")`
-// grid-column: 2/3;
-// grid-row:1/2;
 position:absolute`;
 const DropDownHeader = styledComponents("div")`
 margin: auto 0;
@@ -30,18 +21,31 @@ width:30px;
 height:30px;
 align-items:center;
 display:flex;
-// grid-column: 2/3;
-// grid-row:1/2;
+
 
 `;
 const DropDownListContainer = styledComponents("div")``;
 const DropDownList = styledComponents("ul")`
-padding:0;
+
+display:flex;
+flex-wrap:wrap;
+min-height:6vw;
+width:24vw;
+padding:0.5vw 0;
+justify-content:space-evenly;
+align-items:center;
+border: solid var(--light-grey) 1px;
+column-gap:0.2vw;
+row-gap:0.2vw;
+background-color:var(--white);
+
 `;
 const ListItem = styledComponents("li")`
   list-style:none;
   width:30px;
-  height:30px;  `;
+  height:30px;
+  cursor:pointer;
+  `;
 
 const lightGreen = {
   name: "lightGreen",

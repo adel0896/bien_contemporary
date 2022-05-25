@@ -46,6 +46,16 @@
     text-align: center;
     grid-column: 1/4;
     text-transform: uppercase;
+    align-self: center;
+  }
+  .eventDetails {
+    display: flex;
+    text-align: center;
+    grid-column: 1/4;
+    justify-content: space-around;
+    > * {
+      width: 20%;
+    }
   }
   .abstractTime,
   .abstractDate,
@@ -79,6 +89,9 @@
       opacity: 0.7;
     }
   }
+}
+.graphicElAbstract {
+  //   background-image: url("../../components/assets/graphicAbstract.svg");
 }
 //COMMON STYLING END
 
