@@ -1,8 +1,13 @@
+// these classes change the format and keep the aspect ratio while resizing the screen
 .storySize {
   width: 25.3125vw;
   max-width: 45vh;
   height: 45vw;
   max-height: 80.055vh;
+  .TemplateText {
+    width: 25.3125vw;
+    max-width: 45vh;
+  }
   .image {
     position: inherit;
     z-index: 2;
@@ -15,10 +20,58 @@
       max-width: 45vh;
       height: 45vw;
       max-height: 80.055vh;
+      position: relative;
+      z-index: -11;
     }
   }
 }
 .postSize {
+  max-width: 30vw;
+  max-height: 30vw;
+  aspect-ratio: 1/1;
+  .TemplateText {
+    max-width: 30vh;
+    max-height: 30vw;
+  }
+  .image {
+    max-width: 30vw;
+    max-height: 30vw;
+    position: inherit;
+    z-index: 2;
+    aspect-ratio: 1/1;
+    img {
+      width: 30vw;
+      max-height: 30vw;
+      aspect-ratio: 1/1;
+      position: relative;
+      z-index: -11;
+    }
+  }
 }
+
 .bannerSize {
+  width: 60vw;
+  max-width: 106.68vh;
+  height: 33.75vw;
+  max-height: 60vh;
+  .TemplateText {
+    width: 60vw;
+    max-width: 106.68vh;
+  }
+  .image {
+    position: inherit;
+    z-index: 2;
+    width: 60vw;
+    max-width: 106.68vh;
+    height: 33.75vw;
+    max-height: 60vh;
+    img {
+      width: 60vw;
+      max-width: 106.68vh;
+      height: 33.75vw;
+      max-height: 60vh;
+      position: relative;
+      z-index: -11;
+    }
+  }
 }
