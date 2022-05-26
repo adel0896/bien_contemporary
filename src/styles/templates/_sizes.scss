@@ -25,6 +25,11 @@
     }
   }
 }
+.storySize + .appendhere canvas {
+  position: absolute;
+  left: 35% !important;
+  top: 10% !important;
+}
 .postSize {
   max-width: 30vw;
   max-height: 30vw;
@@ -48,8 +53,14 @@
     }
   }
 }
+.postSize + .appendhere canvas {
+  position: absolute;
+  top: 20% !important;
+  left: 35% !important;
+}
 
 .bannerSize {
+  margin: 1vw;
   width: 60vw;
   max-width: 106.68vh;
   height: 33.75vw;
@@ -74,4 +85,10 @@
       z-index: -11;
     }
   }
+}
+
+.bannerSize + .appendhere canvas {
+  position: absolute;
+  left: 25% !important;
+  top: 20% !important;
 }

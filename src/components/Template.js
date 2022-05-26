@@ -30,6 +30,12 @@ export default function Template(props) {
     const image = document.querySelector(".templateContainer");
     html2canvas(image).then(function (canvas) {
       document.querySelector(".appendhere").appendChild(canvas);
+      document.querySelector(".appendhere").classList.remove("hidden");
+      document.querySelector("body").style.overflow = "hidden";
+      setInterval(function () {
+        document.querySelector(".appendhere").removeChild(canvas);
+        document.querySelector(".appendhere").classList.add("hidden");
+      }, 3000);
     });
     const canvas = await html2canvas(image);
     const dataURL = canvas.toDataURL("image/jpeg");
@@ -39,9 +45,16 @@ export default function Template(props) {
   async function capturePNG() {
     const image = document.querySelector(".templateContainer");
     html2canvas(image).then(function (canvas) {
-      // image.classList.add("story-size");
       document.querySelector(".appendhere").appendChild(canvas);
+      document.querySelector(".appendhere").classList.remove("hidden");
+      document.querySelector("body").style.overflow = "hidden";
+
+      setInterval(function () {
+        document.querySelector(".appendhere").removeChild(canvas);
+        document.querySelector(".appendhere").classList.add("hidden");
+      }, 3000);
     });
+
     const canvas = await html2canvas(image);
     const dataURL = canvas.toDataURL("image/png");
     downloadjs(dataURL, `download.png`, "image/png");
@@ -75,9 +88,9 @@ export default function Template(props) {
             <svg viewBox="0 0 100 100" src={svgGraphic}></svg>
           </div> */}
         </div>
+        <div className="appendhere hidden"></div>
       </div>
-      <div className="appendhere"></div>
-      <div className="ExportButtons">
+      <div className="ExportButtons" id="ExportButtons">
         <button onClick={captureJPG}>CaptureJPG</button>
         <button onClick={capturePNG}>CapturePNG</button>
       </div>

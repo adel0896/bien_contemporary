@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styledComponents from "styled-components";
+import logo from "./assets/logo.png";
 
 const FormatSelect = styledComponents("div")`
     width:20%;
@@ -38,27 +39,30 @@ export default function Format(props) {
     setIsOpen(false);
   };
   return (
-    <FormatSelect>
-      <DropDownHeader onClick={toggling}>
-        {selectedFormat || "Select format"} v
-      </DropDownHeader>
-      <DropDownContainer>
-        <DropDownListContainer>
-          {isOpen && (
-            <DropDownList>
-              {formats.map((format) => (
-                <ListItem
-                  onClick={onFormatClicked(format)}
-                  key={Math.random()}
-                  className={format}
-                >
-                  {format}
-                </ListItem>
-              ))}
-            </DropDownList>
-          )}
-        </DropDownListContainer>
-      </DropDownContainer>
-    </FormatSelect>
+    <div className="headerFormat">
+      <img className="logo" src={logo}></img>
+      <label> Select the format:</label>
+
+      <section className="formatInputContainer">
+        <FormatSelect>
+          <DropDownHeader onClick={toggling} className="formatInput">
+            {selectedFormat || "Post"} v
+          </DropDownHeader>
+          <DropDownContainer>
+            <DropDownListContainer>
+              {isOpen && (
+                <DropDownList>
+                  {formats.map((format) => (
+                    <ListItem onClick={onFormatClicked(format)} key={Math.random()} className={format}>
+                      {format}
+                    </ListItem>
+                  ))}
+                </DropDownList>
+              )}
+            </DropDownListContainer>
+          </DropDownContainer>
+        </FormatSelect>
+      </section>
+    </div>
   );
 }
