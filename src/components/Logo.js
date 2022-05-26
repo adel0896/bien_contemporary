@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import styledComponents from "styled-components";
-import lightGreen from "./logos_svg/logo-lightGreen.svg";
-import lightGrey from "./logos_svg/logo-lightGrey.svg";
-import pink from "./logos_svg/logo-pink.svg";
-import green from "./logos_svg/logo-green.svg";
-import grey from "./logos_svg/logo-grey.svg";
-import black from "./logos_svg/logo-black.svg";
-import white from "./logos_svg/logo-white.svg";
-import outline from "./logos_svg/logo-outline.svg";
-import ArrowDown from "./assets/arrow-down.png";
+import lightGreen from "./logos/logo-lightGreen.png";
+import lightGrey from "./logos/logo-lightGrey.png";
+import pink from "./logos/logo-pink.png";
+import green from "./logos/logo-green.png";
+import grey from "./logos/logo-grey.png";
+import black from "./logos/logo-black.png";
+import white from "./logos/logo-white.png";
+import outline from "./logos/logo-outline.png";
+import arrowDown from "./assets/arrow-down.png";
+import arrowUp from "./assets/arrow-up.png";
 
 const LogoSelect = styledComponents("div")`
 // width:9rem;
@@ -46,8 +47,8 @@ display:flex;
 flex-wrap:wrap;
 min-height:6vw;
 width:24vw;
-padding:0.5vw 0;
-justify-content:space-evenly;
+padding:0.5vw ;
+// justify-content:space-evenly;
 align-items:center;
 border: solid var(--light-grey) 1px;
 column-gap:0.5vw;
@@ -62,8 +63,7 @@ const ListItem = styledComponents("li")`
   height:50px; 
   cursor:pointer;
   img{
-    width:50px;
-    height:50px;
+    width:3.5vw;
   }
   `;
 
@@ -102,12 +102,7 @@ const whiteLogo = {
   logoColor: "white",
   appearAs: outline,
 };
-// const outlineLogo = {
-//   path: outline,
-//   logoColor: "outline",
-//   appearAs:outline,
 
-// };
 export const logoColors = [
   lightGreenLogo,
   lightGreyLogo,
@@ -116,7 +111,6 @@ export const logoColors = [
   greyLogo,
   blackLogo,
   whiteLogo,
-  // outlineLogo,
 ];
 export default function Logo(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -135,10 +129,15 @@ export default function Logo(props) {
         <p className="setLogoColor inputLabel">Logo appearance</p>
         <div className="headerArrow">
           <DropDownHeader>
-            <img src={selectedLogo || black} alt="selected_logo" />
+            <img
+              className="logoEditor"
+              src={selectedLogo || black}
+              alt="selected_logo"
+            />
           </DropDownHeader>
-          <Arrow onClick={toggling}>
-            <img src={ArrowDown} alt="arrow-down" />
+          <Arrow onClick={toggling} className="arrow">
+            {isOpen && <img src={arrowUp} alt="arrow" />}
+            {!isOpen && <img src={arrowDown} alt="arrow" />}{" "}
           </Arrow>
         </div>
         <DropDownContainer>

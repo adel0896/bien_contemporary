@@ -15,7 +15,7 @@
     letter-spacing: 0.3vw;
     border-top: solid white 3px;
     border-left: solid white 3px;
-    width: min-content;
+    // width: min-content;
     line-height: 3.5vw;
     padding: 1vw;
     background: rgba(255, 255, 255, 0.3);
@@ -45,6 +45,7 @@
 .outside-story {
   .outsideTitle {
     margin-left: 3vw;
+    width: min-content;
   }
   .eventDetails {
     margin: 0 2vw 0 auto;
@@ -67,6 +68,7 @@
 .outside-post {
   .outsideTitle {
     margin-left: 2vw;
+    width: min-content;
   }
   .eventDetails {
     border-bottom: solid white 3px;
@@ -83,10 +85,14 @@
     justify-self: self-end;
     margin: 0 2vw 2vw 0;
   }
+  .image {
+    width: 30vw;
+  }
 }
 .outside-banner {
   .outsideTitle {
     margin-left: 3vw;
+    width: fit-content;
 
     max-width: 60%;
   }
@@ -95,6 +101,8 @@
     border-left: solid white 3px;
     margin: 0 auto 0 3vw;
     font-size: 1.3vw;
+    position: relative;
+    z-index: 200;
     > * {
       text-align: left;
       padding: 0.5vw;

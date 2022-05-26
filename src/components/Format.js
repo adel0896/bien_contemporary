@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styledComponents from "styled-components";
 import logo from "./assets/logo.png";
+import arrowDown from "./assets/arrow-down.png";
+import arrowUp from "./assets/arrow-up.png";
 
 const FormatSelect = styledComponents("div")`
     width:20%;
@@ -15,6 +17,8 @@ const DropDownHeader = styledComponents("div")`
 padding:0.3rem 0;
 font-size:1.2rem;
 
+align-items:center;
+display:flex;
 `;
 const DropDownListContainer = styledComponents("div")``;
 const DropDownList = styledComponents("ul")`
@@ -25,6 +29,10 @@ const ListItem = styledComponents("li")`
     list-style:none;
     margin:0.2rem 0;
   `;
+
+const Arrow = styledComponents("div")`
+
+`;
 
 const formats = ["story", "post", "banner"];
 export default function Format(props) {
@@ -38,22 +46,31 @@ export default function Format(props) {
     setSelectedFormat(format);
     setIsOpen(false);
   };
+
   return (
     <div className="headerFormat">
-      <img className="logo" src={logo}></img>
+      <img className="logo" src={logo} alt="logo"></img>
       <label> Select the format:</label>
 
       <section className="formatInputContainer">
         <FormatSelect>
-          <DropDownHeader onClick={toggling} className="formatInput">
-            {selectedFormat || "Post"} v
-          </DropDownHeader>
+          <div className="formatInputArrow">
+            <DropDownHeader>{selectedFormat || "Post"}</DropDownHeader>
+            <Arrow onClick={toggling} className="arrow">
+              {isOpen && <img src={arrowUp} alt="arrow" />}
+              {!isOpen && <img src={arrowDown} alt="arrow" />}{" "}
+            </Arrow>
+          </div>
           <DropDownContainer>
             <DropDownListContainer>
               {isOpen && (
                 <DropDownList>
                   {formats.map((format) => (
-                    <ListItem onClick={onFormatClicked(format)} key={Math.random()} className={format}>
+                    <ListItem
+                      onClick={onFormatClicked(format)}
+                      key={Math.random()}
+                      className={format}
+                    >
                       {format}
                     </ListItem>
                   ))}

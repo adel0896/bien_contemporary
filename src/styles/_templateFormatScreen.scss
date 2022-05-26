@@ -46,7 +46,7 @@
         .templateMockupContainer {
           display: flex;
           align-items: center;
-          height: 15rem;
+          height: 14rem;
           border: solid var(--grey) 1.5px;
         }
       }
@@ -81,6 +81,18 @@
     padding-top: 1rem;
     padding-bottom: 0.4rem;
   }
+  .formatInputArrow {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    > * {
+      width: min-content;
+    }
+    .arrow img {
+      width: 2vw;
+    }
+  }
 
   section {
     div {
@@ -97,5 +109,18 @@
     justify-self: center;
     width: 10rem;
     height: auto;
+  }
+}
+.arrowNext {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--regular-font);
+  font-size: 1rem;
+  margin-top: 0.5vw;
+  img {
+    width: 1.5vw;
   }
 }

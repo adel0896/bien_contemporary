@@ -4,7 +4,7 @@ import { images } from "./Image";
 import defaultImage from "./assets/abstract.jpg";
 import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
-import svgGraphic from "./assets/graphicAbstract.svg";
+// const abstractSvg = require("./svgFetch");
 
 export default function Template(props) {
   if (props.color !== "black") {
@@ -19,13 +19,18 @@ export default function Template(props) {
   }
 
   if (props.image !== "none" && props.imagenew === "none") {
-    document.querySelector(".image").style.backgroundImage = `url("${imageToDisplay.path}")`;
+    document.querySelector(
+      ".image"
+    ).style.backgroundImage = `url("${imageToDisplay.path}")`;
     // document.querySelector(".image img").src = imageToDisplay.path;
   } else if (props.imagenew !== "none" && props.image === "none") {
     // document.querySelector(".image img").src = newImage;
     // document.querySelector(".image img").src = "";
-    document.querySelector(".image").style.backgroundImage = `url("${newImage}")`;
+    document.querySelector(
+      ".image"
+    ).style.backgroundImage = `url("${newImage}")`;
   }
+  // console.log(abstractSvg);
 
   // downloading the template
 
@@ -71,11 +76,11 @@ export default function Template(props) {
           id="templateContainer"
         >
           <div className="TemplateText">
-            <h1 className={`${props.template}Title `}>{props.title}</h1>
+            <h1 className={`${props.template}Title title`}>{props.title}</h1>
             {/* <div className="graphicElAbstract">
               <svg src={svgGraphic}></svg>
             </div> */}
-            <div className="eventDetails">
+            <div className="eventDetails details">
               <h1 className={`${props.template}Location`}>{props.location}</h1>
               <h1 className={`${props.template}Date`}>{props.date}</h1>
               <h1 className={`${props.template}Time`}>{props.time}</h1>
@@ -85,9 +90,8 @@ export default function Template(props) {
             <img src={logoColors[5].path} alt="" />
           </div>
           <div className="image">{/* <img src={defaultImage} alt="" /> */}</div>
-          {/* <div className="graphicElAbstract">
-            <svg viewBox="0 0 100 100" src={svgGraphic}></svg>
-          </div> */}
+          <div className="opacityDiv"></div>
+          {/* <div className="graphicElAbstract">{abstractSvg}</div> */}
         </div>
         <div className="appendhere hidden"></div>
       </div>

@@ -16,6 +16,9 @@ body {
       cursor: pointer;
       font-family: var(--regular-font);
       font-size: 1rem;
+      img {
+        width: 2vw;
+      }
     }
   }
   .EditorMain {
@@ -36,6 +39,9 @@ body {
           display: flex;
           column-gap: 2rem;
           align-items: center;
+          .arrow img {
+            width: 2vw;
+          }
         }
       }
       .Title {
@@ -55,6 +61,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        z-index: 99;
       }
 
       .File {
@@ -93,6 +100,12 @@ body {
           align-items: center;
           padding: 0 1rem;
           border: solid var(--grey) 1px;
+          .logoEditor {
+            width: 3vw;
+          }
+          .arrow img {
+            width: 2vw;
+          }
         }
       }
 
@@ -137,6 +150,13 @@ body {
           background-image: url("../components/assets/abstract.jpg");
           background-position: center;
           background-size: cover;
+        }
+        .opacityDiv {
+          grid-row: 1/9;
+          grid-column: 1/2;
+          background-color: white;
+          opacity: 0.3;
+          z-index: 2;
         }
         .TemplateText {
           grid-row: 1/9;
@@ -204,5 +224,6 @@ body {
 .Preview > :first-child:after {
   bottom: 0;
   left: 0;
+  z-index: 0;
   border-width: 0 0 2px 2px;
 }
