@@ -4,6 +4,7 @@ import { images } from "./Image";
 import defaultImage from "./assets/abstract.jpg";
 import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
+import graphicGirl from "./assets/huge1.png";
 import svgGraphic from "./assets/graphicAbstract.svg";
 
 export default function Template(props) {
@@ -26,6 +27,20 @@ export default function Template(props) {
     // document.querySelector(".image img").src = "";
     document.querySelector(".image").style.backgroundImage = `url("${newImage}")`;
   }
+  if (props.image !== "none" && props.imagenew === "none" && props.template === "croquis") {
+    console.log("it is croquis story");
+    document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
+    document.querySelector(".image").style.backgroundImage = "";
+    document.querySelector(".image").style.backgroundImage = `url("")`;
+    document.querySelector(".image").style.backgroundColor = "white !important";
+    document.querySelector(".imageCroquis").style.backgroundImage = `url("${imageToDisplay.path}")`;
+  } else if (props.imagenew !== "none" && props.image === "none" && props.template === "croquis") {
+    document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
+    document.querySelector(".image").style.backgroundImage = "";
+    document.querySelector(".image").style.backgroundImage = `url("")`;
+    document.querySelector(".image").style.backgroundColor = "white !important";
+    document.querySelector(".imageCroquis").style.backgroundImage = `url("${newImage}")`;
+  }
 
   // downloading the template
 
@@ -36,7 +51,9 @@ export default function Template(props) {
       document.querySelector(".appendhere").classList.remove("hidden");
       document.querySelector("body").style.overflow = "hidden";
       setInterval(function () {
-        document.querySelector(".appendhere").removeChild(canvas);
+        if (document.querySelector(".appendhere").hasChildNodes()) {
+          document.querySelector(".appendhere").removeChild(canvas);
+        }
         document.querySelector(".appendhere").classList.add("hidden");
       }, 3000);
     });
@@ -53,7 +70,9 @@ export default function Template(props) {
       document.querySelector("body").style.overflow = "hidden";
 
       setInterval(function () {
-        document.querySelector(".appendhere").removeChild(canvas);
+        if (document.querySelector(".appendhere").hasChildNodes()) {
+          document.querySelector(".appendhere").removeChild(canvas);
+        }
         document.querySelector(".appendhere").classList.add("hidden");
       }, 3000);
     });
@@ -78,10 +97,14 @@ export default function Template(props) {
               <h1 className={`${props.template}Time`}>{props.time}</h1>
             </div>
           </div>
+
+          <div className="image" id="image">
+            <div className="imageCroquis"></div>
+          </div>
+          <img src="" className="graphicCroquis"></img>
           <div className="logo">
             <img src={logoColors[5].path} alt="" />
           </div>
-          <div className="image">{/* <img src={defaultImage} alt="" /> */}</div>
           {/* <div className="graphicElAbstract">
             <svg viewBox="0 0 100 100" src={svgGraphic}></svg>
           </div> */}
