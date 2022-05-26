@@ -19,9 +19,12 @@ export default function Template(props) {
   }
 
   if (props.image !== "none" && props.imagenew === "none") {
-    document.querySelector(".image img").src = imageToDisplay.path;
+    document.querySelector(".image").style.backgroundImage = `url("${imageToDisplay.path}")`;
+    // document.querySelector(".image img").src = imageToDisplay.path;
   } else if (props.imagenew !== "none" && props.image === "none") {
-    document.querySelector(".image img").src = newImage;
+    // document.querySelector(".image img").src = newImage;
+    // document.querySelector(".image img").src = "";
+    document.querySelector(".image").style.backgroundImage = `url("${newImage}")`;
   }
 
   // downloading the template
@@ -78,9 +81,7 @@ export default function Template(props) {
           <div className="logo">
             <img src={logoColors[5].path} alt="" />
           </div>
-          <div className="image">
-            <img src={defaultImage} alt="" />
-          </div>
+          <div className="image">{/* <img src={defaultImage} alt="" /> */}</div>
           {/* <div className="graphicElAbstract">
             <svg viewBox="0 0 100 100" src={svgGraphic}></svg>
           </div> */}
