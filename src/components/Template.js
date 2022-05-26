@@ -91,6 +91,7 @@ export default function Template(props) {
           </div>
           <div className="image">{/* <img src={defaultImage} alt="" /> */}</div>
           <div className="opacityDiv"></div>
+          <div className="exhibitWhiteBG"></div>
           {/* <div className="graphicElAbstract">{abstractSvg}</div> */}
         </div>
         <div className="appendhere hidden"></div>

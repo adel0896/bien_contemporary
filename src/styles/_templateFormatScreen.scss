@@ -14,6 +14,12 @@
     border-bottom: solid black 2px;
     font-family: var(--medium-font);
     width: 70%;
+    .formatOptions {
+      li:hover {
+        background-color: #f2efe9;
+        transition: all 0.2s;
+      }
+    }
   }
   .TemplateSection {
     margin-top: 0.5rem;

@@ -64,7 +64,7 @@ export default function Format(props) {
           <DropDownContainer>
             <DropDownListContainer>
               {isOpen && (
-                <DropDownList>
+                <DropDownList className="formatOptions">
                   {formats.map((format) => (
                     <ListItem
                       onClick={onFormatClicked(format)}
