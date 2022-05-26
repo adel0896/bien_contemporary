@@ -134,6 +134,9 @@ body {
         .image {
           grid-row: 1/9;
           grid-column: 1/2;
+          background-image: url("../components/assets/abstract.jpg");
+          background-position: center;
+          background-size: cover;
         }
         .TemplateText {
           grid-row: 1/9;
