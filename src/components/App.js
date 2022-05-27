@@ -62,8 +62,8 @@ export default class App extends Component {
               ></Mockups>
             </div>
             <button onClick={this.hideFirstScreen} className="arrowNext">
-              <img src={ArrowNext} alt="arrow-next" />
               NEXT
+              <img src={ArrowNext} alt="arrow-next" />
             </button>
           </section>
         </>
