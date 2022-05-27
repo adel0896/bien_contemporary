@@ -1,7 +1,10 @@
 @use "../variables";
 .abstract-story {
+  .TemplateText {
+    grid-row: 1/8;
+  }
   .abstractTitle {
-    font-size: 3.5vw;
+    font-size: 3vw;
     text-align: center;
     line-height: 3.5vw;
     // word-spacing: 9vw;
@@ -31,10 +34,11 @@
   .logo {
     height: 3vw;
     width: 5vw;
-    grid-row: 7/8;
+    grid-row: 8/9;
     grid-column: 1/2;
     z-index: 80;
     margin-left: 2vw;
+    margin-bottom: 2vw;
     background-repeat: no-repeat;
     img {
       width: inherit;

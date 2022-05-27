@@ -53,10 +53,10 @@ export default function Format(props) {
       <label> Select the format:</label>
 
       <section className="formatInputContainer">
-        <FormatSelect>
+        <FormatSelect onClick={toggling}>
           <div className="formatInputArrow">
             <DropDownHeader>{selectedFormat || "Post"}</DropDownHeader>
-            <Arrow onClick={toggling} className="arrow">
+            <Arrow className="arrow">
               {isOpen && <img src={arrowUp} alt="arrow" />}
               {!isOpen && <img src={arrowDown} alt="arrow" />}{" "}
             </Arrow>
