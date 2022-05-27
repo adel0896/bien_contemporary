@@ -29,7 +29,8 @@ export default function Template(props) {
   }
   if (props.image !== "none" && props.imagenew === "none" && props.template === "croquis") {
     console.log("it is croquis story");
-    document.querySelector(".graphicCroquis").classList.add = `${graphicGirl}`;
+    document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
+
     document.querySelector(".image").style.backgroundImage = "";
     document.querySelector(".image").style.backgroundImage = `url("")`;
     document.querySelector(".image").style.backgroundColor = "white !important";
@@ -41,7 +42,9 @@ export default function Template(props) {
     document.querySelector(".image").style.backgroundColor = "white !important";
     document.querySelector(".imageCroquis").style.backgroundImage = `url("${newImage}")`;
   }
-
+  if (props.appstate.show === false && props.appstate.template === "croquis") {
+    // document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
+  }
   // downloading the template
 
   async function captureJPG() {

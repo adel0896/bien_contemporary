@@ -1,5 +1,6 @@
 import React from "react";
 import Template from "./Template";
+import graphicGirl from "./assets/girl-graphic.png";
 
 export default function Preview(props) {
   return (
@@ -16,6 +17,7 @@ export default function Preview(props) {
         imagenew={props.state.file}
         format={props.format}
         template={props.template}
+        appstate={props.appstate}
       ></Template>
 
       {/* <div className="appendhere"></div> */}

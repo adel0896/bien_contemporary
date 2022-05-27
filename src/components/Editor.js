@@ -72,19 +72,8 @@ export default class Editor extends Component {
           </button>
         </div>
         <section className="EditorMain">
-          <Customizer
-            onInputChange={this.handleInputChange}
-            onColorChange={this.handleColorChange}
-            onLogoChange={this.handleLogoChange}
-            onImageChange={this.handleImageChange}
-            onImageUpload={this.handleImageUpload}
-            state={this.state}
-          ></Customizer>
-          <Preview
-            state={this.state}
-            format={format}
-            template={template}
-          ></Preview>
+          <Customizer onInputChange={this.handleInputChange} onColorChange={this.handleColorChange} onLogoChange={this.handleLogoChange} onImageChange={this.handleImageChange} onImageUpload={this.handleImageUpload} state={this.state}></Customizer>
+          <Preview appstate={this.props.appState} state={this.state} format={format} template={template}></Preview>
         </section>
       </section>
     );
