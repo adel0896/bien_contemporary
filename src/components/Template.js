@@ -4,7 +4,7 @@ import { images } from "./Image";
 import defaultImage from "./assets/abstract.jpg";
 import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
-import graphicGirl from "./assets/huge1.png";
+import graphicGirl from "./assets/girl-graphic.png";
 import svgGraphic from "./assets/graphicAbstract.svg";
 
 export default function Template(props) {
@@ -29,7 +29,7 @@ export default function Template(props) {
   }
   if (props.image !== "none" && props.imagenew === "none" && props.template === "croquis") {
     console.log("it is croquis story");
-    document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
+    document.querySelector(".graphicCroquis").classList.add = `${graphicGirl}`;
     document.querySelector(".image").style.backgroundImage = "";
     document.querySelector(".image").style.backgroundImage = `url("")`;
     document.querySelector(".image").style.backgroundColor = "white !important";
@@ -58,6 +58,7 @@ export default function Template(props) {
       }, 3000);
     });
     const canvas = await html2canvas(image);
+
     const dataURL = canvas.toDataURL("image/jpeg");
     downloadjs(dataURL, `download.png`, "image/jpeg");
   }
