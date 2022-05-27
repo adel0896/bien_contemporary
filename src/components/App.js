@@ -2,6 +2,7 @@ import React, { Component, useState } from "react";
 import Editor from "./Editor";
 import Format from "./Format";
 import Mockups from "./Mockups";
+import ArrowNext from "./assets/arrow-next.png";
 
 export default class App extends Component {
   constructor() {
@@ -46,13 +47,24 @@ export default class App extends Component {
         <>
           <section className="FormatTemplate">
             <div className="FormatSection">
-              <Format onFormatChange={this.handleFormatChange} name="format" defaultFormat={this.state.format}></Format>
+              <Format
+                onFormatChange={this.handleFormatChange}
+                name="format"
+                defaultFormat={this.state.format}
+              ></Format>
             </div>
             <div className="TemplateSection">
               <label className="labelTemp">Select the template:</label>
-              <Mockups format={this.state.format} onTemplateChange={this.handleTemplateChange} template={this.state.template}></Mockups>
+              <Mockups
+                format={this.state.format}
+                onTemplateChange={this.handleTemplateChange}
+                template={this.state.template}
+              ></Mockups>
             </div>
-            <button onClick={this.hideFirstScreen}>NEXT</button>
+            <button onClick={this.hideFirstScreen} className="arrowNext">
+              <img src={ArrowNext} alt="arrow-next" />
+              NEXT
+            </button>
           </section>
         </>
       );

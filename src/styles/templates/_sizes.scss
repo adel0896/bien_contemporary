@@ -30,14 +30,15 @@
   left: 35% !important;
   top: 10% !important;
 }
+//POST
 .postSize {
   max-width: 30vw;
   max-height: 30vw;
   aspect-ratio: 1/1;
-  // .TemplateText {
-  //   max-width: 30vh;
-  //   max-height: 30vw;
-  // }
+
+  .opacityDiv {
+    z-index: -5;
+  }
   .image {
     max-width: 30vw;
     max-height: 30vw;
@@ -91,4 +92,29 @@
   position: absolute;
   left: 25% !important;
   top: 20% !important;
+}
+
+.storySize,
+.postSize,
+.bannerSize {
+  .TemplateText {
+    .title {
+      z-index: 100;
+    }
+    .details {
+      z-index: 200;
+      position: inherit;
+      > * {
+        z-index: 200;
+        position: relative;
+      }
+    }
+  }
+  .logo {
+    position: inherit;
+    img {
+      z-index: 99;
+      position: relative;
+    }
+  }
 }

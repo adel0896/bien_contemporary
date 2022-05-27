@@ -91,11 +91,11 @@ export default function Template(props) {
       <div className="templatContainerGrid">
         <div className={`${props.template}-${props.format} templateContainer ${props.format}Size`} id="templateContainer">
           <div className="TemplateText">
-            <h1 className={`${props.template}Title `}>{props.title}</h1>
+            <h1 className={`${props.template}Title title`}>{props.title}</h1>
             {/* <div className="graphicElAbstract">
               <svg src={svgGraphic}></svg>
             </div> */}
-            <div className="eventDetails">
+            <div className="eventDetails details">
               <h1 className={`${props.template}Location`}>{props.location}</h1>
               <h1 className={`${props.template}Date`}>{props.date}</h1>
               <h1 className={`${props.template}Time`}>{props.time}</h1>
@@ -109,6 +109,8 @@ export default function Template(props) {
           <div className="logo">
             <img src={logoColors[5].path} alt="" />
           </div>
+          <div className="opacityDiv"></div>
+          <div className="exhibitWhiteBG"></div>
           {/* <div className="graphicElAbstract">
             <svg viewBox="0 0 100 100" src={svgGraphic}></svg>
           </div> */}

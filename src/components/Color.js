@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styledComponents from "styled-components";
-import ArrowDown from "./assets/arrow-down.png";
+import arrowDown from "./assets/arrow-down.png";
+import arrowUp from "./assets/arrow-up.png";
 
 const ColorSelect = styledComponents("div")`
 width:7rem;
@@ -79,6 +80,7 @@ const darkRed = {
   name: "darkred",
   hex: "#490f19",
 };
+
 const options = [
   lightGreen,
   lightGrey,
@@ -110,8 +112,10 @@ export default function Color(props) {
           <DropDownHeader
             className={selectedOption || "lightGreen"}
           ></DropDownHeader>
-          <Arrow onClick={toggling}>
-            <img src={ArrowDown} alt="arrow-down" />
+          <Arrow onClick={toggling} className="arrow">
+            {/* <img src={arrowDown} alt="arrow" /> */}
+            {isOpen && <img src={arrowUp} alt="arrow" />}
+            {!isOpen && <img src={arrowDown} alt="arrow" />}
           </Arrow>
         </div>
         <DropDownContainer>
