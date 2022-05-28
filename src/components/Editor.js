@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-
+import React, { Component, useEffect } from "react";
+import CustomizerSwiper from "./Swiper";
 import Customizer from "./Customizer";
 import Preview from "./Preview";
 import ArrowBack from "./assets/arrow-back.png";
@@ -57,11 +57,39 @@ export default class Editor extends Component {
     }));
   };
 
+  checkWidth = () => {
+    let desktop = window.innerWidth >= 950;
+    return desktop;
+    // console.log(desktop);
+  };
+
   render() {
     const format = this.props.appState.format;
     const template = this.props.appState.template;
-
     console.log(format);
+    this.checkWidth();
+    if (this.checkWidth() === false) {
+      return (
+        <section className="ScreenMobile">
+          <section className="EditorMainMobile">
+            <CustomizerSwiper
+              onInputChange={this.handleInputChange}
+              onColorChange={this.handleColorChange}
+              onLogoChange={this.handleLogoChange}
+              onImageChange={this.handleImageChange}
+              onImageUpload={this.handleImageUpload}
+              state={this.state}
+            ></CustomizerSwiper>
+
+            <Preview
+              state={this.state}
+              format={format}
+              template={template}
+            ></Preview>
+          </section>
+        </section>
+      );
+    }
 
     return (
       <section className="Screen">

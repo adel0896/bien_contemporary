@@ -1,0 +1,221 @@
+@use "./variables";
+body {
+  overflow: hidden;
+}
+.ScreenMobile {
+  background-color: var(--background-color);
+  height: 90vh;
+
+  .EditorMainMobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    .CustomizerSwiper {
+      font-family: var(--regular-font);
+      grid-row: 2/3;
+
+      height: 15vw;
+      width: 80vw;
+      text-align: -webkit-center;
+      .Color {
+        .headerArrow {
+          display: flex;
+          column-gap: 2rem;
+          align-items: center;
+          .arrow img {
+            width: 2vw;
+          }
+        }
+      }
+      .imageSelect {
+        div {
+          width: 8vw;
+          height: 8vw;
+          img {
+            width: inherit;
+            height: inherit;
+          }
+        }
+      }
+      .ImageFileDivMobile {
+        display: flex;
+        justify-content: center;
+        column-gap: 2vw;
+      }
+      .imageSelectorFile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 99;
+      }
+
+      .File {
+        align-self: center;
+        margin-bottom: 2vw;
+        input {
+          display: none;
+        }
+        label {
+          width: 3vw;
+          height: 3vw;
+          padding: 0;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          background-color: transparent;
+          border: solid var(--grey) 1px;
+          cursor: pointer;
+          :hover {
+            box-shadow: 1px 1px 2px var(--grey);
+            transition: all 0.2s;
+          }
+          img {
+            width: inherit;
+          }
+        }
+      }
+      .Logo {
+        grid-column: 1/4;
+        .inputLabel {
+          margin: 0.5vw 0;
+        }
+        .headerArrow {
+          display: flex;
+          column-gap: 2rem;
+          align-items: center;
+          padding: 0 1rem;
+          border: solid var(--grey) 1px;
+          width: 80%;
+          align-self: center;
+          .logoEditor {
+            width: 3vw;
+          }
+          .arrow img {
+            width: 2vw;
+          }
+        }
+      }
+
+      .customizerInput {
+        input {
+          height: 3vw;
+          background-color: transparent;
+          border: solid var(--grey) 1px;
+          //   font-size: 1.2rem;
+          width: 70%;
+        }
+        input {
+          align-self: center;
+        }
+        label {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .inputLabel {
+        font-size: 20px;
+        margin: 0;
+      }
+    }
+    .Preview {
+      height: 80vh;
+      //   grid-column: 2/3;
+      background-color: var(--white);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 4vw;
+      .templatContainerGrid {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        grid-column: 1/2;
+        // border: solid;
+        // margin: 2vw;
+      }
+      .templateContainer {
+        grid-column: 1/3;
+        justify-content: space-around;
+        display: grid;
+        .image {
+          grid-row: 1/9;
+          grid-column: 1/2;
+          background-image: url("../components/assets/abstract.jpg");
+          background-position: center;
+          background-size: cover;
+        }
+        .opacityDiv {
+          grid-row: 1/9;
+          grid-column: 1/2;
+          background-color: white;
+          opacity: 0.3;
+          z-index: 2;
+        }
+        .TemplateText {
+          grid-row: 1/9;
+          grid-column: 1/2;
+
+          z-index: 3;
+        }
+      }
+      .appendhere {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba($color: #525252, $alpha: 0.56);
+        z-index: 100;
+
+        canvas {
+          top: 50%;
+          left: 50%;
+        }
+      }
+      .ExportButtons {
+        grid-column: 1/2;
+        margin-top: auto;
+        text-align: end;
+        button {
+          background-color: transparent;
+          border: none;
+          border-top: solid var(--grey) 1px;
+          font-family: var(--medium-font);
+          margin: 0.5vw;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//CORNER BORDERS FOR CUSTOMIZER AND PREVIEW
+
+.Customizer,
+.Preview {
+  position: relative;
+}
+.Customizer:after,
+.Customizer > :first-child:after,
+.Preview:after,
+.Preview > :first-child:after {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: solid var(--grey);
+  content: " ";
+}
+
+.Customizer:after,
+.Preview:after {
+  top: 0;
+  right: 0;
+  border-width: 2px 2px 0 0;
+}
+
+.Customizer > :first-child:after,
+.Preview > :first-child:after {
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  border-width: 0 0 2px 2px;
+}
