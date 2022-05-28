@@ -47,7 +47,7 @@
     z-index: 100;
     position: relative;
     width: 6vw;
-    height: 4.5vw;
+    height: auto;
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
     img {
@@ -58,6 +58,129 @@
 }
 
 .croquis-post {
+  background-color: white;
+  border: solid;
+  .graphicCroquis {
+    width: 25.3125vw;
+    max-width: 45vh;
+    grid-column-start: 1;
+    grid-row-start: 7;
+    z-index: 1000;
+    image-rendering: auto;
+  }
+  .TemplateText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+    .croquisTitle {
+      word-spacing: 9vw;
+      text-transform: uppercase;
+      width: 14vw;
+      text-align: left;
+      left: revert;
+      margin-right: 0.4rem;
+      font-size: 1.7vw;
+      margin-bottom: 1rem;
+    }
+    .eventDetails {
+      margin-right: 0.4rem;
+      width: 14vw;
+      text-align: left;
+      line-height: 1.2vw;
+      font-size: 1vw;
+      h1 {
+        margin: 0;
+      }
+    }
+  }
+  .image {
+    background-image: none !important;
+    .imageCroquis {
+      background-image: url("../../components/assets/abstract.jpg");
+      width: 7vw !important;
+      max-width: 15vh !important;
+      height: 25.3vw;
+      max-height: 45vh !important;
+      aspect-ratio: 1/1;
+    }
+  }
+  .logo {
+    grid-column-start: 1;
+    grid-row-start: 8;
+    z-index: 100;
+    position: relative;
+    width: 5vw;
+    height: auto;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    img {
+      width: inherit;
+      height: inherit;
+    }
+  }
 }
-.croquis-baner {
+.croquis-banner {
+  background-color: white;
+  border: solid;
+  .graphicCroquis {
+    width: 60vw;
+    max-width: 106.68vh;
+    grid-column-start: 1;
+    grid-row-start: 7;
+    z-index: 1000;
+    image-rendering: auto;
+  }
+  .TemplateText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    .croquisTitle {
+      word-spacing: 1vw;
+      text-transform: uppercase;
+      width: 40vw;
+      text-align: left;
+      left: revert;
+      font-size: 3vw;
+      padding-left: 9vw;
+    }
+    .eventDetails {
+      margin-right: 0.4rem;
+      width: 14vw;
+      text-align: left;
+      line-height: 2vw;
+      font-size: 1.3vw;
+      padding-left: 9vw;
+
+      h1 {
+        margin: 0;
+      }
+    }
+  }
+  .image {
+    background-image: none !important;
+    .imageCroquis {
+      background-image: url("../../components/assets/abstract.jpg");
+      width: 7vw !important;
+      max-width: 15vh !important;
+      height: 33.75vw;
+      max-height: 60vh;
+      aspect-ratio: 1/1;
+    }
+  }
+  .logo {
+    grid-column-start: 1;
+    grid-row-start: 8;
+    z-index: 100;
+    position: relative;
+    width: 5vw;
+    height: auto;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    img {
+      width: inherit;
+      height: inherit;
+    }
+  }
 }
