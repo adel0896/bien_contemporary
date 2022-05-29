@@ -81,11 +81,7 @@ export default class Editor extends Component {
               state={this.state}
             ></CustomizerSwiper>
 
-            <Preview
-              state={this.state}
-              format={format}
-              template={template}
-            ></Preview>
+            <Preview state={this.state} format={format} template={template}></Preview>
           </section>
         </section>
       );

@@ -47,19 +47,11 @@ export default class App extends Component {
         <>
           <section className="FormatTemplate">
             <div className="FormatSection">
-              <Format
-                onFormatChange={this.handleFormatChange}
-                name="format"
-                defaultFormat={this.state.format}
-              ></Format>
+              <Format onFormatChange={this.handleFormatChange} name="format" defaultFormat={this.state.format}></Format>
             </div>
             <div className="TemplateSection">
               <label className="labelTemp">Select the template:</label>
-              <Mockups
-                format={this.state.format}
-                onTemplateChange={this.handleTemplateChange}
-                template={this.state.template}
-              ></Mockups>
+              <Mockups format={this.state.format} onTemplateChange={this.handleTemplateChange} template={this.state.template}></Mockups>
             </div>
             <button onClick={this.hideFirstScreen} className="arrowNext">
               NEXT

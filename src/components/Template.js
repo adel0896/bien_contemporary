@@ -42,9 +42,9 @@ export default function Template(props) {
     document.querySelector(".image").style.backgroundColor = "white !important";
     document.querySelector(".imageCroquis").style.backgroundImage = `url("${newImage}")`;
   }
-  if (props.appstate.show === false && props.appstate.template === "croquis") {
-    // document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
-  }
+  // if (props.appstate.show === false && props.appstate.template === "croquis") {
+  //   // document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
+  // }
   // downloading the template
 
   async function captureJPG() {

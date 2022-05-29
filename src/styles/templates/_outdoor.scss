@@ -46,6 +46,7 @@
   .outsideTitle {
     margin-left: 3vw;
     width: min-content;
+    position: relative;
   }
   .eventDetails {
     margin: 0 2vw 0 auto;
@@ -69,6 +70,7 @@
   .outsideTitle {
     margin-left: 2vw;
     width: min-content;
+    position: relative;
   }
   .eventDetails {
     border-bottom: solid white 3px;
@@ -93,7 +95,7 @@
   .outsideTitle {
     margin-left: 3vw;
     width: fit-content;
-
+    position: relative;
     max-width: 60%;
   }
   .eventDetails {
