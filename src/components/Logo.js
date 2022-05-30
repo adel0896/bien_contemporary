@@ -122,47 +122,76 @@ export default function Logo(props) {
     setSelectedLogo(appearAs);
     setIsOpen(false);
   };
-
-  return (
-    <div className="Logo">
-      <LogoSelect>
+  function checkWidth() {
+    let desktop = window.innerWidth >= 950;
+    return desktop;
+  }
+  checkWidth();
+  if (checkWidth() === false) {
+    return (
+      <div className="LogoSwiper">
         <p className="setLogoColor inputLabel">Logo appearance</p>
-        <div className="headerArrow">
-          <DropDownHeader>
-            <img
-              className="logoEditor"
-              src={selectedLogo || black}
-              alt="selected_logo"
-            />
-          </DropDownHeader>
-          <Arrow onClick={toggling} className="arrow">
-            {isOpen && <img src={arrowUp} alt="arrow" />}
-            {!isOpen && <img src={arrowDown} alt="arrow" />}{" "}
-          </Arrow>
-        </div>
-        <DropDownContainer>
-          <DropDownListContainer>
-            {isOpen && (
-              <DropDownList className="colorDropDownList">
-                {logoColors.map((option) => (
-                  <ListItem
-                    onClick={onLogoClicked(
-                      option.path,
-                      option.logoColor,
-                      option.appearAs
-                    )}
-                    key={Math.random()}
-                    value={props.value}
-                    name="logo"
-                  >
-                    <img src={option.appearAs} alt="logo_option" />
-                  </ListItem>
-                ))}
-              </DropDownList>
-            )}
-          </DropDownListContainer>
-        </DropDownContainer>
-      </LogoSelect>
-    </div>
-  );
+        <ul className="LogoListContainer">
+          {logoColors.map((option) => (
+            <li
+              className="LogoListItem"
+              onClick={onLogoClicked(
+                option.path,
+                option.logoColor,
+                option.appearAs
+              )}
+              key={Math.random()}
+              value={props.value}
+              name="logo"
+            >
+              <img src={option.appearAs} alt="logo_option" />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  } else {
+    return (
+      <div className="Logo">
+        <LogoSelect>
+          <p className="setLogoColor inputLabel">Logo appearance</p>
+          <div className="headerArrow">
+            <DropDownHeader>
+              <img
+                className="logoEditor"
+                src={selectedLogo || black}
+                alt="selected_logo"
+              />
+            </DropDownHeader>
+            <Arrow onClick={toggling} className="arrow">
+              {isOpen && <img src={arrowUp} alt="arrow" />}
+              {!isOpen && <img src={arrowDown} alt="arrow" />}{" "}
+            </Arrow>
+          </div>
+          <DropDownContainer className="dropDownContainer">
+            <DropDownListContainer>
+              {isOpen && (
+                <DropDownList className="colorDropDownList">
+                  {logoColors.map((option) => (
+                    <ListItem
+                      onClick={onLogoClicked(
+                        option.path,
+                        option.logoColor,
+                        option.appearAs
+                      )}
+                      key={Math.random()}
+                      value={props.value}
+                      name="logo"
+                    >
+                      <img src={option.appearAs} alt="logo_option" />
+                    </ListItem>
+                  ))}
+                </DropDownList>
+              )}
+            </DropDownListContainer>
+          </DropDownContainer>
+        </LogoSelect>
+      </div>
+    );
+  }
 }

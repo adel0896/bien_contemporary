@@ -1,3 +1,8 @@
+@use "./variables";
+body {
+  padding: 0;
+  margin: 0;
+}
 .FormatTemplate {
   background-color: var(--background-color);
   height: 100vh;
@@ -11,9 +16,10 @@
   .FormatSection {
     padding: 1rem 0;
     height: 17%;
-    border-bottom: solid black 2px;
     font-family: var(--medium-font);
     width: 70%;
+    border-bottom: solid black 2px;
+
     .formatOptions {
       li:hover {
         background-color: #f2efe9;
@@ -27,6 +33,7 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
+
     label {
       align-self: center;
       font-size: 1rem;
@@ -45,14 +52,14 @@
       }
 
       div {
-        width: 30vw;
+        // width: 30vw;
         margin: auto;
         transition: all 0.2s;
         cursor: pointer;
         .templateMockupContainer {
           display: flex;
           align-items: center;
-          height: 14rem;
+          // height: 14rem;
           border: solid var(--grey) 1.5px;
         }
       }
@@ -83,6 +90,8 @@
 .headerFormat {
   display: grid;
   justify-items: center;
+  // border-bottom: solid black 2px;
+
   label {
     padding-top: 1rem;
     padding-bottom: 0.4rem;
@@ -102,7 +111,7 @@
 
   section {
     div {
-      width: 20vw;
+      // width: 20vw;
       background-color: #fdfbf8;
       position: relative;
     }
@@ -128,5 +137,92 @@
   margin-top: 0.5vw;
   img {
     width: 1.5vw;
+  }
+}
+
+@media (min-width: variables.$min-desktop) {
+  .templateMockupContainer {
+    height: 15rem;
+  }
+}
+
+@media (max-width: variables.$max-desktop) {
+  .templateMockupContainer {
+    height: 13rem;
+  }
+}
+@media (min-width: variables.$min-tablet) {
+  .formatSelect {
+    width: 20vw;
+  }
+  .templateOptions {
+    div {
+      width: 30vw;
+    }
+  }
+}
+
+@media (max-width: variables.$max-tablet) {
+  .formatSelect {
+    width: 30vw;
+  }
+  .FormatTemplate .FormatSection {
+    height: 12%;
+  }
+  .headerFormat .logo {
+    width: 6rem;
+  }
+
+  .headerFormat label {
+    padding-top: 0;
+  }
+  .FormatTemplate {
+    .TemplateSection {
+      .templateOptions {
+        div {
+          width: 40vw;
+        }
+      }
+    }
+  }
+}
+@media (min-width: variables.$min-mobile) {
+  .dropdownHeader {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: variables.$max-mobile) {
+  .dropdownHeader {
+    font-size: 1rem !important;
+  }
+  .headerFormat .formatInputArrow {
+    column-gap: 1rem;
+  }
+  .formatSelect {
+    padding: 0 1rem;
+  }
+  .headerFormat section li {
+    padding: 0;
+  }
+
+  .storyMockup img {
+    height: inherit;
+    width: auto;
+  }
+  .postMockup img {
+    width: inherit;
+    height: fit-content;
+    align-self: center;
+  }
+  .arrowNext img {
+    width: 2vw;
+  }
+}
+@media (max-width: 335px) {
+  .storyMockup img {
+    height: 80%;
+    width: auto;
+    align-self: center;
   }
 }

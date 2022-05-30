@@ -11,19 +11,23 @@ export default function Mockups(props) {
   const onTemplateClicked = (template) => (e) => {
     props.onTemplateChange(template.name);
     setSelectedTemplate(template);
-    console.log(template);
     if (template.name === "abstratct") {
     }
     e.currentTarget.classList.add("mockupselected");
-    console.log(e);
   };
 
   return (
     <section className="templateOptions">
       {arrayToMap.map((template) => (
-        <div key={Math.random()} className={template.name === props.template ? "mockupselected" : ""}>
+        <div
+          key={Math.random()}
+          className={template.name === props.template ? "mockupselected" : ""}
+        >
           <div className="templateMockupContainer">
-            <div className={`${props.format}Mockup`} onClick={onTemplateClicked(template)}>
+            <div
+              className={`${props.format}Mockup`}
+              onClick={onTemplateClicked(template)}
+            >
               <img src={template.path} alt="" />
             </div>
           </div>

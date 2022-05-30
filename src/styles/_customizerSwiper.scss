@@ -5,7 +5,24 @@ body {
 .ScreenMobile {
   background-color: var(--background-color);
   height: 90vh;
-
+  .EditorHeaderMobile {
+    height: 10vh;
+    position: absolute;
+    z-index: 100;
+    button {
+      background-color: transparent;
+      border: none;
+      padding: 2vw;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-family: var(--regular-font);
+      font-size: 1rem;
+      img {
+        width: 2vw;
+      }
+    }
+  }
   .EditorMainMobile {
     display: grid;
     grid-template-columns: 1fr;
@@ -18,12 +35,25 @@ body {
       width: 80vw;
       text-align: -webkit-center;
       .Color {
+        margin-top: 1rem;
+        padding-left: 20%;
+        display: flex;
         .headerArrow {
           display: flex;
           column-gap: 2rem;
           align-items: center;
           .arrow img {
             width: 2vw;
+          }
+        }
+        .dropDownContainer {
+          top: 0;
+          left: 6rem;
+          ul {
+            min-width: 40vw;
+            flex-wrap: nowrap;
+            height: 35px;
+            padding: 0.2rem;
           }
         }
       }
@@ -74,29 +104,48 @@ body {
           }
         }
       }
-      .Logo {
-        grid-column: 1/4;
-        .inputLabel {
-          margin: 0.5vw 0;
-        }
-        .headerArrow {
+      .LogoSwiper {
+        .LogoListContainer {
           display: flex;
-          column-gap: 2rem;
-          align-items: center;
-          padding: 0 1rem;
-          border: solid var(--grey) 1px;
+          justify-content: space-between;
           width: 80%;
-          align-self: center;
-          .logoEditor {
-            width: 3vw;
+          padding: 0;
+          margin: 0.2rem 0;
+          .LogoListItem {
+            list-style: none;
+            height: 5vw;
+            width: 8%;
+            display: flex;
+            background-color: white;
+            padding: 0.4rem;
+            border: solid var(--grey) 1px;
+            cursor: pointer;
+
+            img {
+              width: 100%;
+              align-self: center;
+            }
           }
-          .arrow img {
-            width: 2vw;
+        }
+      }
+      .ColorSwiper {
+        .ColorListContainer {
+          display: flex;
+          justify-content: space-between;
+          width: 80%;
+          padding: 0;
+          margin: 0.2rem 0;
+          .ColorListItem {
+            list-style: none;
+            width: 8%;
+            height: 5vw;
+            cursor: pointer;
           }
         }
       }
 
       .customizerInput {
+        margin-top: 1rem;
         input {
           height: 3vw;
           background-color: transparent;
@@ -187,35 +236,10 @@ body {
     }
   }
 }
-
-//CORNER BORDERS FOR CUSTOMIZER AND PREVIEW
-
-.Customizer,
-.Preview {
-  position: relative;
+.swiper-button-next,
+.swiper-button-prev {
+  color: black;
 }
-.Customizer:after,
-.Customizer > :first-child:after,
-.Preview:after,
-.Preview > :first-child:after {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  border: solid var(--grey);
-  content: " ";
-}
-
-.Customizer:after,
-.Preview:after {
-  top: 0;
-  right: 0;
-  border-width: 2px 2px 0 0;
-}
-
-.Customizer > :first-child:after,
-.Preview > :first-child:after {
-  bottom: 0;
-  left: 0;
-  z-index: 0;
-  border-width: 0 0 2px 2px;
+.swiper-pagination-bullet-active {
+  background-color: black;
 }

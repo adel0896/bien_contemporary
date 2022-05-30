@@ -12,13 +12,10 @@ import File from "./File";
 export default class Customizer extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
 
     this.state = {
       file: "",
     };
-
-    console.log(props.state);
   }
 
   render() {
@@ -39,7 +36,6 @@ export default class Customizer extends Component {
           name="title"
           value={this.props.value}
         ></Title>
-        {/* <div className="DateTimeRow"> */}
         <Date
           onInputChange={this.props.onInputChange}
           name="date"
@@ -51,7 +47,6 @@ export default class Customizer extends Component {
           value={this.props.value}
         ></Time>
 
-        {/* </div> */}
         <Location
           onInputChange={this.props.onInputChange}
           name="location"

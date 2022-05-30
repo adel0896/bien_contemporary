@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styledComponents from "styled-components";
-import arrowDown from "./assets/arrow-down.png";
-import arrowUp from "./assets/arrow-up.png";
+import arrowOpen from "./assets/arrow-next.png";
+import arrowClose from "./assets/arrow-back.png";
+import { colors } from "./ColorOptions";
 
 const ColorSelect = styledComponents("div")`
 width:7rem;
@@ -48,50 +49,6 @@ const ListItem = styledComponents("li")`
   cursor:pointer;
   `;
 
-const lightGreen = {
-  name: "lightGreen",
-  hex: "#e9efed",
-};
-const lightGrey = {
-  name: "lightGrey",
-  hex: "#c3c1c4",
-};
-const pink = {
-  name: "pink",
-  hex: "#cc9e87",
-};
-const green = {
-  name: "green",
-  hex: "#839388",
-};
-const grey = {
-  name: "grey",
-  hex: "#6c6c6e",
-};
-const black = {
-  name: "black",
-  hex: "#000000",
-};
-const white = {
-  name: "white",
-  hex: "#FFFFFF",
-};
-const darkRed = {
-  name: "darkred",
-  hex: "#490f19",
-};
-
-const options = [
-  lightGreen,
-  lightGrey,
-  pink,
-  green,
-  grey,
-  black,
-  white,
-  darkRed,
-];
-
 export default function Color(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -101,42 +58,65 @@ export default function Color(props) {
     props.onColorChange(hex);
     setSelectedOption(name);
     setIsOpen(false);
-    console.log(selectedOption);
   };
-
-  return (
-    <div className="Color">
-      <ColorSelect>
-        <p className="selectColor inputLabel">Color</p>
-        <div className="headerArrow">
-          <DropDownHeader
-            className={selectedOption || "lightGreen"}
-          ></DropDownHeader>
-          <Arrow onClick={toggling} className="arrow">
-            {/* <img src={arrowDown} alt="arrow" /> */}
-            {isOpen && <img src={arrowUp} alt="arrow" />}
-            {!isOpen && <img src={arrowDown} alt="arrow" />}
-          </Arrow>
-        </div>
-        <DropDownContainer>
-          <DropDownListContainer>
-            {isOpen && (
-              <DropDownList className="colorDropDownList">
-                {options.map((option) => (
-                  <ListItem
-                    onClick={onOptionClicked(option.hex, option.name)}
-                    key={Math.random()}
-                    className={option.name}
-                    data-color={option.name}
-                    value={props.value}
-                    name="color"
-                  ></ListItem>
-                ))}
-              </DropDownList>
-            )}
-          </DropDownListContainer>
-        </DropDownContainer>
-      </ColorSelect>
-    </div>
-  );
+  function checkWidth() {
+    let desktop = window.innerWidth >= 950;
+    return desktop;
+  }
+  checkWidth();
+  if (checkWidth() === false) {
+    return (
+      <div className="ColorSwiper">
+        <p className="setColor inputLabel">Color</p>
+        <ul className="ColorListContainer">
+          {colors.map((option) => (
+            <li
+              onClick={onOptionClicked(option.hex, option.name)}
+              key={Math.random()}
+              className={`${option.name} ColorListItem `}
+              data-color={option.name}
+              value={props.value}
+              name="color"
+            ></li>
+          ))}
+        </ul>
+      </div>
+    );
+  } else {
+    return (
+      <div className="Color">
+        <ColorSelect>
+          <p className="selectColor inputLabel">Color</p>
+          <div className="headerArrow">
+            <DropDownHeader
+              className={selectedOption || "black"}
+            ></DropDownHeader>
+            <Arrow onClick={toggling} className="arrow">
+              {/* <img src={arrowDown} alt="arrow" /> */}
+              {isOpen && <img src={arrowClose} alt="arrow" />}
+              {!isOpen && <img src={arrowOpen} alt="arrow" />}
+            </Arrow>
+          </div>
+          <DropDownContainer className="dropDownContainer">
+            <DropDownListContainer>
+              {isOpen && (
+                <DropDownList className="colorDropDownList">
+                  {colors.map((option) => (
+                    <ListItem
+                      onClick={onOptionClicked(option.hex, option.name)}
+                      key={Math.random()}
+                      className={option.name}
+                      data-color={option.name}
+                      value={props.value}
+                      name="color"
+                    ></ListItem>
+                  ))}
+                </DropDownList>
+              )}
+            </DropDownListContainer>
+          </DropDownContainer>
+        </ColorSelect>
+      </div>
+    );
+  }
 }
