@@ -154,6 +154,18 @@
     left: 33% !important;
     top: 10% !important;
   }
+  .postSize {
+    max-width: 55vw;
+    max-height: 55vw;
+    .image {
+      max-width: 55vw;
+      max-height: 55vw;
+      img {
+        width: 55vw;
+        max-height: 55vw;
+      }
+    }
+  }
 }
 @media (max-width: 600px) {
   .storySize {
@@ -161,25 +173,37 @@
     max-width: 80vh;
     height: 80vw;
     max-height: 124.24vh;
-  }
-  .TemplateText {
-    width: 45vw;
-    max-width: 80vh;
-  }
-  .image {
-    position: inherit;
-    z-index: 2;
-    width: 45vw;
-    max-width: 80vh;
-    height: 80vw;
-    max-height: 124, 24vh;
-    img {
-      width: 25.3125vw;
-      max-width: 45vh;
+    .TemplateText {
+      width: 45vw;
+      max-width: 80vh;
+    }
+    .image {
+      position: inherit;
+      z-index: 2;
+      width: 45vw;
+      max-width: 80vh;
       height: 80vw;
       max-height: 124, 24vh;
-      position: relative;
-      z-index: -11;
+      img {
+        width: 25.3125vw;
+        max-width: 45vh;
+        height: 80vw;
+        max-height: 124, 24vh;
+        position: relative;
+        z-index: -11;
+      }
+    }
+  }
+  .postSize {
+    max-width: 65vw;
+    max-height: 65vw;
+    .image {
+      max-width: 65vw;
+      max-height: 65vw;
+      img {
+        width: 65vw;
+        max-height: 65vw;
+      }
     }
   }
 }
