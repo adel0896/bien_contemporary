@@ -94,7 +94,7 @@ export default function Template(props) {
           </div>
 
           {/* className={template.name === props.template ? "mockupselected" : ""} */}
-          <img src={graphicGirl} className={props.appstate.template === "croquis" ? "graphicCroquis" : "graphicCroquis hidden"}></img>
+          <img src={graphicGirl} className={props.template === "croquis" ? "graphicCroquis" : "graphicCroquis hidden"}></img>
           <div className="logo">
             <img src={logoColors[5].path} alt="" />
           </div>
