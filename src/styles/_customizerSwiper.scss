@@ -17,9 +17,9 @@ body {
       align-items: center;
       cursor: pointer;
       font-family: var(--regular-font);
-      font-size: 1rem;
+      // font-size: 1rem;
       img {
-        width: 2vw;
+        // width: 2vw;
       }
     }
   }
@@ -30,15 +30,14 @@ body {
     .CustomizerSwiper {
       font-family: var(--regular-font);
       grid-row: 2/3;
-
-      height: 15vw;
-      width: 80vw;
+      // height: 15vw;
+      // width: 80vw;
       text-align: -webkit-center;
       text-align: -moz-center;
       .Color {
         margin-top: 1rem;
         padding-left: 20%;
-        display: flex;
+
         .headerArrow {
           display: flex;
           column-gap: 2rem;
@@ -59,13 +58,9 @@ body {
         }
       }
       .imageSelect {
-        div {
-          width: 8vw;
-          height: 8vw;
-          img {
-            width: inherit;
-            height: inherit;
-          }
+        img {
+          width: inherit;
+          height: inherit;
         }
       }
       .ImageFileDivMobile {
@@ -87,8 +82,8 @@ body {
           display: none;
         }
         label {
-          width: 3vw;
-          height: 3vw;
+          // width: 3vw;
+          // height: 3vw;
           padding: 0;
           align-items: center;
           display: flex;
@@ -130,6 +125,8 @@ body {
         }
       }
       .ColorSwiper {
+        // margin-top: 3vh;
+
         .ColorListContainer {
           display: flex;
           justify-content: space-between;
@@ -163,7 +160,7 @@ body {
         }
       }
       .inputLabel {
-        font-size: 20px;
+        font-size: 25px;
         margin: 0;
       }
     }
@@ -173,7 +170,7 @@ body {
       background-color: var(--white);
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 4vw;
+      // grid-template-rows: 1fr 4vw;
       .templatContainerGrid {
         display: grid;
         align-content: center;
@@ -236,11 +233,126 @@ body {
       }
     }
   }
-}
-.swiper-button-next,
-.swiper-button-prev {
-  color: black;
-}
-.swiper-pagination-bullet-active {
-  background-color: black;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: black;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: black;
+  }
+
+  @media (min-width: 670px) {
+    .CustomizerSwiper {
+      height: 20vh;
+      width: 80vw;
+      // .ColorListContainer {
+      //   display: flex;
+      //   justify-content: space-between;
+      //   width: 80%;
+      //   padding: 0;
+      //   margin: 0.2rem 0;
+      //   .ColorListItem {
+      //     list-style: none;
+      //     width: 8%;
+      //     height: 5vw;
+      //     cursor: pointer;
+      //   }
+      // }
+    }
+  }
+  @media (max-width: 669px) {
+    .CustomizerSwiper {
+      height: 15vh;
+      width: 100vw;
+      margin-top: 2rem;
+      .ColorListContainer {
+        // display: grid;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        // justify-content: space-between;
+        // width: 80vw;
+        // height: 8vh;
+        // row-gap: 0.2rem;
+        // padding: 0;
+        // margin: 0.2rem 0;
+        .ColorListItem {
+          list-style: none;
+          width: 4vh;
+          height: 4vh;
+          cursor: pointer;
+        }
+      }
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 2rem;
+    }
+  }
+  @media (min-width: variables.$min-tablet) {
+    .EditorHeaderMobile {
+      button {
+        font-size: 1rem;
+        img {
+          width: 2vw;
+        }
+      }
+    }
+    .ColorSwiper {
+      margin-top: 3vh;
+    }
+  }
+  @media (max-width: variables.$max-tablet) {
+    .ColorSwiper {
+      // margin-top: 3vh;
+      .inputLabel {
+        font-size: 25px;
+      }
+    }
+    .EditorHeaderMobile {
+      button {
+        font-size: 1.5rem;
+        img {
+          width: 2rem;
+        }
+      }
+    }
+  }
+  @media (min-width: variables.$min-mobile) {
+    .Preview {
+      grid-template-rows: 1fr 4vw;
+    }
+    // .ColorSwiper {
+    //   margin-top: 3vh;
+    // }
+    .imageSelect {
+      div {
+        width: 8vw;
+        height: 8vw;
+      }
+    }
+    .File {
+      label {
+        width: 3vw;
+        height: 3vw;
+      }
+    }
+  }
+
+  @media (max-width: variables.$max-mobile) {
+    .Preview {
+      grid-template-rows: 1fr 10vw;
+    }
+    .imageSelect {
+      div {
+        width: 12vw;
+        height: 12vw;
+      }
+    }
+    .File {
+      label {
+        width: 5vw;
+        height: 5vw;
+      }
+    }
+  }
 }

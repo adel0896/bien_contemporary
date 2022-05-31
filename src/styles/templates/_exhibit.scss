@@ -211,10 +211,10 @@
       }
     }
     .image {
-      width: 33.75vw !important;
-      max-width: 60vh !important;
-      height: 60vw !important;
-      max-height: 106.68vh !important;
+      width: 39.15vw !important;
+      max-width: 65vh !important;
+      height: 65vw !important;
+      max-height: 106.688vh !important;
     }
   }
   .exhibit-post {
@@ -244,14 +244,41 @@
       height: auto;
     }
   }
+  .exhibit-banner {
+    width: 90vw;
+    // height: 30vw;
+    .TemplateText {
+      // border-left: solid 2px;
+
+      .exhibitTitle {
+        font-size: 3.5vw;
+      }
+      .eventDetails {
+        > * {
+          font-size: 2.5vw;
+          margin: 0.5vw 0;
+        }
+      }
+    }
+
+    .logo {
+      height: 9vw;
+      width: 13vw;
+      margin-left: 16%;
+      img {
+        width: 15vw;
+        height: auto;
+      }
+    }
+  }
 }
 @media (max-width: 600px) {
   .exhibit-story {
     .image {
-      width: 45vw !important;
-      max-width: 80vh !important;
-      height: 80vw !important;
-      max-height: 124.24vh !important;
+      width: 47.8125vw !important;
+      max-width: 85vh !important;
+      height: 85vw !important;
+      max-height: 151.13vh !important;
     }
     .logo {
       height: 5vw;

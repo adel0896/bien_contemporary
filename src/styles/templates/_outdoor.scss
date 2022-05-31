@@ -166,11 +166,26 @@
       width: 55vw;
     }
   }
+  .outside-banner {
+    .outsideTitle {
+      font-size: 5vw;
+      line-height: 6vw;
+    }
+    .eventDetails {
+      font-size: 2.8vw;
+      position: relative;
+      z-index: 200;
+    }
+    .logo {
+      width: 9vw;
+      height: 6vw;
+    }
+  }
 }
 @media (max-width: 600px) {
   .outside-story {
     .TemplateText {
-      width: 45vw !important;
+      width: 47.8125vw !important;
     }
     .outsideTitle {
       font-size: 5vw;
@@ -181,10 +196,10 @@
       height: 8vw;
     }
     .image {
-      width: 45vw !important;
-      max-width: 80vh !important;
-      height: 80vw !important;
-      max-height: 124.24vh !important;
+      width: 47.8125vw !important;
+      max-width: 85vh !important;
+      height: 85vw !important;
+      max-height: 151.13vh !important;
     }
   }
   .outside-post {

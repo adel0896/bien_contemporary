@@ -191,22 +191,22 @@
 @media (max-width: 900px) {
   .croquis-story {
     .graphicCroquis {
-      width: 33.75vw;
-      max-width: 60vh;
+      width: 39.15vw;
+      max-width: 65vh;
     }
     .croquisTitle {
-      width: 22vw !important;
+      width: 24vw !important;
       font-size: 3.5vw !important;
       margin-right: -0.6rem !important;
     }
     .eventDetails {
-      width: 19vw !important;
+      width: 22vw !important;
       font-size: 2.3vw !important;
     }
     .imageCroquis {
       width: 10.4vw !important;
       max-width: 15vh !important;
-      height: 60vw !important;
+      height: 65vw !important;
       max-height: 106.68vh !important;
     }
     .logo {
@@ -252,34 +252,81 @@
       width: 8vw;
     }
   }
+  .croquis-banner {
+    .graphicCroquis {
+      width: 90vw;
+      max-width: 160.02vh;
+    }
+    .TemplateText {
+      .croquisTitle {
+        word-spacing: 3vw;
+        text-transform: uppercase;
+        width: 50vw;
+        text-align: left;
+        left: revert;
+        font-size: 5vw;
+        padding-left: 20vw;
+      }
+      .eventDetails {
+        margin-right: 0.4rem;
+        width: 24vw;
+        line-height: 3vw;
+        font-size: 1.9vw;
+        padding-left: 20vw;
+      }
+    }
+    .image {
+      .imageCroquis {
+        width: 12vw !important;
+        max-width: 15vh !important;
+        height: 50.625vw;
+        max-height: 90vh;
+      }
+    }
+    .logo {
+      grid-column-start: 1;
+      grid-row-start: 8;
+      z-index: 100;
+      position: relative;
+      width: 9.5vw;
+      height: auto;
+      margin-left: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    width: 90vw;
+    max-width: 160.02vh;
+    height: 50.625vw;
+    max-height: 90vh;
+  }
 }
 @media (max-width: 600px) {
   .croquis-story {
     .graphicCroquis {
-      width: 45vw;
-      max-width: 80vh;
+      width: 47.8125vw;
+      max-width: 85vh;
     }
     .croquisTitle {
-      width: 24vw !important;
+      word-spacing: 0.2vw !important;
+      width: 35vw !important;
       font-size: 5vw !important;
-      margin-right: -1.5rem !important;
+      margin-right: -0.3rem !important;
     }
     .eventDetails {
-      width: 20vw !important;
+      width: 33vw !important;
       font-size: 2.5vw !important;
       margin-right: 0rem !important;
     }
     .imageCroquis {
       width: 11.4vw !important;
       max-width: 15vh !important;
-      height: 80vw !important;
+      height: 85vw !important;
       max-height: 124.24vh !important;
     }
     .logo {
       width: 9vw;
     }
     .opacityDiv {
-      height: 80vw !important;
+      height: 85vw !important;
       max-height: 124.24vh !important;
     }
   }

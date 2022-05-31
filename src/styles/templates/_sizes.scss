@@ -123,27 +123,27 @@
 
 @media (max-width: 900px) {
   .storySize {
-    width: 33.75vw;
-    max-width: 60vh;
-    height: 60vw;
-    max-height: 106.68vh;
+    width: 39.15vw;
+    max-width: 65vh;
+    height: 65vw;
+    max-height: 106.688vh;
 
     .TemplateText {
-      width: 33.75vw;
-      max-width: 60vh;
+      width: 39.15vw;
+      max-width: 65vh;
     }
     .image {
       position: inherit;
       z-index: 2;
-      width: 33.75vw;
-      max-width: 60vh;
-      height: 60vw;
-      max-height: 106.68vh;
+      width: 39.15vw;
+      max-width: 65vh;
+      height: 65vw;
+      max-height: 106.688vh;
       img {
-        width: 25.3125vw;
-        max-width: 45vh;
-        height: 60vw;
-        max-height: 106.68vh;
+        width: 39.15vw;
+        max-width: 65vh;
+        height: 65vw;
+        max-height: 106.688vh;
         position: relative;
         z-index: -11;
       }
@@ -166,29 +166,51 @@
       }
     }
   }
+  .bannerSize {
+    width: 90vw;
+    max-width: 160.02vh;
+    height: 50.625vw;
+    max-height: 90vh;
+    .TemplateText {
+      width: 90vw;
+      max-width: 160.02vh;
+    }
+    .image {
+      width: 90vw;
+      max-width: 160.02vh;
+      height: 50.625vw;
+      max-height: 90vh;
+      img {
+        width: 90vw;
+        max-width: 160.02vh;
+        height: 50.625vw;
+        max-height: 90vh;
+      }
+    }
+  }
 }
 @media (max-width: 600px) {
   .storySize {
-    width: 45vw;
-    max-width: 80vh;
-    height: 80vw;
-    max-height: 124.24vh;
+    width: 47.8125vw;
+    max-width: 85vh;
+    height: 85vw;
+    max-height: 151.13vh;
     .TemplateText {
-      width: 45vw;
-      max-width: 80vh;
+      width: 47.8125vw;
+      max-width: 85vh;
     }
     .image {
       position: inherit;
       z-index: 2;
-      width: 45vw;
-      max-width: 80vh;
-      height: 80vw;
-      max-height: 124, 24vh;
+      width: 47.8125vw;
+      max-width: 85vh;
+      height: 85vw;
+      max-height: 151.13vh;
       img {
-        width: 25.3125vw;
-        max-width: 45vh;
-        height: 80vw;
-        max-height: 124, 24vh;
+        width: 47.8125vw;
+        max-width: 85vh;
+        height: 85vw;
+        max-height: 151.13vh;
         position: relative;
         z-index: -11;
       }

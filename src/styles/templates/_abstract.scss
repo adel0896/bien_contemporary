@@ -167,10 +167,10 @@
       width: 7.2vw;
     }
     .image {
-      width: 33.75vw !important;
-      max-width: 60vh !important;
-      height: 60vw !important;
-      max-height: 106.68vh !important;
+      width: 39.15vw !important;
+      max-width: 65vh !important;
+      height: 65vw !important;
+      max-height: 106.688vh !important;
     }
   }
   .abstract-post {
@@ -189,7 +189,23 @@
       width: 9.5vw;
     }
   }
+  .abstract-banner {
+    .abstractTitle {
+      font-size: 6vw;
+      line-height: 6vw;
+    }
+    .abstractTime,
+    .abstractDate,
+    .abstractLocation {
+      font-size: 3vw;
+    }
+    .logo {
+      width: 9vw;
+      height: 7vw;
+    }
+  }
 }
+
 @media (max-width: 600px) {
   .abstract-story {
     .TemplateText {
@@ -211,10 +227,10 @@
       width: 9.5vw;
     }
     .image {
-      width: 45vw !important;
-      max-width: 80vh !important;
-      height: 80vw !important;
-      max-height: 124.24vh !important;
+      width: 47.8125vw !important;
+      max-width: 85vh !important;
+      height: 85vw !important;
+      max-height: 151.13vh !important;
     }
   }
   .abstract-post {
