@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import CustomizerSwiper from "./Swiper";
 import Customizer from "./Customizer";
 import Preview from "./Preview";
+import logo from "./assets/logo.png";
+
 import ArrowBack from "./assets/arrow-back.png";
 
 export default class Editor extends Component {
@@ -73,6 +75,7 @@ export default class Editor extends Component {
               <img src={ArrowBack} alt="arrow-back" />
               Back
             </button>
+            <img className="headerLogo" src={logo} alt="logo"></img>
           </div>
           <section className="EditorMainMobile">
             <CustomizerSwiper
@@ -101,6 +104,7 @@ export default class Editor extends Component {
             <img src={ArrowBack} alt="arrow-back" />
             Back
           </button>
+          <img className="headerLogo" src={logo} alt="logo"></img>
         </div>
         <section className="EditorMain">
           <Customizer

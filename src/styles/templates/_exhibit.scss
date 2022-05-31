@@ -1,7 +1,6 @@
 .exhibit-story {
   grid-template-columns: 1fr 1fr !important;
   border: solid black 1px;
-
   .TemplateText {
     display: flex;
     flex-direction: column;
@@ -82,11 +81,9 @@
       word-spacing: 1.5vw;
     }
   }
-
   .logo {
     height: 3vw;
     width: 5vw;
-
     margin-left: 3vw;
   }
   .image {
@@ -97,29 +94,24 @@
 .exhibit-banner {
   .TemplateText {
     width: 60% !important;
-
     .exhibitTitle {
       font-size: 1.7vw;
     }
     .eventDetails {
       flex-direction: column;
       text-align: right;
-
       > * {
         font-size: 1.2vw;
       }
     }
   }
-
   .logo {
     height: 4vw;
     width: 6vw;
-
     margin-left: 20%;
   }
 }
 //COMMON STYLING FOR BANNER AND POST
-
 .exhibit-post,
 .exhibit-banner {
   border: solid black 1px;
@@ -135,14 +127,12 @@
     justify-self: flex-end;
     // border-left: solid 2px;
     margin: 0.5vw 0;
-
     .exhibitTitle {
       text-align: right;
       align-self: flex-end;
       margin-right: 2vw;
       text-transform: uppercase;
       position: relative;
-
       margin-bottom: 0;
     }
     .eventDetails {
@@ -249,7 +239,6 @@
     // height: 30vw;
     .TemplateText {
       // border-left: solid 2px;
-
       .exhibitTitle {
         font-size: 3.5vw;
       }
@@ -260,7 +249,6 @@
         }
       }
     }
-
     .logo {
       height: 9vw;
       width: 13vw;

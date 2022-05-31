@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styledComponents from "styled-components";
-import arrowOpen from "./assets/arrow-next.png";
-import arrowClose from "./assets/arrow-back.png";
+import arrowDown from "./assets/arrow-down.png";
+import arrowUp from "./assets/arrow-up.png";
 import { colors } from "./ColorOptions";
 
 const ColorSelect = styledComponents("div")`
@@ -92,9 +92,8 @@ export default function Color(props) {
               className={selectedOption || "black"}
             ></DropDownHeader>
             <Arrow onClick={toggling} className="arrow">
-              {/* <img src={arrowDown} alt="arrow" /> */}
-              {isOpen && <img src={arrowClose} alt="arrow" />}
-              {!isOpen && <img src={arrowOpen} alt="arrow" />}
+              {isOpen && <img src={arrowUp} alt="arrow" />}
+              {!isOpen && <img src={arrowDown} alt="arrow" />}
             </Arrow>
           </div>
           <DropDownContainer className="dropDownContainer">
