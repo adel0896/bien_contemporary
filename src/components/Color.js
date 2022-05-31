@@ -92,7 +92,6 @@ export default function Color(props) {
               className={selectedOption || "black"}
             ></DropDownHeader>
             <Arrow onClick={toggling} className="arrow">
-              {/* <img src={arrowDown} alt="arrow" /> */}
               {isOpen && <img src={arrowUp} alt="arrow" />}
               {!isOpen && <img src={arrowDown} alt="arrow" />}
             </Arrow>
