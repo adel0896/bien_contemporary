@@ -6,7 +6,7 @@
     max-width: 45vh;
     grid-column-start: 1;
     grid-row-start: 7;
-    z-index: 1000;
+    z-index: 100;
     image-rendering: auto;
   }
   .TemplateText {
@@ -35,10 +35,10 @@
     background-image: none !important;
     .imageCroquis {
       background-image: url("../../components/assets/abstract.jpg");
-      width: 8.4375vw !important;
-      max-width: 15vh !important;
-      height: 45vw !important;
-      max-height: 80.055vh !important;
+      width: 8.4375vw;
+      max-width: 15vh;
+      height: 45vw;
+      max-height: 80.055vh;
     }
   }
   .logo {
@@ -65,7 +65,7 @@
     max-width: 45vh;
     grid-column-start: 1;
     grid-row-start: 7;
-    z-index: 1000;
+    z-index: 100;
     image-rendering: auto;
   }
   .TemplateText {
@@ -181,6 +181,65 @@
     img {
       width: inherit;
       height: inherit;
+    }
+  }
+}
+// media queries
+@media (max-width: 900px) {
+  .croquis-story {
+    .graphicCroquis {
+      width: 33.75vw;
+      max-width: 60vh;
+    }
+    .croquisTitle {
+      width: 22vw !important;
+      font-size: 3.5vw !important;
+      margin-right: -0.6rem !important;
+    }
+    .eventDetails {
+      width: 19vw !important;
+      font-size: 2.3vw !important;
+    }
+    .imageCroquis {
+      width: 10.4vw !important;
+      max-width: 15vh !important;
+      height: 60vw !important;
+      max-height: 106.68vh !important;
+    }
+    .logo {
+      width: 8vw;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .croquis-story {
+    .graphicCroquis {
+      width: 45vw;
+      max-width: 80vh;
+    }
+    .croquisTitle {
+      width: 24vw !important;
+      font-size: 5vw !important;
+      margin-right: -1.5rem !important;
+    }
+    .eventDetails {
+      width: 20vw !important;
+      font-size: 2.5vw !important;
+      margin-right: 0rem !important;
+    }
+    .imageCroquis {
+      width: 11.4vw !important;
+      max-width: 15vh !important;
+      height: 80vw !important;
+      max-height: 124.24vh !important;
+    }
+    .logo {
+      width: 9vw;
+    }
+    .opacityDiv {
+      height: 80vw !important;
+      max-height: 124.24vh !important;
     }
   }
 }

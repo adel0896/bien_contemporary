@@ -116,3 +116,37 @@
     margin: 0 2vw 2vw 0;
   }
 }
+// media queries
+@media (max-width: 900px) {
+  .outside-story {
+    .outsideTitle {
+      font-size: 3.5vw;
+      line-height: 4.5vw;
+    }
+    .logo {
+      width: 8vw;
+      height: 6vw;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .outside-story {
+    .TemplateText {
+      width: 45vw !important;
+    }
+    .outsideTitle {
+      font-size: 5vw;
+      line-height: 6vw;
+    }
+    .logo {
+      width: 12vw;
+      height: 8vw;
+    }
+    .image {
+      width: 45vw !important;
+      max-width: 80vh !important;
+      height: 80vw !important;
+      max-height: 124.24vh !important;
+    }
+  }
+}

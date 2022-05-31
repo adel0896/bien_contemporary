@@ -10,10 +10,12 @@
     grid-row: 6/9 !important;
     grid-column: 1/3;
     justify-self: flex-end;
+    width: 17vh !important;
     max-width: 60% !important;
     border-left: solid 1px;
     margin: 0.5vw 0;
-
+    padding-right: 1rem;
+    padding-left: 1rem;
     .exhibitTitle {
       text-align: right;
       align-self: flex-end;
@@ -36,8 +38,10 @@
     }
   }
   .image {
-    width: 100%;
-    height: 100%;
+    width: 25.3125vw !important;
+    max-width: 45vh !important;
+    height: 45vw !important;
+    max-height: 80.055vh !important;
     grid-column: 1/3;
   }
   .opacityDiv {
@@ -58,7 +62,7 @@
     grid-column: 1/2;
     z-index: 80;
     // background-repeat: no-repeat;
-    margin-left: 3vw;
+    margin-left: 2vw;
     img {
       width: inherit;
       height: inherit;
@@ -181,6 +185,45 @@
     img {
       width: inherit;
       height: inherit;
+    }
+  }
+}
+// media queries
+@media (max-width: 900px) {
+  .exhibit-story {
+    .TemplateText {
+      margin: 2vw 0;
+      width: 100% !important;
+    }
+    .exhibitTitle {
+      padding-right: 0.8rem;
+      font-size: 3vw !important;
+    }
+    .eventDetails {
+      > * {
+        font-size: 1.5vw !important;
+        padding-right: 0.8rem;
+      }
+    }
+    .image {
+      width: 33.75vw !important;
+      max-width: 60vh !important;
+      height: 60vw !important;
+      max-height: 106.68vh !important;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .exhibit-story {
+    .image {
+      width: 45vw !important;
+      max-width: 80vh !important;
+      height: 80vw !important;
+      max-height: 124.24vh !important;
+    }
+    .logo {
+      height: 5vw;
+      width: 8vw;
     }
   }
 }
