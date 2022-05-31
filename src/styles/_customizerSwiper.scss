@@ -1,14 +1,22 @@
 @use "./variables";
-body {
-  overflow: hidden;
-}
+
 .ScreenMobile {
   background-color: var(--background-color);
   height: 90vh;
+
   .EditorHeaderMobile {
     height: 10vh;
     position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
     z-index: 100;
+    .headerLogo {
+      width: 7rem;
+      height: fit-content;
+      align-self: center;
+      margin-right: 1rem;
+    }
     button {
       background-color: transparent;
       border: none;
@@ -17,10 +25,6 @@ body {
       align-items: center;
       cursor: pointer;
       font-family: var(--regular-font);
-      // font-size: 1rem;
-      img {
-        // width: 2vw;
-      }
     }
   }
   .EditorMainMobile {
@@ -30,28 +34,8 @@ body {
     .CustomizerSwiper {
       font-family: var(--regular-font);
       grid-row: 2/3;
-      // height: 15vw;
-      // width: 80vw;
-      text-align: -webkit-center;
 
-      .headerArrow {
-        display: flex;
-        column-gap: 2rem;
-        align-items: center;
-        .arrow img {
-          width: 2vw;
-        }
-      }
-      .dropDownContainer {
-        top: 0;
-        left: 6rem;
-        ul {
-          min-width: 40vw;
-          flex-wrap: nowrap;
-          height: 35px;
-          padding: 0.2rem;
-        }
-      }
+      text-align: -webkit-center;
     }
     .imageSelect {
       img {
@@ -162,18 +146,14 @@ body {
   }
   .Preview {
     height: 80vh;
-    //   grid-column: 2/3;
     background-color: var(--white);
     display: grid;
     grid-template-columns: 1fr;
-    // grid-template-rows: 1fr 4vw;
     .templatContainerGrid {
       display: grid;
       align-content: center;
       justify-content: center;
       grid-column: 1/2;
-      // border: solid;
-      // margin: 2vw;
     }
     .templateContainer {
       grid-column: 1/3;
@@ -242,19 +222,6 @@ body {
   .CustomizerSwiper {
     height: 20vh;
     width: 80vw;
-    // .ColorListContainer {
-    //   display: flex;
-    //   justify-content: space-between;
-    //   width: 80%;
-    //   padding: 0;
-    //   margin: 0.2rem 0;
-    //   .ColorListItem {
-    //     list-style: none;
-    //     width: 8%;
-    //     height: 5vw;
-    //     cursor: pointer;
-    //   }
-    // }
   }
 }
 @media (max-width: 669px) {
@@ -263,14 +230,6 @@ body {
     width: 100vw;
     margin-top: 2rem;
     .ColorListContainer {
-      // display: grid;
-      // grid-template-columns: 1fr 1fr 1fr 1fr;
-      // justify-content: space-between;
-      // width: 80vw;
-      // height: 8vh;
-      // row-gap: 0.2rem;
-      // padding: 0;
-      // margin: 0.2rem 0;
       .ColorListItem {
         list-style: none;
         width: 4vh;
@@ -299,7 +258,6 @@ body {
 }
 @media (max-width: variables.$max-tablet) {
   .ColorSwiper {
-    // margin-top: 3vh;
     .inputLabel {
       font-size: 25px;
     }
@@ -317,9 +275,7 @@ body {
   .Preview {
     grid-template-rows: 1fr 4vw;
   }
-  // .ColorSwiper {
-  //   margin-top: 3vh;
-  // }
+
   .imageSelect {
     div {
       width: 8vw;
