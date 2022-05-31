@@ -35,7 +35,7 @@ position:absolute;
 const DropDownHeader = styledComponents("div")`
 margin: auto 0;
 width:50px;
-height:50px;
+// height:50px;
 align-items:center;
 display:flex;
 
