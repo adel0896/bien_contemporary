@@ -17,9 +17,9 @@ body {
       align-items: center;
       cursor: pointer;
       font-family: var(--regular-font);
-      font-size: 1rem;
+      // font-size: 1rem;
       img {
-        width: 2vw;
+        // width: 2vw;
       }
     }
   }
@@ -30,216 +30,324 @@ body {
     .CustomizerSwiper {
       font-family: var(--regular-font);
       grid-row: 2/3;
-
-      height: 15vw;
-      width: 80vw;
+      // height: 15vw;
+      // width: 80vw;
       text-align: -webkit-center;
-      .Color {
-        margin-top: 1rem;
-        padding-left: 20%;
+
+      .headerArrow {
         display: flex;
-        .headerArrow {
-          display: flex;
-          column-gap: 2rem;
-          align-items: center;
-          .arrow img {
-            width: 2vw;
-          }
-        }
-        .dropDownContainer {
-          top: 0;
-          left: 6rem;
-          ul {
-            min-width: 40vw;
-            flex-wrap: nowrap;
-            height: 35px;
-            padding: 0.2rem;
-          }
-        }
-      }
-      .imageSelect {
-        div {
-          width: 8vw;
-          height: 8vw;
-          img {
-            width: inherit;
-            height: inherit;
-          }
-        }
-      }
-      .ImageFileDivMobile {
-        display: flex;
-        justify-content: center;
-        column-gap: 2vw;
-      }
-      .imageSelectorFile {
-        display: flex;
+        column-gap: 2rem;
         align-items: center;
-        justify-content: space-between;
-        z-index: 99;
-      }
-
-      .File {
-        align-self: center;
-        margin-bottom: 2vw;
-        input {
-          display: none;
-        }
-        label {
-          width: 3vw;
-          height: 3vw;
-          padding: 0;
-          align-items: center;
-          display: flex;
-          justify-content: center;
-          background-color: transparent;
-          border: solid var(--grey) 1px;
-          cursor: pointer;
-          :hover {
-            box-shadow: 1px 1px 2px var(--grey);
-            transition: all 0.2s;
-          }
-          img {
-            width: inherit;
-          }
+        .arrow img {
+          width: 2vw;
         }
       }
-      .LogoSwiper {
-        .LogoListContainer {
-          display: flex;
-          justify-content: space-between;
-          width: 80%;
-          padding: 0;
-          margin: 0.2rem 0;
-          .LogoListItem {
-            list-style: none;
-            height: 5vw;
-            width: 8%;
-            display: flex;
-            background-color: white;
-            padding: 0.4rem;
-            border: solid var(--grey) 1px;
-            cursor: pointer;
-
-            img {
-              width: 100%;
-              align-self: center;
-            }
-          }
+      .dropDownContainer {
+        top: 0;
+        left: 6rem;
+        ul {
+          min-width: 40vw;
+          flex-wrap: nowrap;
+          height: 35px;
+          padding: 0.2rem;
         }
-      }
-      .ColorSwiper {
-        .ColorListContainer {
-          display: flex;
-          justify-content: space-between;
-          width: 80%;
-          padding: 0;
-          margin: 0.2rem 0;
-          .ColorListItem {
-            list-style: none;
-            width: 8%;
-            height: 5vw;
-            cursor: pointer;
-          }
-        }
-      }
-
-      .customizerInput {
-        margin-top: 1rem;
-        input {
-          height: 3vw;
-          background-color: transparent;
-          border: solid var(--grey) 1px;
-          //   font-size: 1.2rem;
-          width: 70%;
-        }
-        input {
-          align-self: center;
-        }
-        label {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-      .inputLabel {
-        font-size: 20px;
-        margin: 0;
       }
     }
-    .Preview {
-      height: 80vh;
-      //   grid-column: 2/3;
-      background-color: var(--white);
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 4vw;
-      .templatContainerGrid {
-        display: grid;
-        align-content: center;
+    .imageSelect {
+      img {
+        width: inherit;
+        height: inherit;
+      }
+    }
+    .ImageFileDivMobile {
+      display: flex;
+      justify-content: center;
+      column-gap: 2vw;
+    }
+    .imageSelectorFile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 99;
+    }
+
+    .File {
+      align-self: center;
+      margin-bottom: 2vw;
+      input {
+        display: none;
+      }
+      label {
+        // width: 3vw;
+        // height: 3vw;
+        padding: 0;
+        align-items: center;
+        display: flex;
         justify-content: center;
-        grid-column: 1/2;
-        // border: solid;
-        // margin: 2vw;
-      }
-      .templateContainer {
-        grid-column: 1/3;
-        justify-content: space-around;
-        display: grid;
-        .image {
-          grid-row: 1/9;
-          grid-column: 1/2;
-          background-image: url("../components/assets/abstract.jpg");
-          background-position: center;
-          background-size: cover;
+        background-color: transparent;
+        border: solid var(--grey) 1px;
+        cursor: pointer;
+        :hover {
+          box-shadow: 1px 1px 2px var(--grey);
+          transition: all 0.2s;
         }
-        .opacityDiv {
-          grid-row: 1/9;
-          grid-column: 1/2;
+        img {
+          width: inherit;
+        }
+      }
+    }
+    .LogoSwiper {
+      .LogoListContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        padding: 0;
+        margin: 0.2rem 0;
+        .LogoListItem {
+          list-style: none;
+          height: 5vw;
+          width: 8%;
+          display: flex;
           background-color: white;
-          opacity: 0.3;
-          z-index: 2;
-        }
-        .TemplateText {
-          grid-row: 1/9;
-          grid-column: 1/2;
+          padding: 0.4rem;
+          border: solid var(--grey) 1px;
+          cursor: pointer;
 
-          z-index: 3;
+          img {
+            width: 100%;
+            align-self: center;
+          }
         }
       }
-      .appendhere {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba($color: #525252, $alpha: 0.56);
-        z-index: 100;
+    }
+    .ColorSwiper {
+      // margin-top: 3vh;
 
-        canvas {
-          top: 50%;
-          left: 50%;
+      .ColorListContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        padding: 0;
+        margin: 0.2rem 0;
+        .ColorListItem {
+          list-style: none;
+          width: 8%;
+          height: 5vw;
+          cursor: pointer;
         }
       }
-      .ExportButtons {
+    }
+
+    .customizerInput {
+      margin-top: 1rem;
+      input {
+        height: 3vw;
+        background-color: transparent;
+        border: solid var(--grey) 1px;
+        //   font-size: 1.2rem;
+        width: 70%;
+      }
+      input {
+        align-self: center;
+      }
+      label {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .inputLabel {
+      font-size: 25px;
+      margin: 0;
+    }
+  }
+  .Preview {
+    height: 80vh;
+    //   grid-column: 2/3;
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr;
+    // grid-template-rows: 1fr 4vw;
+    .templatContainerGrid {
+      display: grid;
+      align-content: center;
+      justify-content: center;
+      grid-column: 1/2;
+      // border: solid;
+      // margin: 2vw;
+    }
+    .templateContainer {
+      grid-column: 1/3;
+      justify-content: space-around;
+      display: grid;
+      .image {
+        grid-row: 1/9;
         grid-column: 1/2;
-        margin-top: auto;
-        text-align: end;
-        button {
-          background-color: transparent;
-          border: none;
-          border-top: solid var(--grey) 1px;
-          font-family: var(--medium-font);
-          margin: 0.5vw;
-          font-size: 1rem;
-        }
+        background-image: url("../components/assets/abstract.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      .opacityDiv {
+        grid-row: 1/9;
+        grid-column: 1/2;
+        background-color: white;
+        opacity: 0.3;
+        z-index: 2;
+      }
+      .TemplateText {
+        grid-row: 1/9;
+        grid-column: 1/2;
+
+        z-index: 3;
+      }
+    }
+    .appendhere {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba($color: #525252, $alpha: 0.56);
+      z-index: 100;
+
+      canvas {
+        top: 50%;
+        left: 50%;
+      }
+    }
+    .ExportButtons {
+      grid-column: 1/2;
+      margin-top: auto;
+      text-align: end;
+      button {
+        background-color: transparent;
+        border: none;
+        border-top: solid var(--grey) 1px;
+        font-family: var(--medium-font);
+        margin: 0.5vw;
+        font-size: 1rem;
       }
     }
   }
 }
+
 .swiper-button-next,
 .swiper-button-prev {
   color: black;
 }
 .swiper-pagination-bullet-active {
   background-color: black;
+}
+
+@media (min-width: 670px) {
+  .CustomizerSwiper {
+    height: 20vh;
+    width: 80vw;
+    // .ColorListContainer {
+    //   display: flex;
+    //   justify-content: space-between;
+    //   width: 80%;
+    //   padding: 0;
+    //   margin: 0.2rem 0;
+    //   .ColorListItem {
+    //     list-style: none;
+    //     width: 8%;
+    //     height: 5vw;
+    //     cursor: pointer;
+    //   }
+    // }
+  }
+}
+@media (max-width: 669px) {
+  .CustomizerSwiper {
+    height: 15vh;
+    width: 100vw;
+    margin-top: 2rem;
+    .ColorListContainer {
+      // display: grid;
+      // grid-template-columns: 1fr 1fr 1fr 1fr;
+      // justify-content: space-between;
+      // width: 80vw;
+      // height: 8vh;
+      // row-gap: 0.2rem;
+      // padding: 0;
+      // margin: 0.2rem 0;
+      .ColorListItem {
+        list-style: none;
+        width: 4vh;
+        height: 4vh;
+        cursor: pointer;
+      }
+    }
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 2rem;
+  }
+}
+@media (min-width: variables.$min-tablet) {
+  .EditorHeaderMobile {
+    button {
+      font-size: 1rem;
+      img {
+        width: 2vw;
+      }
+    }
+  }
+  .ColorSwiper {
+    margin-top: 3vh;
+  }
+}
+@media (max-width: variables.$max-tablet) {
+  .ColorSwiper {
+    // margin-top: 3vh;
+    .inputLabel {
+      font-size: 25px;
+    }
+  }
+  .EditorHeaderMobile {
+    button {
+      font-size: 1.5rem;
+      img {
+        width: 2rem;
+      }
+    }
+  }
+}
+@media (min-width: variables.$min-mobile) {
+  .Preview {
+    grid-template-rows: 1fr 4vw;
+  }
+  // .ColorSwiper {
+  //   margin-top: 3vh;
+  // }
+  .imageSelect {
+    div {
+      width: 8vw;
+      height: 8vw;
+    }
+  }
+  .File {
+    label {
+      width: 3vw;
+      height: 3vw;
+    }
+  }
+}
+
+@media (max-width: variables.$max-mobile) {
+  .Preview {
+    grid-template-rows: 1fr 10vw;
+  }
+  .imageSelect {
+    div {
+      width: 12vw;
+      height: 12vw;
+    }
+  }
+  .File {
+    label {
+      width: 5vw;
+      height: 5vw;
+    }
+  }
 }
