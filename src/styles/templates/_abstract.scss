@@ -50,7 +50,6 @@
     }
   }
 }
-
 //COMMON STYLING BANNER AND POST
 .abstract-banner,
 .abstract-post {
@@ -119,9 +118,7 @@
     }
   }
 }
-
 //COMMON STYLING END
-
 //SEPARATE STYLING FOR POST
 .abstract-post {
   .abstractTitle {
@@ -148,7 +145,7 @@
 .TemplateText {
   font-family: var(--heading-font);
 }
-// media queries
+// media queriess
 @media (max-width: 900px) {
   .abstract-story {
     .abstractTitle {
@@ -167,10 +164,41 @@
       width: 7.2vw;
     }
     .image {
-      width: 33.75vw !important;
-      max-width: 60vh !important;
-      height: 60vw !important;
-      max-height: 106.68vh !important;
+      width: 39.15vw !important;
+      max-width: 65vh !important;
+      height: 65vw !important;
+      max-height: 106.688vh !important;
+    }
+  }
+  .abstract-post {
+    .abstractTitle {
+      font-size: 4vw;
+      line-height: 5vw;
+    }
+    .abstractTime,
+    .abstractDate,
+    .abstractLocation {
+      font-size: 2.2vw;
+      margin: 0.5rem 1rem 0.5rem 0.5rem;
+    }
+    .logo {
+      height: 6vw;
+      width: 9.5vw;
+    }
+  }
+  .abstract-banner {
+    .abstractTitle {
+      font-size: 6vw;
+      line-height: 6vw;
+    }
+    .abstractTime,
+    .abstractDate,
+    .abstractLocation {
+      font-size: 3vw;
+    }
+    .logo {
+      width: 9vw;
+      height: 7vw;
     }
   }
 }
@@ -195,10 +223,26 @@
       width: 9.5vw;
     }
     .image {
-      width: 45vw !important;
-      max-width: 80vh !important;
-      height: 80vw !important;
-      max-height: 124.24vh !important;
+      width: 47.8125vw !important;
+      max-width: 85vh !important;
+      height: 85vw !important;
+      max-height: 151.13vh !important;
+    }
+  }
+  .abstract-post {
+    .abstractTitle {
+      font-size: 6vw;
+      line-height: 6.5vw;
+    }
+    .abstractTime,
+    .abstractDate,
+    .abstractLocation {
+      font-size: 3vw;
+      margin: 0.5rem 1rem 0.5rem 0.5rem;
+    }
+    .logo {
+      height: 6vw;
+      width: 9.5vw;
     }
   }
 }
