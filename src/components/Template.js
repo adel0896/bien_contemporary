@@ -20,47 +20,21 @@ export default function Template(props) {
   }
 
   if (props.image !== "none" && props.imagenew === "none") {
-    document.querySelector(
-      ".image"
-    ).style.backgroundImage = `url("${imageToDisplay.path}")`;
-    // document.querySelector(".image img").src = imageToDisplay.path;
+    document.querySelector(".image").style.backgroundImage = `url("${imageToDisplay.path}")`;
   } else if (props.imagenew !== "none" && props.image === "none") {
-    // document.querySelector(".image img").src = newImage;
-    // document.querySelector(".image img").src = "";
-    document.querySelector(
-      ".image"
-    ).style.backgroundImage = `url("${newImage}")`;
+    document.querySelector(".image").style.backgroundImage = `url("${newImage}")`;
   }
-  if (
-    props.image !== "none" &&
-    props.imagenew === "none" &&
-    props.template === "croquis"
-  ) {
-    document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
-
+  if (props.image !== "none" && props.imagenew === "none" && props.template === "croquis") {
     document.querySelector(".image").style.backgroundImage = "";
     document.querySelector(".image").style.backgroundImage = `url("")`;
     document.querySelector(".image").style.backgroundColor = "white !important";
-    document.querySelector(
-      ".imageCroquis"
-    ).style.backgroundImage = `url("${imageToDisplay.path}")`;
-  } else if (
-    props.imagenew !== "none" &&
-    props.image === "none" &&
-    props.template === "croquis"
-  ) {
-    document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
+    document.querySelector(".imageCroquis").style.backgroundImage = `url("${imageToDisplay.path}")`;
+  } else if (props.imagenew !== "none" && props.image === "none" && props.template === "croquis") {
     document.querySelector(".image").style.backgroundImage = "";
     document.querySelector(".image").style.backgroundImage = `url("")`;
     document.querySelector(".image").style.backgroundColor = "white !important";
-    document.querySelector(
-      ".imageCroquis"
-    ).style.backgroundImage = `url("${newImage}")`;
+    document.querySelector(".imageCroquis").style.backgroundImage = `url("${newImage}")`;
   }
-  // if (props.appstate.show === false && props.appstate.template === "croquis") {
-  //   // document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
-  // }
-  // downloading the template
 
   async function captureJPG() {
     const image = document.querySelector(".templateContainer");
@@ -104,10 +78,7 @@ export default function Template(props) {
   return (
     <>
       <div className="templatContainerGrid">
-        <div
-          className={`${props.template}-${props.format} templateContainer ${props.format}Size`}
-          id="templateContainer"
-        >
+        <div className={`${props.template}-${props.format} templateContainer ${props.format}Size`} id="templateContainer">
           <div className="TemplateText">
             <h1 className={`${props.template}Title title`}>{props.title}</h1>
 
@@ -121,7 +92,9 @@ export default function Template(props) {
           <div className="image" id="image">
             <div className="imageCroquis"></div>
           </div>
-          <img src="" className="graphicCroquis"></img>
+
+          {/* className={template.name === props.template ? "mockupselected" : ""} */}
+          <img src={graphicGirl} className={props.appstate.template === "croquis" ? "graphicCroquis" : "graphicCroquis hidden"}></img>
           <div className="logo">
             <img src={logoColors[5].path} alt="" />
           </div>
