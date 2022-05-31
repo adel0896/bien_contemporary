@@ -20,27 +20,42 @@ export default function Template(props) {
   }
 
   if (props.image !== "none" && props.imagenew === "none") {
-    document.querySelector(".image").style.backgroundImage = `url("${imageToDisplay.path}")`;
+    document.querySelector(
+      ".image"
+    ).style.backgroundImage = `url("${imageToDisplay.path}")`;
     // document.querySelector(".image img").src = imageToDisplay.path;
   } else if (props.imagenew !== "none" && props.image === "none") {
     // document.querySelector(".image img").src = newImage;
     // document.querySelector(".image img").src = "";
-    document.querySelector(".image").style.backgroundImage = `url("${newImage}")`;
+    document.querySelector(
+      ".image"
+    ).style.backgroundImage = `url("${newImage}")`;
   }
-  if (props.image !== "none" && props.imagenew === "none" && props.template === "croquis") {
-    console.log("it is croquis story");
+  if (
+    props.image !== "none" &&
+    props.imagenew === "none" &&
+    props.template === "croquis"
+  ) {
     document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
 
     document.querySelector(".image").style.backgroundImage = "";
     document.querySelector(".image").style.backgroundImage = `url("")`;
     document.querySelector(".image").style.backgroundColor = "white !important";
-    document.querySelector(".imageCroquis").style.backgroundImage = `url("${imageToDisplay.path}")`;
-  } else if (props.imagenew !== "none" && props.image === "none" && props.template === "croquis") {
+    document.querySelector(
+      ".imageCroquis"
+    ).style.backgroundImage = `url("${imageToDisplay.path}")`;
+  } else if (
+    props.imagenew !== "none" &&
+    props.image === "none" &&
+    props.template === "croquis"
+  ) {
     document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
     document.querySelector(".image").style.backgroundImage = "";
     document.querySelector(".image").style.backgroundImage = `url("")`;
     document.querySelector(".image").style.backgroundColor = "white !important";
-    document.querySelector(".imageCroquis").style.backgroundImage = `url("${newImage}")`;
+    document.querySelector(
+      ".imageCroquis"
+    ).style.backgroundImage = `url("${newImage}")`;
   }
   // if (props.appstate.show === false && props.appstate.template === "croquis") {
   //   // document.querySelector(".graphicCroquis").src = `${graphicGirl}`;
@@ -89,12 +104,13 @@ export default function Template(props) {
   return (
     <>
       <div className="templatContainerGrid">
-        <div className={`${props.template}-${props.format} templateContainer ${props.format}Size`} id="templateContainer">
+        <div
+          className={`${props.template}-${props.format} templateContainer ${props.format}Size`}
+          id="templateContainer"
+        >
           <div className="TemplateText">
             <h1 className={`${props.template}Title title`}>{props.title}</h1>
-            {/* <div className="graphicElAbstract">
-              <svg src={svgGraphic}></svg>
-            </div> */}
+
             <div className="eventDetails details">
               <h1 className={`${props.template}Location`}>{props.location}</h1>
               <h1 className={`${props.template}Date`}>{props.date}</h1>
@@ -111,9 +127,6 @@ export default function Template(props) {
           </div>
           <div className="opacityDiv"></div>
           <div className="exhibitWhiteBG"></div>
-          {/* <div className="graphicElAbstract">
-            <svg viewBox="0 0 100 100" src={svgGraphic}></svg>
-          </div> */}
         </div>
         <div className="appendhere hidden"></div>
       </div>

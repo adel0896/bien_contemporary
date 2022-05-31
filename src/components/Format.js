@@ -5,7 +5,7 @@ import arrowDown from "./assets/arrow-down.png";
 import arrowUp from "./assets/arrow-up.png";
 
 const FormatSelect = styledComponents("div")`
-    width:20%;
+    // width:20%;
     text-align:center;
     margin:auto;
     border: solid var(--grey) 1px;
@@ -53,9 +53,11 @@ export default function Format(props) {
       <label> Select the format:</label>
 
       <section className="formatInputContainer">
-        <FormatSelect onClick={toggling}>
+        <FormatSelect onClick={toggling} className="formatSelect">
           <div className="formatInputArrow">
-            <DropDownHeader>{selectedFormat || "Post"}</DropDownHeader>
+            <DropDownHeader className="dropdownHeader">
+              {selectedFormat || "Post"}
+            </DropDownHeader>
             <Arrow className="arrow">
               {isOpen && <img src={arrowUp} alt="arrow" />}
               {!isOpen && <img src={arrowDown} alt="arrow" />}{" "}
