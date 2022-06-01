@@ -1,11 +1,11 @@
 import React from "react";
 import { logoColors } from "./Logo";
 import { images } from "./Image";
-import defaultImage from "./assets/abstract.jpg";
+
 import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
 import graphicGirl from "./assets/girl-graphic.png";
-import svgGraphic from "./assets/graphicAbstract.svg";
+
 export default function Template(props) {
   if (props.color !== "black") {
     document.querySelector(".templateContainer").style.color = `${props.color}`;

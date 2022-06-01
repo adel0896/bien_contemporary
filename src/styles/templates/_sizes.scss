@@ -145,7 +145,17 @@
   .storySize + .appendhere canvas {
     position: absolute;
     left: 33% !important;
-    top: 10% !important;
+    top: 20% !important;
+  }
+  .postSize + .appendhere canvas {
+    position: absolute;
+    top: 24% !important;
+    left: 23% !important;
+  }
+  .bannerSize + .appendhere canvas {
+    position: absolute;
+    left: 5% !important;
+    top: 24% !important;
   }
   .postSize {
     max-width: 55vw;
@@ -220,5 +230,20 @@
         max-height: 65vw;
       }
     }
+  }
+  .storySize + .appendhere canvas {
+    position: absolute;
+    left: 26% !important;
+    top: 20% !important;
+  }
+  .postSize + .appendhere canvas {
+    position: absolute;
+    top: 27% !important;
+    left: 17% !important;
+  }
+  .bannerSize + .appendhere canvas {
+    position: absolute;
+    left: 5% !important;
+    top: 32% !important;
   }
 }
