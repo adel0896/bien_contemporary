@@ -123,8 +123,12 @@ body {
         input {
           height: 2vw;
           background-color: transparent;
+          font-family: var(--medium-font);
           border: solid var(--grey) 1px;
           //   font-size: 1.2rem;
+        }
+        input:focus::placeholder {
+          color: transparent;
         }
         label {
           display: flex;
@@ -142,7 +146,7 @@ body {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 4vw;
-      .templatContainerGrid {
+      .templateContainerGrid {
         display: grid;
         align-content: center;
         justify-content: center;

@@ -7,6 +7,7 @@ export default function Time(props) {
         Time
         <input
           type="text"
+          placeholder={props.defaultTime}
           onChange={props.onInputChange}
           name="time"
           value={props.value}

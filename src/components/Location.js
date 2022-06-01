@@ -7,6 +7,7 @@ export default function Location(props) {
         Location
         <input
           type="text"
+          placeholder={props.defaultLocation}
           onChange={props.onInputChange}
           name="location"
           value={props.value}

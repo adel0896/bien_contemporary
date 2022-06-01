@@ -75,7 +75,12 @@ export default class Editor extends Component {
               <img src={ArrowBack} alt="arrow-back" />
               Back
             </button>
-            <img className="headerLogo" src={logo} alt="logo"></img>
+            <img
+              onClick={this.props.goBack}
+              className="headerLogo"
+              src={logo}
+              alt="logo"
+            ></img>
           </div>
           <section className="EditorMainMobile">
             <CustomizerSwiper
@@ -104,7 +109,12 @@ export default class Editor extends Component {
             <img src={ArrowBack} alt="arrow-back" />
             Back
           </button>
-          <img className="headerLogo" src={logo} alt="logo"></img>
+          <img
+            onClick={this.props.goBack}
+            className="headerLogo"
+            src={logo}
+            alt="logo"
+          ></img>
         </div>
         <section className="EditorMain">
           <Customizer
