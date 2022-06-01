@@ -84,7 +84,7 @@ export default function Template(props) {
   }
   return (
     <>
-      <div className="templatContainerGrid">
+      <div className="templateContainerGrid">
         <div
           className={`${props.template}-${props.format} templateContainer ${props.format}Size`}
           id="templateContainer"

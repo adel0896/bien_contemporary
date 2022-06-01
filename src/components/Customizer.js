@@ -35,22 +35,26 @@ export default class Customizer extends Component {
           onInputChange={this.props.onInputChange}
           name="title"
           value={this.props.value}
+          defaultTitle={this.props.state.title}
         ></Title>
         <Date
           onInputChange={this.props.onInputChange}
           name="date"
           value={this.props.value}
+          defaultDate={this.props.state.date}
         ></Date>
         <Time
           onInputChange={this.props.onInputChange}
           name="time"
           value={this.props.value}
+          defaultTime={this.props.state.time}
         ></Time>
 
         <Location
           onInputChange={this.props.onInputChange}
           name="location"
           value={this.props.value}
+          defaultLocation={this.props.state.location}
         ></Location>
         <div className="imageSelectorFile">
           <Image

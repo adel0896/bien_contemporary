@@ -6,6 +6,7 @@ export default function Title(props) {
       <label className="inputLabel">
         Title
         <input
+          placeholder={props.defaultTitle}
           onChange={props.onInputChange}
           name="title"
           value={props.value}

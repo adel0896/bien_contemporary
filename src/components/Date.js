@@ -5,7 +5,12 @@ export default function Date(props) {
     <div className="Date customizerInput">
       <label className="inputLabel">
         Date
-        <input onChange={props.onInputChange} name="date" value={props.value} />
+        <input
+          placeholder={props.defaultDate}
+          onChange={props.onInputChange}
+          name="date"
+          value={props.value}
+        />
       </label>
     </div>
   );
