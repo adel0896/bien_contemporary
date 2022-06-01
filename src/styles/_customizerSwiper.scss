@@ -189,21 +189,25 @@
       background: rgba($color: #525252, $alpha: 0.56);
       z-index: 100;
     }
-    .ExportButtons {
-      grid-column: 1/2;
-      margin-top: auto;
-      text-align: end;
-      button {
-        background-color: transparent;
-        border: none;
-        border-top: solid var(--grey) 1px;
-        font-family: var(--medium-font);
-        margin: 0.5vw;
-        font-size: 1rem;
+  }
+  .ExportButtons {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      background-color: transparent;
+      cursor: pointer;
+
+      border: none;
+      margin: 0.5vw;
+      display: flex;
+      img {
+        width: 1.5rem;
+        align-self: flex-end;
       }
     }
   }
-
   .swiper-button-next,
   .swiper-button-prev {
     color: black;
@@ -211,59 +215,56 @@
   .swiper-pagination-bullet-active {
     background-color: black;
   }
+}
+@media (min-width: 670px) {
+  .CustomizerSwiper {
+    height: 20vh;
+    width: 80vw;
+  }
+}
+@media (max-width: 669px) {
+  .CustomizerSwiper {
+    height: 15vh;
+    width: 100vw;
+    margin-top: 2rem;
+    .ColorListContainer {
+      .ColorListItem {
+        list-style: none;
+        width: 4vh;
+        height: 4vh;
+        cursor: pointer;
+      }
+    }
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 2rem;
+  }
+}
+@media (min-width: variables.$min-tablet) {
+  .EditorHeaderMobile {
+    button {
+      font-size: 1rem;
+      img {
+        width: 2vw;
+      }
+    }
+  }
 
-  @media (min-width: 670px) {
-    .CustomizerSwiper {
-      height: 20vh;
-      width: 80vw;
-    }
+  .ColorSwiper {
+    margin-top: 3vh;
   }
-  @media (max-width: 669px) {
-    .CustomizerSwiper {
-      height: 15vh;
-      width: 100vw;
-      margin-top: 2rem;
-      .ColorListContainer {
-        .ColorListItem {
-          list-style: none;
-          width: 4vh;
-          height: 4vh;
-          cursor: pointer;
-        }
-      }
-    }
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      font-size: 2rem;
-    }
-  }
-  @media (min-width: variables.$min-tablet) {
-    .EditorHeaderMobile {
-      button {
-        font-size: 1rem;
-        img {
-          width: 2vw;
-        }
-      }
-    }
-    .imageSelect {
-      div {
-        width: 8vw;
-        height: 8vw;
-        img {
-          width: inherit;
-        }
-      }
-    }
-
-    .ColorSwiper {
-      margin-top: 3vh;
-    }
-  }
-  @media (max-width: variables.$max-tablet) {
+}
+@media (max-width: variables.$max-tablet) {
+  .ScreenMobile {
     .ColorSwiper {
       .inputLabel {
         font-size: 25px;
+      }
+    }
+    .customizerInput {
+      input {
+        height: 5vw !important;
       }
     }
     .EditorHeaderMobile {
@@ -275,33 +276,65 @@
       }
     }
   }
-  @media (min-width: variables.$min-mobile) {
+}
+@media (min-width: variables.$min-mobile) {
+  .ScreenMobile {
     .Preview {
-      grid-template-rows: 1fr 4vw;
+      grid-template-rows: 1fr 12vw;
     }
 
-    // .imageSelect {
-    //   div {
-    //     width: 6vw;
-    //     height: 6vw;
-    //   }
-    // }
     .File {
       label {
         width: 3vw;
         height: 3vw;
       }
     }
+    .imageSelect {
+      div {
+        width: 8vw;
+        height: 8vw;
+        img {
+          width: inherit;
+        }
+      }
+    }
   }
-
-  @media (max-width: variables.$max-mobile) {
+}
+@media (max-width: variables.$max-mobile) {
+  .ScreenMobile {
     .Preview {
-      grid-template-rows: 1fr 10vw;
+      grid-template-rows: 1fr 15vw;
+      height: 70vh;
+    }
+    .EditorHeaderMobile {
+      button {
+        font-size: 1rem;
+        img {
+          width: 1rem;
+        }
+      }
+      .headerLogo {
+        width: 5rem;
+      }
+    }
+    .CustomizerSwiper {
+      margin-top: 1rem;
+      height: 13vh;
+      .ColorSwiper .ColorListItem {
+        height: 6vw !important;
+      }
+    }
+
+    .Customizer:after,
+    .Customizer > :first-child:after,
+    .Preview:after,
+    .Preview > :first-child:after {
+      display: none;
     }
     .imageSelect {
       div {
-        width: 12vw;
-        height: 12vw;
+        width: 10vw;
+        height: 10vw;
       }
     }
     .File {
@@ -310,5 +343,12 @@
         height: 5vw;
       }
     }
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 1.5rem;
+  }
+  .ExportButtons {
+    justify-content: space-between !important;
   }
 }

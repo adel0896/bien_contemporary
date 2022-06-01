@@ -246,3 +246,12 @@
     }
   }
 }
+@media (max-width: variables.$max-mobile) {
+  .abstractTitle::after {
+    border-bottom: 2px solid !important;
+  }
+  .abstractTime,
+  .abstractLocation {
+    border-width: 1px !important;
+  }
+}

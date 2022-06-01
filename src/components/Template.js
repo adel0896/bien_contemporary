@@ -1,6 +1,8 @@
 import React from "react";
 import { logoColors } from "./Logo";
 import { images } from "./Image";
+import downloadJPGicon from "./assets/downloadJPG.png";
+import downloadPNGicon from "./assets/downloadPNG.png";
 
 import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
@@ -119,8 +121,12 @@ export default function Template(props) {
         <div className="appendhere hidden"></div>
       </div>
       <div className="ExportButtons" id="ExportButtons">
-        <button onClick={captureJPG}>CaptureJPG</button>
-        <button onClick={capturePNG}>CapturePNG</button>
+        <button onClick={captureJPG}>
+          <img src={downloadJPGicon} alt="jpg-icon" />
+        </button>
+        <button onClick={capturePNG}>
+          <img src={downloadPNGicon} alt="png-icon" />
+        </button>
       </div>
     </>
   );

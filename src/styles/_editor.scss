@@ -44,6 +44,7 @@ body {
       grid-template-columns: 8vw 8vw 8vw 8vw;
       .Color {
         grid-column: 1/2;
+        cursor: pointer;
         .headerArrow {
           display: flex;
           column-gap: 2rem;
@@ -100,6 +101,7 @@ body {
       }
       .Logo {
         grid-column: 1/4;
+        cursor: pointer;
         .inputLabel {
           margin: 0.5vw 0;
         }
@@ -195,15 +197,20 @@ body {
       }
       .ExportButtons {
         grid-column: 1/2;
-        margin-top: auto;
-        text-align: end;
+        // margin-top: auto;
+        display: flex;
+        justify-content: flex-end;
         button {
           background-color: transparent;
+          cursor: pointer;
           border: none;
-          border-top: solid var(--grey) 1px;
-          font-family: var(--medium-font);
+          display: flex;
           margin: 0.5vw;
           font-size: 1rem;
+          img {
+            width: 1.7rem;
+            align-self: flex-end;
+          }
         }
       }
     }
