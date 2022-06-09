@@ -92,7 +92,17 @@ export default function Template(props) {
           id="templateContainer"
         >
           <div className="TemplateText">
+            <h1
+              className={
+                props.template === "exhibit"
+                  ? `${props.template}Artist artist`
+                  : `${props.template}Artist artist hidden`
+              }
+            >
+              {props.artist}
+            </h1>
             <h1 className={`${props.template}Title title`}>{props.title}</h1>
+
             <div className="eventDetails details">
               <h1 className={`${props.template}Location`}>{props.location}</h1>
               <h1 className={`${props.template}Date`}>{props.date}</h1>

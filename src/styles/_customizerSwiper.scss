@@ -176,8 +176,14 @@
       .TemplateText {
         grid-row: 1/9;
         grid-column: 1/2;
-
         z-index: 3;
+        .exhibitTitle,
+        .exhibitArtist {
+          font-family: var(--heading-font);
+        }
+        .eventDetails {
+          font-family: var(--regular-font);
+        }
       }
     }
     .appendhere {

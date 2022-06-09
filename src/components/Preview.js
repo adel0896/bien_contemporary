@@ -8,6 +8,7 @@ export default function Preview(props) {
     <div className="Preview">
       <Template
         title={props.state.title}
+        artist={props.state.artist}
         date={props.state.date}
         location={props.state.location}
         time={props.state.time}
