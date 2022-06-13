@@ -1,38 +1,37 @@
 import React, { useState } from "react";
-import image1 from "./assets/abstract.jpg";
-import image2 from "./assets/abstract2.jpg";
-import image3 from "./assets/abstract3.jpg";
+import {
+  abstractImages,
+  outsideImages,
+  croquisImages,
+  exhibitImages,
+} from "./imageArrays";
 
-const Image1 = {
-  path: image1,
-  imageOption: "image1",
-};
-const Image2 = {
-  path: image2,
-  imageOption: "image2",
-};
-const Image3 = {
-  path: image3,
-  imageOption: "image3",
-};
-
-export const images = [Image1, Image2, Image3];
+export const imageArrays = [
+  abstractImages,
+  outsideImages,
+  croquisImages,
+  exhibitImages,
+];
 
 export default function Image(props) {
+  const matchArray = imageArrays.filter(
+    (x) => x.template === props.template
+  )[0];
+  const arrayToMap = matchArray.images;
+  // console.log(props.template);
   const [file, setFile] = useState();
-
   const [selectedImage, setSelectedImage] = useState(null);
-  const onImageClicked = (path, imageOption) => () => {
-    props.onImageChange(imageOption);
-    setSelectedImage(path);
+  const onImageClicked = (image) => () => {
+    props.onImageChange(image.imageOption);
+    setSelectedImage(image.path);
   };
   return (
     <div className="imageSelectContainer">
       <p className="inputLabel">Picture</p>
       <div className="imageSelect">
-        {images.map((image) => (
+        {arrayToMap.map((image) => (
           <div
-            onClick={onImageClicked(image.path, image.imageOption)}
+            onClick={onImageClicked(image)}
             key={Math.random()}
             value={props.value}
             name="image"

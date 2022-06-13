@@ -1,6 +1,6 @@
 import React from "react";
 import { logoColors } from "./Logo";
-import { images } from "./Image";
+import { imageArrays } from "./Image";
 import downloadJPGicon from "./assets/downloadJPG.png";
 import downloadPNGicon from "./assets/downloadPNG.png";
 
@@ -13,7 +13,15 @@ export default function Template(props) {
     document.querySelector(".templateContainer").style.color = `${props.color}`;
   }
   const logoToDisplay = logoColors.filter((x) => x.logoColor === props.logo)[0];
-  const imageToDisplay = images.filter((x) => x.imageOption === props.image)[0];
+
+  const arrayToFilter = imageArrays.filter(
+    (x) => x.template === props.template
+  )[0].images;
+
+  const imageToDisplay = arrayToFilter.filter(
+    (x) => x.imageOption === props.image
+  )[0];
+
   const newImage = props.imagenew;
   if (props.logo !== "none") {
     document.querySelector(".logo img").src = logoToDisplay.path;

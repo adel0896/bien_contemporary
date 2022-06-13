@@ -70,6 +70,7 @@ export default class Customizer extends Component {
               onImageUpload={this.props.onImageUpload}
               name="image"
               value={this.props.value}
+              template={this.props.template}
             ></Image>
 
             <File
@@ -124,6 +125,7 @@ export default class Customizer extends Component {
             onImageUpload={this.props.onImageUpload}
             name="image"
             value={this.props.value}
+            template={this.props.template}
           ></Image>
 
           <File

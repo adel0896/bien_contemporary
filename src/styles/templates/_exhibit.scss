@@ -1,3 +1,4 @@
+@use "../variables";
 .exhibit-story {
   grid-template-columns: 1fr 1fr !important;
   border: solid black 1px;
@@ -103,9 +104,13 @@
 .exhibit-banner {
   .TemplateText {
     width: 60% !important;
-    .exhibitTitle {
+    .exhibitArtist {
       font-size: 1.7vw;
     }
+    .exhibitTitle {
+      font-size: 1.2vw;
+    }
+
     .eventDetails {
       flex-direction: column;
       text-align: right;
@@ -198,9 +203,13 @@
       margin: 2vw 0;
       width: 100% !important;
     }
-    .exhibitTitle {
+    .exhibitArtist {
       padding-right: 0.8rem;
       font-size: 3vw !important;
+    }
+    .exhibitTitle {
+      padding-right: 0.8rem;
+      font-size: 2.5vw !important;
     }
     .eventDetails {
       > * {
@@ -213,6 +222,11 @@
       max-width: 65vh !important;
       height: 65vw !important;
       max-height: 106.688vh !important;
+    }
+    .logo {
+      height: 4vw;
+      width: 6vw;
+      margin-left: 2vw;
     }
   }
   .exhibit-post {
@@ -252,11 +266,14 @@
     width: 90vw;
     .TemplateText {
       .exhibitTitle {
+        font-size: 2.5vw;
+      }
+      .exhibitArtist {
         font-size: 3.5vw;
       }
       .eventDetails {
         > * {
-          font-size: 2.5vw;
+          font-size: 2vw;
           margin: 0.5vw 0;
         }
       }
@@ -293,6 +310,14 @@
     }
     .image {
       width: 65vw;
+    }
+  }
+}
+@media (max-width: variables.$max-mobile) {
+  .exhibit-story {
+    .TemplateText {
+      padding: 0;
+      margin: 0;
     }
   }
 }

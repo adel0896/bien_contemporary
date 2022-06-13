@@ -91,6 +91,7 @@ export default class Editor extends Component {
               onImageChange={this.handleImageChange}
               onImageUpload={this.handleImageUpload}
               state={this.state}
+              template={template}
             ></CustomizerSwiper>
 
             <Preview
@@ -126,6 +127,7 @@ export default class Editor extends Component {
             onImageChange={this.handleImageChange}
             onImageUpload={this.handleImageUpload}
             state={this.state}
+            template={template}
           ></Customizer>
           <Preview
             appstate={this.props.appState}
