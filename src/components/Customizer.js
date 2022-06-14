@@ -33,18 +33,19 @@ export default class Customizer extends Component {
             name="logo"
             value={this.props.value}
           ></Logo>
-          <Title
-            onInputChange={this.props.onInputChange}
-            name="title"
-            value={this.props.value}
-            defaultTitle={this.props.state.title}
-          ></Title>
           <Artist
             onInputChange={this.props.onInputChange}
             name="artist"
             value={this.props.value}
             defaultArtist={this.props.state.artist}
           ></Artist>
+          <Title
+            onInputChange={this.props.onInputChange}
+            name="title"
+            value={this.props.value}
+            defaultTitle={this.props.state.title}
+          ></Title>
+
           <Date
             onInputChange={this.props.onInputChange}
             name="date"
