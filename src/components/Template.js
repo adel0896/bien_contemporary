@@ -1,6 +1,6 @@
 import React from "react";
 import { logoColors } from "./Logo";
-import { images } from "./Image";
+import { imageArrays } from "./Image";
 import downloadJPGicon from "./assets/downloadJPG.png";
 import downloadPNGicon from "./assets/downloadPNG.png";
 
@@ -13,7 +13,15 @@ export default function Template(props) {
     document.querySelector(".templateContainer").style.color = `${props.color}`;
   }
   const logoToDisplay = logoColors.filter((x) => x.logoColor === props.logo)[0];
-  const imageToDisplay = images.filter((x) => x.imageOption === props.image)[0];
+
+  const arrayToFilter = imageArrays.filter(
+    (x) => x.template === props.template
+  )[0].images;
+
+  const imageToDisplay = arrayToFilter.filter(
+    (x) => x.imageOption === props.image
+  )[0];
+
   const newImage = props.imagenew;
   if (props.logo !== "none") {
     document.querySelector(".logo img").src = logoToDisplay.path;
@@ -74,7 +82,17 @@ export default function Template(props) {
         <div className={`${props.template}-${props.format} templateContainer ${props.format}Size`} id="templateContainer">
           <div className={props.template === "exhibit" ? "blur" : "blur hidden"}></div>
           <div className="TemplateText">
+            <h1
+              className={
+                props.template === "exhibit"
+                  ? `${props.template}Artist artist`
+                  : `${props.template}Artist artist hidden`
+              }
+            >
+              {props.artist}
+            </h1>
             <h1 className={`${props.template}Title title`}>{props.title}</h1>
+
             <div className="eventDetails details">
               <h1 className={`${props.template}Location`}>{props.location}</h1>
               <h1 className={`${props.template}Date`}>{props.date}</h1>

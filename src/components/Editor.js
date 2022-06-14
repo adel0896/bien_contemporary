@@ -12,6 +12,7 @@ export default class Editor extends Component {
     this.state = {
       color: "black",
       title: "Abstract painting & cocktails",
+      artist: "Artist's name",
       date: "13/05",
       time: "from 5pm to 8pm ",
       location: "Vester Volgade 8",
@@ -90,6 +91,7 @@ export default class Editor extends Component {
               onImageChange={this.handleImageChange}
               onImageUpload={this.handleImageUpload}
               state={this.state}
+              template={template}
             ></CustomizerSwiper>
 
             <Preview
@@ -118,12 +120,14 @@ export default class Editor extends Component {
         </div>
         <section className="EditorMain">
           <Customizer
+            appstate={this.props.appState}
             onInputChange={this.handleInputChange}
             onColorChange={this.handleColorChange}
             onLogoChange={this.handleLogoChange}
             onImageChange={this.handleImageChange}
             onImageUpload={this.handleImageUpload}
             state={this.state}
+            template={template}
           ></Customizer>
           <Preview
             appstate={this.props.appState}

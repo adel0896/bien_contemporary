@@ -54,7 +54,8 @@ body {
           }
         }
       }
-      .Title {
+      .Title,
+      .Artist {
         grid-column: 1/4;
       }
       .Date {
@@ -177,8 +178,14 @@ body {
         .TemplateText {
           grid-row: 1/9;
           grid-column: 1/2;
-
           z-index: 3;
+          .title,
+          .exhibitArtist {
+            font-family: var(--heading-font);
+          }
+          .eventDetails {
+            font-family: var(--regular-font);
+          }
         }
       }
       .appendhere {

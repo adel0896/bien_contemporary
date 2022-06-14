@@ -1,6 +1,6 @@
 .croquis-story {
   background-color: white;
-  border: solid;
+  border: solid 1px;
   .graphicCroquis {
     width: 25.3125vw;
     max-width: 45vh;
@@ -15,7 +15,7 @@
     justify-content: flex-start;
     align-items: end;
     .croquisTitle {
-      word-spacing: 9vw;
+      // word-spacing: 9vw;
       text-transform: uppercase;
       width: 14vw;
       text-align: left;
@@ -58,7 +58,7 @@
 }
 .croquis-post {
   background-color: white;
-  border: solid;
+  border: solid 1px;
   width: 30vw;
   .graphicCroquis {
     width: 30vw;
@@ -75,7 +75,7 @@
     align-items: end;
     width: 30vw;
     .croquisTitle {
-      word-spacing: 3vw;
+      // word-spacing: 3vw;
       text-transform: uppercase;
       text-align: left;
       left: revert;
@@ -89,7 +89,7 @@
       width: 20vw;
       text-align: left;
       line-height: 2.2vw;
-      font-size: 1.5vw;
+      font-size: 1.3vw;
       h1 {
         margin: 0;
       }
@@ -123,7 +123,7 @@
 }
 .croquis-banner {
   background-color: white;
-  border: solid;
+  border: solid 1px;
   .graphicCroquis {
     width: 60vw;
     max-width: 106.68vh;

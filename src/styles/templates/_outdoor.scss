@@ -60,23 +60,16 @@
   }
   .eventDetails {
     margin: 0 2vw 0 auto;
-    // border-bottom: solid white 3px;
-    // border-right: solid white 3px;
+
     > * {
       text-align: right;
       margin: 1vw 0;
     }
   }
   .outsideTime:after {
-    //   position: absolute;
-    //   width: 200px;
-    //   height: 100px;
-    //   border: solid;
     border-width: 0 2px 2px 0;
     top: -5rem;
     right: -0.2rem;
-    //   content: " ";
-    //   z-index: 0;
   }
   .logo {
     margin: 0 0 2vw 2vw;
@@ -101,14 +94,13 @@
   .eventDetails {
     width: 18vw;
     max-width: 45vh;
-    // border-bottom: solid white 3px;
-    // border-left: solid white 3px;
+
     margin: 0 auto 0 2vw;
     > * {
       text-align: left;
       padding: 0.5vw;
       margin: 0.1vw 0;
-      font-size: 1.5vw;
+      font-size: 1.2vw;
     }
   }
   .outsideTime:after {
@@ -132,16 +124,14 @@
     max-width: 60%;
   }
   .eventDetails {
-    // border-bottom: solid white 3px;
-    // border-left: solid white 3px;
-    margin: 0 auto 0 3vw;
+    margin-left: 3vw;
     font-size: 1.3vw;
     position: relative;
     z-index: 200;
     > * {
       text-align: left;
       padding: 0.5vw;
-      margin: 0.1vw 0 0 1vw;
+      margin: 0.1vw;
     }
   }
   .outsideTime:after {
