@@ -14,10 +14,10 @@ export const imageArrays = [
 ];
 
 export default function Image(props) {
-  const matchArray = imageArrays.filter(
+  const matchingObject = imageArrays.filter(
     (x) => x.template === props.template
   )[0];
-  const arrayToMap = matchArray.images;
+  const arrayToMap = matchingObject.images;
   // console.log(props.template);
   const [file, setFile] = useState();
   const [selectedImage, setSelectedImage] = useState(null);
