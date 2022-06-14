@@ -19,36 +19,20 @@ export default function Template(props) {
     document.querySelector(".logo img").src = logoToDisplay.path;
   }
   if (props.image !== "none" && props.imagenew === "none") {
-    document.querySelector(
-      ".image"
-    ).style.backgroundImage = `url("${imageToDisplay.path}")`;
+    document.querySelector(".image").style.backgroundImage = `url("${imageToDisplay.path}")`;
   } else if (props.imagenew !== "none" && props.image === "none") {
-    document.querySelector(
-      ".image"
-    ).style.backgroundImage = `url("${newImage}")`;
+    document.querySelector(".image").style.backgroundImage = `url("${newImage}")`;
   }
-  if (
-    props.image !== "none" &&
-    props.imagenew === "none" &&
-    props.template === "croquis"
-  ) {
+  if (props.image !== "none" && props.imagenew === "none" && props.template === "croquis") {
     document.querySelector(".image").style.backgroundImage = "";
     document.querySelector(".image").style.backgroundImage = `url("")`;
     document.querySelector(".image").style.backgroundColor = "white !important";
-    document.querySelector(
-      ".imageCroquis"
-    ).style.backgroundImage = `url("${imageToDisplay.path}")`;
-  } else if (
-    props.imagenew !== "none" &&
-    props.image === "none" &&
-    props.template === "croquis"
-  ) {
+    document.querySelector(".imageCroquis").style.backgroundImage = `url("${imageToDisplay.path}")`;
+  } else if (props.imagenew !== "none" && props.image === "none" && props.template === "croquis") {
     document.querySelector(".image").style.backgroundImage = "";
     document.querySelector(".image").style.backgroundImage = `url("")`;
     document.querySelector(".image").style.backgroundColor = "white !important";
-    document.querySelector(
-      ".imageCroquis"
-    ).style.backgroundImage = `url("${newImage}")`;
+    document.querySelector(".imageCroquis").style.backgroundImage = `url("${newImage}")`;
   }
   async function captureJPG() {
     const image = document.querySelector(".templateContainer");
@@ -87,10 +71,8 @@ export default function Template(props) {
   return (
     <>
       <div className="templateContainerGrid">
-        <div
-          className={`${props.template}-${props.format} templateContainer ${props.format}Size`}
-          id="templateContainer"
-        >
+        <div className={`${props.template}-${props.format} templateContainer ${props.format}Size`} id="templateContainer">
+          <div className={props.template === "exhibit" ? "blur" : "blur hidden"}></div>
           <div className="TemplateText">
             <h1 className={`${props.template}Title title`}>{props.title}</h1>
             <div className="eventDetails details">
@@ -103,15 +85,7 @@ export default function Template(props) {
             <div className="imageCroquis"></div>
           </div>
           {/* className={template.name === props.template ? "mockupselected" : ""} */}
-          <img
-            src={graphicGirl}
-            className={
-              props.template === "croquis"
-                ? "graphicCroquis"
-                : "graphicCroquis hidden"
-            }
-            alt="graphics"
-          ></img>
+          <img src={graphicGirl} className={props.template === "croquis" ? "graphicCroquis" : "graphicCroquis hidden"} alt="graphics"></img>
           <div className="logo">
             <img src={logoColors[5].path} alt="" />
           </div>
